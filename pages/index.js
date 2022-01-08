@@ -20,7 +20,7 @@ export default function Home() {
             alt="Bevl Logo"
             draggable="false"
           />
-          <Link href="https://bevl.app">
+          <Link href="https://bevl.app/signup">
             <a className="button buttonPrimary">
               SIGN UP FOR CLOSED BETA
             </a>

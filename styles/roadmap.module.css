@@ -1,23 +1,27 @@
 .containerMain {
     width: 100%;
     padding: 3.5em 12.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     box-sizing: border-box;
 }
 
 .roadmapFeatures {
+    max-width: 75em;
     margin-top: 5em;
 }
 
 .roadmapFeaturesHeading {
     font-size: 1.35rem;
-    margin-bottom: 0.35em;
+    margin-bottom: 1em;
 }
 
 .roadmapFeaturesListElement {
-    margin: 0 0 0.85em 1em;
+    margin: 0 0 1em 1em;
     padding-left: 0.85em;
     font-size: 1rem;
-    line-height: 2.85em;
+    line-height: 2.65em;
 }
 
 @media(max-width: 1000px) {
@@ -31,14 +35,11 @@
     }
 
     .roadmapFeaturesHeading {
-        font-size: 1rem;
         margin-bottom: 0.35em;
     }
     
     .roadmapFeaturesListElement {
         margin-left: 1em;
         padding-left: 0.85em;
-        font-size: 0.85rem;
-        line-height: 2.5em;
     }
 }
