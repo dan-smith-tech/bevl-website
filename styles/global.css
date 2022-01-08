@@ -64,9 +64,9 @@ nav ul li a {
   padding: 1em 3.5em;
   font-size: 1rem;
   font-weight: 700;
-  border-radius: 0.85em;    
+  border-radius: 0.85em;
+  border: 3px solid transparent;
   text-decoration: none;
-  border: none;
   outline: none;
   cursor: pointer;
 }
@@ -74,28 +74,32 @@ nav ul li a {
 .buttonPrimary {
   margin-top: 3.5em;
   background-color: rgb(254, 76, 95);
+  border-color: rgb(254, 76, 95);
 }
 
 .buttonSecondary {
   margin-top: 1.5em;
-  color: rgb(50, 58, 82);
-  background-color: white;
+  background-color: transparent;
+  border-color: white;
 }
 
 .buttonPrimary:hover {
   background-color: rgb(152, 67, 89);
+  border-color: rgb(152, 67, 89);
 }
 
 .buttonPrimary:focus {
-  outline: 2px solid white;
+  outline: 3px solid white;
 }
 
 .buttonSecondary:hover {
-  background-color: rgb(185, 185, 185);
+  color: rgb(50, 58, 82);
+  background-color: white;
 }
 
 .buttonSecondary:focus {
-  outline: 2px solid rgb(254, 76, 95);
+  outline: 3px solid rgb(254, 76, 95);
+  /* border-color: rgb(254, 76, 95); */
 }
 
 @media(max-width: 450px) {
