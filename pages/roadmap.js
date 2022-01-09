@@ -1,14 +1,14 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
-import Layout, { siteTitle } from '../components/layout'
+import Layout, { siteName } from '../components/layout'
 import roadmapStyles from '../styles/roadmap.module.css'
 
 export default function Home() {
   return (
     <Layout>
         <Head>
-          <title>Roadmap | {siteTitle}</title>
+          <title>Roadmap | {siteName}</title>
         </Head>
         <div className={roadmapStyles.containerMain}>
           <Image

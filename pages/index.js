@@ -1,14 +1,14 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
-import Layout, { siteTitle } from '../components/layout'
+import Layout, { siteName } from '../components/layout'
 import indexStyles from '../styles/index.module.css'
 
 export default function Home() {
   return (
     <Layout>
         <Head>
-          <title>{siteTitle}</title>
+          <title>{siteName}</title>
         </Head>
         <div className={indexStyles.containerMain}>
           <Image

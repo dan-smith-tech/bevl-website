@@ -1,13 +1,13 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import Layout, { siteTitle } from '../components/layout'
+import Layout, { siteName } from '../components/layout'
 import signupStyles from '../styles/signup.module.css'
 
 export default function Home() {
   return (
     <Layout>
         <Head>
-          <title>{siteTitle}</title>
+          <title>Signup | {siteName}</title>
         </Head>
         <div className={signupStyles.containerMain}>
           <div className={signupStyles.containerInformation}>
