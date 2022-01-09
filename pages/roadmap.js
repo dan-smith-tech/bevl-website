@@ -28,7 +28,7 @@ export default function Home() {
           <div className={roadmapStyles.roadmapFeatures}>
             <h2 className={roadmapStyles.roadmapFeaturesHeading}>Features to be added</h2>
             <ul className={roadmapStyles.roadmapFeaturesList}>
-              <li className={roadmapStyles.roadmapFeaturesListElement}>Deadline plans will signify their time occurance relative to their associated Deadline (e.g., if a Deadline plan occurs after the Deadline itself, users will be signified that they are planning to work on the task after it's due).</li>
+              <li className={roadmapStyles.roadmapFeaturesListElement}>Deadline plans will signify their time occurance relative to their associated Deadline (e.g., if a Deadline plan occurs after the Deadline itself, users will be signified that they are planning to work on the task after it&apos;s due).</li>
               <li className={roadmapStyles.roadmapFeaturesListElement}>All tasks that appear on the calendar can be reordered using drag n&apos; drop.</li>
               <li className={roadmapStyles.roadmapFeaturesListElement}>You can click on a day on the calendar to create a task, with that date pre-selected.</li>
               <li className={roadmapStyles.roadmapFeaturesListElement}>Habits: recurring events that only appear on the calendar.</li>
