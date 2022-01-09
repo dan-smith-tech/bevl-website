@@ -14,13 +14,12 @@ export default function Home() {
           <Image
             priority
             src="/images/logo-complete.svg"
-            className={indexStyles.logo}
             width={400}
             height={165}
             alt="Bevl Logo"
             draggable="false"
           />
-          <Link href="https://bevl.app/signup">
+          <Link href="/signup">
             <a className="button buttonPrimary">
               SIGN UP FOR CLOSED BETA
             </a>
