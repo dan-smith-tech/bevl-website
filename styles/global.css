@@ -18,6 +18,11 @@ body {
   overflow-x: hidden;
 }
 
+h2 {
+  font-size: 1.35rem;
+  margin-bottom: 1.5em;
+}
+
 nav {
   position: fixed;
   height: 100%;
@@ -55,6 +60,7 @@ nav ul li a {
 /* Buttons */
 .button {
   width: auto;
+  margin-bottom: -1em;
   padding: 1em 3.5em;
   font-size: 1rem;
   font-weight: 700;
@@ -72,7 +78,7 @@ nav ul li a {
 }
 
 .buttonSecondary {
-  margin-top: 1.5em;
+  margin-top: 2.5em;
   background-color: transparent;
   border-color: white;
 }

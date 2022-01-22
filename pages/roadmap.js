@@ -4,7 +4,7 @@ import Image from "next/image";
 import Layout, {siteName} from "../components/layout";
 import roadmapStyles from "../styles/roadmap.module.css";
 
-export default function Home() {
+export default function Roadmap() {
    return (
       <Layout>
          <Head>
@@ -14,7 +14,6 @@ export default function Home() {
             <Image
                priority
                src="/images/logo-complete.svg"
-               className={roadmapStyles.logo}
                width={400}
                height={165}
                alt="Bevl Logo"
@@ -23,8 +22,11 @@ export default function Home() {
             <Link href="/signup">
                <a className="button buttonPrimary">SIGN UP FOR CLOSED BETA</a>
             </Link>
+            <Link href="/help">
+               <a className="button buttonSecondary">HOW TO USE</a>
+            </Link>
             <div className={roadmapStyles.roadmapFeatures}>
-               <h2 className={roadmapStyles.roadmapFeaturesHeading}>
+               <h2>
                   Features to be added
                </h2>
                <ul className={roadmapStyles.roadmapFeaturesList}>

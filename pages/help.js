@@ -2,15 +2,15 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import Layout, {siteName} from "../components/layout";
-import indexStyles from "../styles/index.module.css";
+import helpStyles from "../styles/help.module.css";
 
-export default function Home() {
+export default function Help() {
    return (
       <Layout>
          <Head>
-            <title>{siteName}</title>
+            <title>Help | {siteName}</title>
          </Head>
-         <div className={indexStyles.containerMain}>
+         <div className={helpStyles.containerMain}>
             <Image
                priority
                src="/images/logo-complete.svg"
@@ -22,12 +22,12 @@ export default function Home() {
             <Link href="/signup">
                <a className="button buttonPrimary">SIGN UP FOR CLOSED BETA</a>
             </Link>
-            <Link href="/help">
-               <a className="button buttonSecondary">HOW TO USE</a>
-            </Link>
             <Link href="/roadmap">
-               <a className="button buttonSecondary">ROADMAP</a>
+               <a className="button buttonSecondary">VIEW PLANNED FEATURES</a>
             </Link>
+            <div>
+               <h2></h2>
+            </div>
          </div>
       </Layout>
    );

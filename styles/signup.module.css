@@ -18,8 +18,8 @@
     line-height: 2.35em;
 }
 
-.containerInformation a {
-    text-decoration: none;
+.containerInformation a:focus {
+    outline: 2px solid rgb(254, 76, 95);;
 }
 
 .buttonPrimary {
