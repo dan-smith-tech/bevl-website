@@ -11,14 +11,7 @@ export default function Help() {
             <title>Help | {siteName}</title>
          </Head>
          <div className={helpStyles.containerMain}>
-            <Image
-               priority
-               src="/images/logo-complete.svg"
-               width={400}
-               height={165}
-               alt="Bevl Logo"
-               draggable="false"
-            />
+            <Image priority src="/images/logo-complete.svg" width={400} height={165} alt="Bevl Logo" draggable="false" />
             <Link href="/signup">
                <a className="button buttonPrimary">SIGN UP FOR CLOSED BETA</a>
             </Link>

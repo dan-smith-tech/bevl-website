@@ -1,121 +1,120 @@
 * {
-  margin: 0;
-  padding: 0;
-  font-family: 'Work Sans', sans-serif;
-  color: white;
+   margin: 0;
+   padding: 0;
+   font-family: "Work Sans", sans-serif;
+   color: white;
 }
 
 #__next,
 main {
-  width: 100vw;
-  height: 100vh;
+   width: 100vw;
+   height: 100vh;
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
-  background-color: rgb(50, 58, 82);
-  overflow-x: hidden;
+   width: 100vw;
+   height: 100vh;
+   background-color: rgb(50, 58, 82);
+   overflow-x: hidden;
 }
 
 h2 {
-  font-size: 1.35rem;
-  margin-bottom: 1.5em;
+   font-size: 1.35rem;
+   margin-bottom: 1.5em;
 }
 
 nav {
-  position: fixed;
-  height: 100%;
-  padding: 1.5em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 999;  
+   position: fixed;
+   height: 100%;
+   padding: 1.5em;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   z-index: 999;
 }
 
 nav ul {
-  width: 100%;
-  padding-top: 2.5em;
-  list-style: none;
-  display: flex;
-  flex-direction: column;
+   width: 100%;
+   padding-top: 2.5em;
+   list-style: none;
+   display: flex;
+   flex-direction: column;
 }
 
 nav ul li {
-  font-size: 1.15rem;
-  margin: 1.35em 0;
-  border-radius: 0.35em;
-  background-color: rgba(25, 25, 25, 0.35);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+   font-size: 1.15rem;
+   margin: 1.35em 0;
+   border-radius: 0.35em;
+   background-color: rgba(25, 25, 25, 0.35);
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
 
 nav ul li a {
-  padding: 0.65em;
-  text-decoration: none;
+   padding: 0.65em;
+   text-decoration: none;
 }
-
 
 /* Buttons */
 .button {
-  width: auto;
-  margin-bottom: -1em;
-  padding: 1em 3.5em;
-  font-size: 1rem;
-  font-weight: 700;
-  border-radius: 0.85em;
-  border: 3px solid transparent;
-  text-decoration: none;
-  outline: none;
-  cursor: pointer;
+   width: auto;
+   margin-bottom: -1em;
+   padding: 1em 3.5em;
+   font-size: 1rem;
+   font-weight: 700;
+   border-radius: 0.85em;
+   border: 3px solid transparent;
+   text-decoration: none;
+   outline: none;
+   cursor: pointer;
 }
 
 .buttonPrimary {
-  margin-top: 2.5em;
-  background-color: rgb(254, 76, 95);
-  border-color: rgb(254, 76, 95);
+   margin-top: 2.5em;
+   background-color: rgb(254, 76, 95);
+   border-color: rgb(254, 76, 95);
 }
 
 .buttonSecondary {
-  margin-top: 2.5em;
-  background-color: transparent;
-  border-color: white;
+   margin-top: 2.5em;
+   background-color: transparent;
+   border-color: white;
 }
 
 .buttonPrimary:hover {
-  background-color: rgb(152, 67, 89);
-  border-color: rgb(152, 67, 89);
+   background-color: rgb(152, 67, 89);
+   border-color: rgb(152, 67, 89);
 }
 
 .buttonPrimary:focus {
-  outline: 3px solid white;
+   outline: 3px solid white;
 }
 
 .buttonSecondary:hover {
-  color: rgb(50, 58, 82)  ;
-  background-color: white;
+   color: rgb(50, 58, 82);
+   background-color: white;
 }
 
 .buttonSecondary:focus {
-  outline: 3px solid rgb(254, 76, 95);
+   outline: 3px solid rgb(254, 76, 95);
 }
 
-@media(max-width: 450px) {
-  .button {
+@media (max-width: 450px) {
+   .button {
       font-size: 0.85rem;
-  }  
+   }
 }
 
-@media(max-width: 350px) {
-  .button {
+@media (max-width: 350px) {
+   .button {
       font-size: 0.75rem;
-  }  
+   }
 }
 
-@media(max-width: 310px) {
-  .button {
+@media (max-width: 310px) {
+   .button {
       padding: 1em;
       font-size: 0.65rem;
-  }  
+   }
 }
