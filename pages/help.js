@@ -19,7 +19,8 @@ export default function Help() {
                <a className="button buttonSecondary">VIEW PLANNED FEATURES</a>
             </Link>
             <div>
-               <h2></h2>
+               <h2>Labels</h2>
+               <Image src="/images/help/settings-labels.png" layout="fill" objectFit="contain" alt="Bevl Logo" draggable="false" />
             </div>
          </div>
       </Layout>
