@@ -42,6 +42,9 @@ export default function Help() {
 							<em>Bevl</em> allows you to make clear, consice, goals by keeping track of the tasks you need to get done through intuative interaction that allows you to quickly and efficiently project-manage your life.
 						</p>
 						<p className={helpStyles.helpSectionDescription}>
+							Explore the list of features below in order to learn how <em>Bevl</em> works.
+						</p>
+						<p className={helpStyles.helpSectionDescription}>
 							<em>
 								Please note that Bevl is in very early stages of development. Not only are there many more features coming soon (see the{" "}
 								<a draggable="false" href="https://feedback.bevl.app/roadmap" target="_blank" rel="noopener noreferrer">
@@ -53,9 +56,6 @@ export default function Help() {
 								</a>
 								.
 							</em>
-						</p>
-						<p className={helpStyles.helpSectionDescription}>
-							Please explore the list of features below in order to learn how <em>Bevl</em> works.
 						</p>
 
 						{/* Labels */}
