@@ -17,15 +17,16 @@ export default function Help() {
 			<div className={helpStyles.containerMain}>
 				<Image priority src="/images/logo-complete.svg" width={400} height={165} alt="Bevl Logo" draggable="false" />
 				<Link href="/signup">
-					<a className="button buttonPrimary" draggable="false">
-						SIGN UP FOR CLOSED BETA
+					<a draggable="false" className="button buttonPrimary">
+						Sign Up For Alpha
 					</a>
 				</Link>
-				<Link href="/roadmap">
-					<a className="button buttonSecondary" draggable="false">
-						VIEW PLANNED FEATURES
-					</a>
-				</Link>
+				<a href="https://feedback.bevl.app/roadmap" target="_blank" rel="noopener noreferrer" draggable="false" className="button buttonSecondary">
+					View Roadmap
+				</a>
+				<a href="https://feedback.bevl.app/" target="_blank" rel="noopener noreferrer" draggable="false" className="button buttonSecondary">
+					Provide Feedback
+				</a>
 				<div className={helpStyles.helpContainer}>
 					<section className={helpStyles.helpSection}>
 						{/* About */}
@@ -43,11 +44,11 @@ export default function Help() {
 						<p className={helpStyles.helpSectionDescription}>
 							<em>
 								Please note that Bevl is in very early stages of development. Not only are there many more features coming soon (see the{" "}
-								<a href="https://feedback.bevl.app/roadmap" target="_blank" rel="noopener noreferrer">
+								<a draggable="false" href="https://feedback.bevl.app/roadmap" target="_blank" rel="noopener noreferrer">
 									roadmap
 								</a>
-								.), but may of the exisintg features will be improved and built upon. Whilst testing, if you encounter any issues or have any unique ideas, please leave feedback{" "}
-								<a href="https://feedback.bevl.app" target="_blank" rel="noopener noreferrer">
+								), but many of the existing features will be improved and built upon. Whilst testing, if you encounter any issues or have any unique ideas, please leave feedback{" "}
+								<a draggable="false" href="https://feedback.bevl.app" target="_blank" rel="noopener noreferrer">
 									here
 								</a>
 								.
@@ -63,8 +64,15 @@ export default function Help() {
 						</h2>
 						<p className={helpStyles.helpSectionDescription}>Labels allow you to organise your tasks by grouping them together.</p>
 						<p className={helpStyles.helpSectionDescription}>
-							NOTE: When you create an account, a default label named &apos;General&apos; is created. See <Link href="#creating-labels">Creating Labels</Link> and <Link href="#default-labels">Default Labels</Link> in order to
-							replace this.
+							NOTE: When you create an account, a default label named &apos;General&apos; is created. See{" "}
+							<Link href="#creating-labels">
+								<a draggable="false">Creating Labels</a>
+							</Link>{" "}
+							and{" "}
+							<Link href="#default-labels">
+								<a draggable="false">Default Labels</a>
+							</Link>{" "}
+							in order to replace this.
 						</p>
 
 						<h3 id="creating-labels" className={helpStyles.helpSectionSubHeading}>
@@ -117,7 +125,7 @@ export default function Help() {
 						</h2>
 						<p className={helpStyles.helpSectionDescription}>
 							NOTE: There are 2 other types of tasks in development (Habits and Projects). See the{" "}
-							<a href="https://feedback.bevl.app/roadmap" target="_blank" rel="noopener noreferrer">
+							<a draggable="false" href="https://feedback.bevl.app/roadmap" target="_blank" rel="noopener noreferrer">
 								roadmap
 							</a>{" "}
 							for more details.
@@ -194,8 +202,11 @@ export default function Help() {
 							Deadlines
 						</h3>
 						<p className={helpStyles.helpSectionDescription}>
-							Deadlines allow you to assign a final deadline to a task, but can be dragged into the calendar in order to plan when the task will be worked on. See <Link href="#deadline-plans">Deadline Plans</Link> for more
-							details.
+							Deadlines allow you to assign a final deadline to a task, but can be dragged into the calendar in order to plan when the task will be worked on. See{" "}
+							<Link href="#deadline-plans">
+								<a draggable="false">Deadline Plans</a>
+							</Link>{" "}
+							for more details.
 						</p>
 						<p className={helpStyles.helpSectionDescription}>NOTE: Deadline is the pre-selected task type, as it is the most common.</p>
 
