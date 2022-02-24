@@ -15,10 +15,10 @@ export default function Home() {
 				<Link href="/signup">
 					<a className="button buttonPrimary">Sign Up For Alpha</a>
 				</Link>
-				<a href="https://feedback.bevl.app/roadmap" target="_blank" className="button buttonSecondary">
+				<a href="https://feedback.bevl.app/roadmap" target="_blank" rel="noopener noreferrer" className="button buttonSecondary">
 					View Roadmap
 				</a>
-				<a href="https://feedback.bevl.app/" target="_blank" className="button buttonSecondary">
+				<a href="https://feedback.bevl.app/" target="_blank" rel="noopener noreferrer" className="button buttonSecondary">
 					Provide Feedback
 				</a>
 			</div>

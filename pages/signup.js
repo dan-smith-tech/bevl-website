@@ -14,7 +14,7 @@ export default function Home() {
 					<h3>Note:</h3>
 					<p>
 						<em>Bevl</em> is in very early stages of development. As detailed on the{" "}
-						<a href="https://feedback.bevl.app/roadmap" target="_blank">
+						<a href="https://feedback.bevl.app/roadmap" target="_blank" rel="noopener noreferrer">
 							<strong>roadmap</strong>
 						</a>
 						, there are still many features to be added, along with many improvements and optimisations to be made. This means that <em>Bevl</em> is not currently in a state ready for permanent use.
