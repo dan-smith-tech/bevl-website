@@ -35,6 +35,16 @@ export default function Signup() {
 					</p>
 				</div>
 				<a href="https://open.bevl.app/signup" draggable="false" className={["button", "buttonPrimary", signupStyles.buttonPrimary].join(" ")}>
+						<a href="https://feedback.bevl.app/roadmap" target="_blank" rel="noopener noreferrer">
+							<strong>roadmap</strong>
+						</a>
+						, there are still many features to be added, along with many improvements and optimisations to be made. This means that <em>Bevl</em> is not currently in a state ready for permanent use.
+					</p>
+					<p>
+						Thank you for taking the time to test <em>Bevl</em>.
+					</p>
+				</div>
+				<a href="https://open.bevl.app/signup" className={["button", "buttonPrimary", signupStyles.buttonPrimary].join(" ")}>
 					I UNDERSTAND, SIGN UP
 				</a>
 			</div>

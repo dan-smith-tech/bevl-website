@@ -58,15 +58,17 @@ nav ul li a {
 
 /* Buttons */
 .button {
-	width: auto;
 	margin-bottom: -1em;
+	width: 13.5em; /* auto */
 	padding: 1em 3.5em;
 	font-size: 1rem;
 	font-weight: 700;
 	border-radius: 0.85em;
 	border: 3px solid transparent;
 	text-decoration: none;
+	text-align: center;
 	outline: none;
+	text-transform: uppercase;
 	cursor: pointer;
 }
 
