@@ -1,6 +1,6 @@
 .containerMain {
 	width: 100%;
-	padding: 3.5em 1.5em;
+	padding: 3.5em 1.5em !important;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -9,7 +9,7 @@
 }
 
 .helpContainer {
-	max-width: 56em;
+	max-width: 65em;
 	width: 100%;
 	margin-top: 3.5em;
 }
@@ -19,15 +19,23 @@
 }
 
 .helpSectionHeading {
-	margin-bottom: 1em;
+	margin: 3.5em 0 1em 0;
+	font-size: 2rem;
 }
 
 .helpSectionSubHeading {
-	font-size: 1.05rem;
 	margin-top: 3.5em;
+	font-size: 1.35rem;
+}
+
+.helpSectionSubHeadingSmall {
+	margin: 3.5em 0 -0.5em 0;
+	font-size: 1.1rem;
+	line-height: 2.35em;
 }
 
 .helpSectionDescription {
-	margin: 0.85em 0;
-	line-height: 1.85em;
+	margin: 1em 0;
+	font-size: 1.1rem;
+	line-height: 2.35em;
 }

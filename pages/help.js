@@ -4,6 +4,10 @@ import Image from "next/image";
 import Layout, { siteName } from "../components/layout";
 import helpStyles from "../styles/help.module.css";
 
+//Font Awesome (icons)
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleCheck, faPalette, faPen, faStar, faTrash } from "@fortawesome/free-solid-svg-icons";
+
 export default function Help() {
 	return (
 		<Layout>
@@ -24,27 +28,193 @@ export default function Help() {
 				</Link>
 				<div className={helpStyles.helpContainer}>
 					<section className={helpStyles.helpSection}>
-						<h2 className={helpStyles.helpSectionHeading}>Labels</h2>
-						<Image src="/images/help/settings-labels.png" width={1000} height={585} alt="Bevl Logo" draggable="false" />
-						<p className={helpStyles.helpSectionDescription}>Labels allow you to organise your tasks by grouping them together.</p>
-						<p className={helpStyles.helpSectionDescription}>NOTE: You must always have at least one label.</p>
-						<h3 className={helpStyles.helpSectionSubHeading}>Creating A New Label</h3>
+						{/* About */}
+						<h2 id="labels" className={helpStyles.helpSectionHeading}>
+							What is Bevl?
+						</h2>
 						<p className={helpStyles.helpSectionDescription}>
-							When you create an account, a default label called "General" is created. You can create new labels in order to have more organisational capability, and to replace the default "General" label, should you wish to.
+							<em>Bevl</em> is a simple, personal, productivity tool that allows you to spend less time making plans, and more time acting upon them. It is based upon my philosophy of finding a balance between specificity and
+							generality when creating plans: if you are too maticulous and include too much detail when planning, then you will never be able to realistically stick to these goals, and will therefore not achieve them (this is
+							bad for both productivity and mental health).
 						</p>
 						<p className={helpStyles.helpSectionDescription}>
-							To create a label, go to{" "}
+							<em>Bevl</em> allows you to make clear, consice, goals by keeping track of the tasks you need to get done through intuative interaction that allows you to quickly and efficiently project-manage your life.
+						</p>
+						<p className={helpStyles.helpSectionDescription}>
 							<em>
-								Settings (<i class="fas fa-ellipsis-h"></i>) : Labels
-							</em>{" "}
-							and enter the name of your label into the input field. Then press either the "Add Label" UI button or "Enter" on your keyboard. You will see the new label appear in your list of labels.
+								Please note that Bevl is in very early stages of development. Not only are there many more features coming soon (see the{" "}
+								<a href="https://feedback.bevl.app/roadmap" target="_blank" rel="noopener noreferrer">
+									roadmap
+								</a>
+								.), but may of the exisintg features will be improved and built upon. Whilst testing, if you encounter any issues or have any unique ideas, please leave feedback{" "}
+								<a href="https://feedback.bevl.app" target="_blank" rel="noopener noreferrer">
+									here
+								</a>
+								.
+							</em>
 						</p>
-						<h3 className={helpStyles.helpSectionSubHeading}>Changing the Color of a Label</h3>
-						<p className={helpStyles.helpSectionDescription}>Coloring labels allows you to visually organise the tasks you create by having them appear as the same color.</p>
 						<p className={helpStyles.helpSectionDescription}>
-							When you create a label a random color is assigned, but you can easily change this by clicking the <i class="fas fa-palette"></i> icon. A context menu with 12 colors will then appear, selecting one of these will change the color
-							of this label.
+							Please explore the list of features below in order to learn how <em>Bevl</em> works.
 						</p>
+
+						{/* Labels */}
+						<h2 id="labels" className={helpStyles.helpSectionHeading}>
+							Labels
+						</h2>
+						<p className={helpStyles.helpSectionDescription}>Labels allow you to organise your tasks by grouping them together.</p>
+						<p className={helpStyles.helpSectionDescription}>
+							NOTE: When you create an account, a default label named &apos;General&apos; is created. See <Link href="#creating-labels">Creating Labels</Link> and <Link href="#default-labels">Default Labels</Link> in order to
+							replace this.
+						</p>
+
+						<h3 id="creating-labels" className={helpStyles.helpSectionSubHeading}>
+							Creating Labels
+						</h3>
+						<p className={helpStyles.helpSectionDescription}>You can create new labels in order to group tasks together. You can also replace the default label, should you wish to.</p>
+						<p className={helpStyles.helpSectionDescription}>
+							To add a new label, go to <em>Settings : Labels</em> and enter the name of the label in the input field, and press either &apos;Enter&apos; on your keyboard, or the &apos;Add Label&apos; UI button. You will see
+							this new label appear in the list of labels.
+						</p>
+
+						<h3 id="coloring-labels" className={helpStyles.helpSectionSubHeading}>
+							Coloring Labels
+						</h3>
+						<p className={helpStyles.helpSectionDescription}>Coloring labels allows assigned tasks to appear the same color, offering visual organisational capabilities.</p>
+						<p className={helpStyles.helpSectionDescription}>
+							To change the color of a label, go to <em>Settings : Labels</em> and press the <FontAwesomeIcon icon={faPalette} /> icon on the label you want to change the color of. A context menu featuring 12 colors will then
+							appear. Selecting one of these colors will change the color of this label.
+						</p>
+
+						<h3 id="naming-labels" className={helpStyles.helpSectionSubHeading}>
+							Changing the Names of a Labels
+						</h3>
+						<p className={helpStyles.helpSectionDescription}>
+							<em>Coming soon...</em>
+						</p>
+
+						<h3 id="default-labels" className={helpStyles.helpSectionSubHeading}>
+							Default Labels
+						</h3>
+						<p className={helpStyles.helpSectionDescription}>Your default label should be the label you most commonly use, as it is the label that is pre-selected whenever you create a new task.</p>
+						<p className={helpStyles.helpSectionDescription}>
+							To change your default label, go to <em>Settings : Labels</em> and press the <FontAwesomeIcon icon={faStar} /> icon on the label you want to make the new default. This will replace the previous default.
+						</p>
+						<p className={helpStyles.helpSectionDescription}>NOTE: You must always have a default label, and only one label can be the default. If you delete the default label, then it will automatically change to another.</p>
+
+						<h3 id="deleting-labels" className={helpStyles.helpSectionSubHeading}>
+							Deleting Labels
+						</h3>
+						<p className={helpStyles.helpSectionDescription}>
+							To delete a label, go to <em>Settings : Labels</em> and press the <FontAwesomeIcon icon={faTrash} /> icon on the label you want to delete.
+						</p>
+						<p className={helpStyles.helpSectionDescription}>NOTE: You must always have at least one label.</p>
+						<p className={helpStyles.helpSectionDescription}>NOTE: If this was your default label, then another label will be selected as the default.</p>
+						<p className={helpStyles.helpSectionDescription}>NOTE: Deleting a label will delete all of its associated tasks.</p>
+
+						{/* Tasks */}
+						<h2 id="tasks" className={helpStyles.helpSectionHeading}>
+							Tasks
+						</h2>
+						<p className={helpStyles.helpSectionDescription}>
+							NOTE: There are 2 other types of tasks in development (Habits and Projects). See the{" "}
+							<a href="https://feedback.bevl.app/roadmap" target="_blank" rel="noopener noreferrer">
+								roadmap
+							</a>{" "}
+							for more details.
+						</p>
+
+						<h3 id="task-components" className={helpStyles.helpSectionSubHeading}>
+							Components of a Task
+						</h3>
+						<p className={helpStyles.helpSectionDescription}>There are 5 components of a task. They are the following:</p>
+
+						<h4 id="task-components-name" className={helpStyles.helpSectionSubHeadingSmall}>
+							Name
+						</h4>
+						<p className={helpStyles.helpSectionDescription}>This is the name of the task, which will show up when it is plotted on the calendar and when it appears in the Task list.</p>
+						<p className={helpStyles.helpSectionDescription}>NOTE: This field is required.</p>
+						<p className={helpStyles.helpSectionDescription}>NOTE: This field has a character limit of 35.</p>
+
+						<h4 id="task-components-notes" className={helpStyles.helpSectionSubHeadingSmall}>
+							Notes
+						</h4>
+						<p className={helpStyles.helpSectionDescription}>This is a place for you to write more extensive information about the task you are adding.</p>
+						<p className={helpStyles.helpSectionDescription}>NOTE: This field is not required.</p>
+						<p className={helpStyles.helpSectionDescription}>NOTE: This field has a character limit of 250.</p>
+
+						<h4 id="task-components-type" className={helpStyles.helpSectionSubHeadingSmall}>
+							Type
+						</h4>
+						<p className={helpStyles.helpSectionDescription}>There are (currently) 2 types of tasks: Deadlines and Events. See below for an explanation of each.</p>
+						<p className={helpStyles.helpSectionDescription}>NOTE: This field is required.</p>
+
+						<h4 id="task-components-label" className={helpStyles.helpSectionSubHeadingSmall}>
+							Label
+						</h4>
+						<p className={helpStyles.helpSectionDescription}>You can assign one of your created labels.</p>
+						<p className={helpStyles.helpSectionDescription}>NOTE: This field is required.</p>
+
+						<h4 id="task-components-date" className={helpStyles.helpSectionSubHeadingSmall}>
+							Date
+						</h4>
+						<p className={helpStyles.helpSectionDescription}>This is the date the task is due (or occurs on).</p>
+						<p className={helpStyles.helpSectionDescription}>NOTE: This field is required.</p>
+
+						<h3 id="creating-tasks" className={helpStyles.helpSectionSubHeading}>
+							Creating Tasks
+						</h3>
+						<p className={helpStyles.helpSectionDescription}>
+							Go to <em>Dashboard</em> and press &apos;Add Task&apos;. Enter the information into the relevant fields and press &apos;Add Task&apos;.
+						</p>
+						<p className={helpStyles.helpSectionDescription}>NOTE: Type, Label, and Date all have default values, in order to reduce the time it takes to add a task.</p>
+
+						<h3 id="editing-tasks" className={helpStyles.helpSectionSubHeading}>
+							Editing Tasks
+						</h3>
+						<p className={helpStyles.helpSectionDescription}>
+							Go to <em>Dashboard</em> and click on the task you want to edit in the Task list. Change the information in the relevant fields and press &apos;Update Task&apos;.
+						</p>
+
+						<h3 id="deleting-tasks" className={helpStyles.helpSectionSubHeading}>
+							Deleting Tasks{" "}
+						</h3>
+						<p className={helpStyles.helpSectionDescription}>
+							Go to <em>Dashboard</em> and click on the task you want to delete in the Task list. Press &apos;Delete Task&apos;.
+						</p>
+
+						<h3 id="completing-tasks" className={helpStyles.helpSectionSubHeading}>
+							Completing Tasks
+						</h3>
+						<p className={helpStyles.helpSectionDescription}>
+							Completed tasks are marked as complete in the task list and disappear once their deadline has passed. Hovering over a task in the Task list will reveal a button with the <FontAwesomeIcon icon={faCircleCheck} />{" "}
+							icon that, when pressed, sets the task as complete. If this button is pressed when a task is already complete, the task will no longer be marked as complete.
+						</p>
+
+						<h3 id="deadlines" className={helpStyles.helpSectionSubHeading}>
+							Deadlines
+						</h3>
+						<p className={helpStyles.helpSectionDescription}>
+							Deadlines allow you to assign a final deadline to a task, but can be dragged into the calendar in order to plan when the task will be worked on. See <Link href="#deadline-plans">Deadline Plans</Link> for more
+							details.
+						</p>
+						<p className={helpStyles.helpSectionDescription}>NOTE: Deadline is the pre-selected task type, as it is the most common.</p>
+
+						<h4 id="deadline-plans" className={helpStyles.helpSectionSubHeadingSmall}>
+							Deadline Plans
+						</h4>
+						<p className={helpStyles.helpSectionDescription}>Deadline Plans allow you to organise when you will work on and prepare for the associated Deadline, without having to edit or change the Deadline itself.</p>
+						<p className={helpStyles.helpSectionDescription}>
+							Dragging a Deadline from the Task list onto a day in the calendar will create a plan for this Deadline, and you can drag existing Deadline Plans to change their date.
+						</p>
+						<p className={helpStyles.helpSectionDescription}>
+							Like Deadlines, Deadline Plans can also be completed and deleted. Hover over a Deadline Plan, and press the <FontAwesomeIcon icon={faTrash} /> icon to delete it, and the <FontAwesomeIcon icon={faCircleCheck} />{" "}
+							icon to complete it.
+						</p>
+
+						<h3 id="events" className={helpStyles.helpSectionSubHeading}>
+							Events
+						</h3>
+						<p className={helpStyles.helpSectionDescription}>Events are tasks that only occur once. They do not require planning/preparation.</p>
 					</section>
 				</div>
 			</div>
