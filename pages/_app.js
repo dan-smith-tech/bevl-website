@@ -1,7 +1,10 @@
+import { config } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+config.autoAddCss = false;
 import "../styles/global.css";
 
-function MyApp({Component, pageProps}) {
-   return <Component {...pageProps} />;
+function MyApp({ Component, pageProps }) {
+	return <Component {...pageProps} />;
 }
 
 export default MyApp;

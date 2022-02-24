@@ -13,12 +13,12 @@ export default function Home() {
 			<div className={indexStyles.containerMain}>
 				<Image priority src="/images/logo-complete.svg" width={400} height={165} alt="Bevl Logo" draggable="false" />
 				<Link href="/signup">
-					<a className="button buttonPrimary">Sign Up For Alpha</a>
+					<a className="button buttonPrimary" draggable="false">Sign Up For Alpha</a>
 				</Link>
-				<a href="https://feedback.bevl.app/roadmap" target="_blank" rel="noopener noreferrer" className="button buttonSecondary">
+				<a href="https://feedback.bevl.app/roadmap" target="_blank" rel="noopener noreferrer" draggable="false" className="button buttonSecondary">
 					View Roadmap
 				</a>
-				<a href="https://feedback.bevl.app/" target="_blank" rel="noopener noreferrer" className="button buttonSecondary">
+				<a href="https://feedback.bevl.app/" target="_blank" rel="noopener noreferrer" draggable="false" className="button buttonSecondary">
 					Provide Feedback
 				</a>
 			</div>
