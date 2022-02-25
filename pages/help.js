@@ -35,11 +35,15 @@ export default function Help() {
 						</h2>
 						<p className={helpStyles.helpSectionDescription}>
 							<em>Bevl</em> is a simple, personal, productivity tool that allows you to spend less time making plans, and more time acting upon them. It is based upon my philosophy of finding a balance between specificity and
-							generality when creating plans: if you are too maticulous and include too much detail when planning, then you will never be able to realistically stick to these goals, and will therefore not achieve them (this is
-							bad for both productivity and mental health).
+							generality when organising your time.
 						</p>
 						<p className={helpStyles.helpSectionDescription}>
-							<em>Bevl</em> allows you to make clear, consice, goals by keeping track of the tasks you need to get done through intuative interaction that allows you to quickly and efficiently project-manage your life.
+							I believe an effective plan is accurate enough to guide you, but not so precise that it dictates every moment of your life. If you include too much detail, then you will never be able to realistically stick to your
+							goals and will spend more time revising your plans than actually carrying them out. This is bad for both productivity and mental health.
+						</p>
+						<p className={helpStyles.helpSectionDescription}>
+							<em>Bevl</em> allows you to set clear, concise, goals by keeping track of the tasks you need to get done through intuitive interaction that allows you to project-manage your life quickly and efficiently.{" "}
+							<em>Bevl</em> defines the start of a week as the current day, so that you can plan out the next 14 days.
 						</p>
 						<p className={helpStyles.helpSectionDescription}>
 							Explore the list of features below in order to learn how <em>Bevl</em> works.
@@ -124,17 +128,21 @@ export default function Help() {
 							Tasks
 						</h2>
 						<p className={helpStyles.helpSectionDescription}>
-							NOTE: There are 2 other types of tasks in development (Habits and Projects). See the{" "}
-							<a draggable="false" href="https://feedback.bevl.app/roadmap" target="_blank" rel="noopener noreferrer">
-								roadmap
-							</a>{" "}
-							for more details.
+							There are two types of tasks that you can create:{" "}
+							<Link href="#deadlines">
+								<a draggable="false">Deadlines</a>
+							</Link>{" "}
+							and{" "}
+							<Link href="#events">
+								<a draggable="false">Events</a>
+							</Link>
+							.
 						</p>
 
 						<h3 id="task-components" className={helpStyles.helpSectionSubHeading}>
 							Components of a Task
 						</h3>
-						<p className={helpStyles.helpSectionDescription}>There are 5 components of a task. They are the following:</p>
+						<p className={helpStyles.helpSectionDescription}>All types of tasks (Deadlines and Events) have the same 5 components. They are the following:</p>
 
 						<h4 id="task-components-name" className={helpStyles.helpSectionSubHeadingSmall}>
 							Name
@@ -215,7 +223,8 @@ export default function Help() {
 						</h4>
 						<p className={helpStyles.helpSectionDescription}>Deadline Plans allow you to organise when you will work on and prepare for the associated Deadline, without having to edit or change the Deadline itself.</p>
 						<p className={helpStyles.helpSectionDescription}>
-							Dragging a Deadline from the Task list onto a day in the calendar will create a plan for this Deadline, and you can drag existing Deadline Plans to change their date.
+							Dragging a Deadline from the Task list onto a day in the calendar will create a plan for this Deadline (it can be dragged from the task list onto as many days as you want to work on it), and you can drag existing
+							Deadline Plans onto other days in the calendar to change their date.
 						</p>
 						<p className={helpStyles.helpSectionDescription}>
 							Like Deadlines, Deadline Plans can also be completed and deleted. Hover over a Deadline Plan, and press the <FontAwesomeIcon icon={faTrash} /> icon to delete it, and the <FontAwesomeIcon icon={faCircleCheck} />{" "}
@@ -225,7 +234,7 @@ export default function Help() {
 						<h3 id="events" className={helpStyles.helpSectionSubHeading}>
 							Events
 						</h3>
-						<p className={helpStyles.helpSectionDescription}>Events are tasks that only occur once. They do not require planning/preparation.</p>
+						<p className={helpStyles.helpSectionDescription}>Events are tasks that only occur once. They do not require planning/preparation. For example, a birthday or medical appointment.</p>
 					</section>
 				</div>
 			</div>
