@@ -17,18 +17,18 @@ export default function Signup() {
 						<a draggable="false" href="https://feedback.bevl.app/roadmap" target="_blank" rel="noopener noreferrer">
 							roadmap
 						</a>
-						), but many of the existing features will be improved and built upon. Whilst testing, if you encounter any issues or have any unique ideas, please leave feedback{" "}
-						<a draggable="false" href="https://feedback.bevl.app" target="_blank" rel="noopener noreferrer">
-							here
-						</a>
-						.
+						), but many of the existing features will be significantly improved and built upon.
 					</p>
 					<p>
 						Go to the{" "}
 						<Link href="/help">
 							<a draggable="false">help</a>
 						</Link>{" "}
-						section to find out exactly what <em>Bevl</em> is, and how to use all of the features currently implemented.
+						section to find out exactly what <em>Bevl</em> is, and how to use all of the features currently implemented. Whilst testing, if you encounter any issues or have any unique ideas, please leave{" "}
+						<a draggable="false" href="https://feedback.bevl.app" target="_blank" rel="noopener noreferrer">
+							feedback
+						</a>
+						.
 					</p>
 					<p>
 						Thank you for taking the time to test <em>Bevl</em>.

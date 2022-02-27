@@ -54,7 +54,7 @@ export default function Help() {
 								<a draggable="false" href="https://feedback.bevl.app/roadmap" target="_blank" rel="noopener noreferrer">
 									roadmap
 								</a>
-								), but many of the existing features will be improved and built upon. Whilst testing, if you encounter any issues or have any unique ideas, please leave feedback{" "}
+								), but many of the existing features will be significantly improved and built upon. Whilst testing, if you encounter any issues or have any unique ideas, please leave feedback{" "}
 								<a draggable="false" href="https://feedback.bevl.app" target="_blank" rel="noopener noreferrer">
 									here
 								</a>
