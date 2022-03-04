@@ -182,6 +182,9 @@ export default function Help() {
 						<p className={helpStyles.helpSectionDescription}>
 							Go to <em>Dashboard</em> and press &apos;Add Task&apos;. Enter the information into the relevant fields and press &apos;Add Task&apos;.
 						</p>
+						<p className={helpStyles.helpSectionDescription}>
+							If the date of your task occurs within the next two weeks, you can press the date of the day you would like to add the task on, in the calendar, and perform the same actions as above.
+						</p>
 						<p className={helpStyles.helpSectionDescription}>NOTE: Type, Label, and Date all have default values, in order to reduce the time it takes to add a task.</p>
 
 						<h3 id="editing-tasks" className={helpStyles.helpSectionSubHeading}>
@@ -202,8 +205,8 @@ export default function Help() {
 							Completing Tasks
 						</h3>
 						<p className={helpStyles.helpSectionDescription}>
-							Completed tasks are marked as complete in the task list and disappear once their deadline has passed. Hovering over a task in the Task list will reveal a button with the <FontAwesomeIcon icon={faCircleCheck} />{" "}
-							icon that, when pressed, sets the task as complete. If this button is pressed when a task is already complete, the task will no longer be marked as complete.
+							Completed tasks are marked as complete in the task list and disappear once their deadline has passed. Hovering over a task in the Task list or in the calenadr will reveal a button with the{" "}
+							<FontAwesomeIcon icon={faCircleCheck} /> icon that, when pressed, sets the task as complete. If this button is pressed when a task is already complete, the task will no longer be marked as complete.
 						</p>
 
 						<h3 id="deadlines" className={helpStyles.helpSectionSubHeading}>
