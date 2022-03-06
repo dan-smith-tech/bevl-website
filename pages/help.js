@@ -6,7 +6,7 @@ import helpStyles from "../styles/help.module.css";
 
 //Font Awesome (icons)
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleCheck, faPalette, faPen, faStar, faTrash } from "@fortawesome/free-solid-svg-icons";
+import { faCircleCheck, faCircleXmark, faPalette, faPen, faStar, faTrash } from "@fortawesome/free-solid-svg-icons";
 
 export default function Help() {
 	return (
@@ -232,6 +232,9 @@ export default function Help() {
 						<p className={helpStyles.helpSectionDescription}>
 							Like Deadlines, Deadline Plans can also be completed and deleted. Hover over a Deadline Plan, and press the <FontAwesomeIcon icon={faTrash} /> icon to delete it, and the <FontAwesomeIcon icon={faCircleCheck} />{" "}
 							icon to complete it.
+						</p>
+						<p className={helpStyles.helpSectionDescription}>
+							Notes can be added to a Deadline Plan by clicking on the plan itself, and entering relevant information into the notes section. Save these notes by pressing the <FontAwesomeIcon icon={faCircleXmark} /> icon.
 						</p>
 
 						<h3 id="events" className={helpStyles.helpSectionSubHeading}>
