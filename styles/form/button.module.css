@@ -1,0 +1,26 @@
+.button {
+	width: 100%;
+	padding: 1.35em;
+	box-sizing: border-box;
+	background-color: var(--color-primary-pink);
+	border: none;
+	border-radius: 3.5em;
+	font-size: 1rem;
+	font-weight: 600;
+	color: var(--color-neutral-white);
+	cursor: pointer;
+	transition: transform 150ms, opacity 150ms;
+}
+
+.button:hover {
+	transform: scale(1.15);
+	opacity: 0.75;
+}
+
+.button:focus {
+	outline: var(--border-size) solid var(--color-neutral-white);
+}
+
+.button-light:focus {
+	outline: var(--border-size) solid var(--color-secondary-blue);
+}

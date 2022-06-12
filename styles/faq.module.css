@@ -1,0 +1,28 @@
+.container-full {
+	background-color: var(--color-neutral-grey);
+	color: var(--color-secondary-blue);
+}
+
+.container-partial {
+	margin: 3.5em 0;
+}
+
+.container-partial h2 {
+	padding-top: 3.5rem;
+	font-size: 1.65rem;
+	text-align: center;
+	border-top: var(--border-size) solid var(--color-neutral-white);
+}
+
+.container-discussion {
+	margin-top: 3.15rem;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 2.35rem;
+}
+
+@media (max-width: 1200px) {
+	.container-discussion {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}

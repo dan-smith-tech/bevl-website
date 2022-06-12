@@ -1,0 +1,20 @@
+.title {
+	/* margin-top: 3.5em; */
+	margin: 5rem 0 6.5em 0;
+}
+
+.title h1 {
+	font-size: 2.85rem;
+	color: var(--color-secondary-blue);
+	text-align: center;
+}
+
+.container-full-content {
+	background-color: var(--color-neutral-grey);
+}
+
+.container-cards {
+	margin: 5em -1.35rem;
+	display: flex;
+	flex-wrap: wrap;
+}

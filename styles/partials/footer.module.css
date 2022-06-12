@@ -1,0 +1,26 @@
+.container-full-content {
+	box-shadow: var(--box-shadow);
+}
+
+.container-partial-content {
+	padding-top: 2.5rem;
+	padding-bottom: 2.5rem;
+	display: flex;
+	flex-direction: row;
+}
+
+.container-image {
+	width: calc(9.7em / 1.85);
+	height: calc(3.65em / 1.85);
+	margin-bottom: 0.85em;
+	position: relative;
+}
+
+.image {
+	object-fit: contain;
+	cursor: pointer;
+}
+
+.copyright {
+	color: var(--color-secondary-blue);
+}

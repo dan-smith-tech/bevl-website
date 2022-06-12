@@ -1,0 +1,126 @@
+.container-full-content {
+	/* min-height: calc(100% - var(--header-height)); */
+	margin: 3.5rem 0;
+	box-sizing: border-box;
+	color: var(--color-secondary-blue);
+	position: relative;
+}
+
+.container-partial-content {
+}
+
+.subheading {
+	margin-bottom: 1.5em;
+	font-weight: 600;
+	letter-spacing: 0.15rem;
+	color: var(--color-secondary-blue-translucent);
+	text-align: center;
+}
+
+.heading {
+	margin-bottom: 0.35em;
+	font-size: 2.85rem;
+	text-align: center;
+	line-height: 3.35rem;
+}
+
+.tagline {
+	margin-bottom: 2.35em;
+	text-align: center;
+}
+
+.container-reel {
+	margin-top: 6.5rem;
+	padding-bottom: 3.5em;
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	position: relative;
+	overflow-x: hidden;
+}
+
+.container-video {
+	width: fit-content;
+	height: 25em;
+	margin-left: -10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all 350ms ease-out;
+}
+
+.demo {
+	width: 25em;
+	z-index: 1;
+	transition: all 350ms ease-out;
+}
+
+.demo-current {
+	width: 35em;
+	opacity: 1;
+	transform: translate(0);
+	z-index: 2;
+}
+
+.demo-back {
+	opacity: 0.65;
+	filter: brightness(0.65);
+	cursor: pointer;
+}
+
+.demo-hidden {
+	opacity: 0;
+}
+
+.demo-back-previous {
+	transform: translateX(25%);
+}
+
+.demo-back-next {
+	transform: translateX(-25%);
+}
+
+.demo-video {
+	width: 100%;
+	border-radius: var(--border-radius);
+	box-shadow: var(--box-shadow);
+}
+
+.demo-heading {
+	margin-top: 1.15em;
+	font-weight: 600;
+	color: var(--color-secondary-blue);
+	text-align: center;
+}
+
+.wave {
+	width: 100%;
+	min-width: 65rem;
+	height: 85%;
+	position: absolute;
+	left: 0 !important;
+	right: 0 !important;
+	bottom: 0;
+	transform: scaleX(2);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.wave {
+		animation-name: animateWave;
+		animation-iteration-count: infinite;
+		animation-timing-function: cubic-bezier(0.46, 0.03, 0.52, 0.96);
+		animation-duration: 12.35s;
+	}
+
+	@keyframes animateWave {
+		0% {
+			transform: translateX(0) scaleX(2);
+		}
+		50% {
+			transform: translateX(-50%) scaleX(2);
+		}
+		100% {
+			transform: translateX(0) scaleX(2);
+		}
+	}
+}
