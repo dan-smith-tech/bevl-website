@@ -4,14 +4,12 @@
 }
 
 .container-partial {
-	margin: 3.5em 0;
+	margin: 6.5em 0;
 }
 
 .container-partial h2 {
-	padding-top: 3.5rem;
 	font-size: 1.65rem;
 	text-align: center;
-	border-top: var(--border-size) solid var(--color-neutral-white);
 }
 
 .container-discussion {

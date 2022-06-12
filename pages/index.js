@@ -52,7 +52,7 @@ function Landing() {
 					<CTA />
 				</div>
 			</div>
-			<div className={"container-full " + landingStyles["container-waves"]}>
+			<div className={"container-full " + landingStyles["container-waves"]} tabIndex={-1}>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					preserveAspectRatio="none"
