@@ -215,8 +215,10 @@ function Landing() {
 				imageFirst={true}
 				dark={false}
 			/>
-			<CTA independent={true} />
+
 			{/* <NewsletterSignup /> */}
+
+			<CTA independent={true} />
 			<FAQ />
 		</>
 	);

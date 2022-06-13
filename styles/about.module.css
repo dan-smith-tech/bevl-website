@@ -1,0 +1,29 @@
+.container-full {
+	background-color: var(--color-neutral-grey);
+}
+
+.container-content {
+	margin: 8.5em 0;
+	scroll-margin-top: calc(8.5em + var(--header-height));
+	color: var(--color-secondary-blue);
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 3.5em;
+}
+
+.content-text {
+}
+
+.content-text h2 {
+	margin-bottom: 1.65rem;
+}
+
+.content-text p {
+}
+
+.content-text p:not(:last-child) {
+	margin-bottom: 1.65rem;
+}
+
+.content-graphic {
+}

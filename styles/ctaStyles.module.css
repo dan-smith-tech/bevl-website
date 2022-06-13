@@ -60,20 +60,24 @@
 
 /* Independant */
 .container-full {
-	background-color: var(--color-neutral-grey);
+	background-color: var(--color-secondary-blue);
+	color: var(--color-neutral-white);
 }
 
 .container-partial {
-	margin: 3.5em 0;
+	margin: 6.5em 0;
 }
 
-.heading {
+.container-full .heading {
 	margin-bottom: 1.15em;
-	color: var(--color-secondary-blue);
+	color: var(--color-neutral-white);
 	text-align: center;
 }
 
-.container-form-input-light input,
-.container-form-input-light input:hover {
+.container-full .container-form-input-light input {
 	background-color: var(--color-neutral-white);
+}
+
+.container-full .container-form-button button:focus {
+	outline-color: var(--color-neutral-white);
 }

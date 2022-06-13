@@ -4,7 +4,7 @@
 }
 
 .container-partial {
-	margin: 6.5em 0;
+	margin: 3.5em 0;
 }
 
 .container-partial h2 {
@@ -13,10 +13,14 @@
 }
 
 .container-discussion {
-	margin-top: 3.15rem;
+	margin-top: 3.5rem;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	gap: 2.35rem;
+}
+
+.container-discussion h3 {
+	margin-bottom: 0.35em;
 }
 
 @media (max-width: 1200px) {

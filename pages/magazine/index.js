@@ -1,47 +1,75 @@
-import Image from "next/image";
+// import Image from "next/image";
 
-import magazineStyles from "../../styles/magazine/magazine.module.css";
+// import magazineStyles from "../../styles/magazine/magazine.module.css";
 
-import MagazineCard from "../../components/magazine/Card";
-import NewsletterSignup from "../../components/NewsletterSignup";
+// import MagazineCard from "../../components/magazine/Card";
+// import NewsletterSignup from "../../components/NewsletterSignup";
 
-import dbConnect from "../../lib/dbConnect";
-import MagazinePost from "../../models/MagazinePost";
+// import dbConnect from "../../lib/dbConnect";
+// import MagazinePost from "../../models/MagazinePost";
 
-export async function getStaticProps() {
-	await dbConnect();
-	const data = await MagazinePost.find({}).select("imageUrl title summary postUrl");
-	const posts = JSON.parse(JSON.stringify(data)).reverse();
+// export async function getStaticProps() {
+// 	await dbConnect();
+// 	const data = await MagazinePost.find({}).select("imageUrl title summary postUrl");
+// 	const posts = JSON.parse(JSON.stringify(data)).reverse();
 
-	const recentPosts = posts.slice(0, 6);
-	const allPosts = posts.slice(6);
+// 	const recentPosts = posts.slice(0, 6);
+// 	const allPosts = posts.slice(6);
 
-	return {
-		props: {
-			recentPosts,
-			allPosts,
-		},
-		revalidate: 10,
-	};
-}
+// 	return {
+// 		props: {
+// 			recentPosts,
+// 			allPosts,
+// 		},
+// 		revalidate: 10,
+// 	};
+// }
 
-function Magazine({ recentPosts, allPosts }) {
+import helpStyles from "../../styles/help.module.css";
+
+function Magazine() {
+	// { recentPosts, allPosts }
 	return (
 		<>
-			<div className={"container-full " + magazineStyles["container-full-content"]}>
+			<div className={"container-full"}>
+				<div className={"container-partial " + helpStyles["container-partial"]}>
+					<p>The Bevl magazine is launching soon.</p>
+				</div>
+			</div>
+			{/* <div className={"container-full " + magazineStyles["container-full-content"]}>
 				<div className={"container-partial"}>
 					<div className={magazineStyles["title"]}>
 						<h1>Magazine</h1>
 					</div>
-					<div className={magazineStyles["container-cards"]}>{recentPosts && recentPosts.map((post, i) => <MagazineCard imageLink={post.imageUrl} title={post.title} summary={post.summary} postLink={post.postUrl} />)}</div>
+					<div className={magazineStyles["container-cards"]}>
+						{recentPosts &&
+							recentPosts.map((post, i) => (
+								<MagazineCard
+									imageLink={post.imageUrl}
+									title={post.title}
+									summary={post.summary}
+									postLink={post.postUrl}
+								/>
+							))}
+					</div>
 				</div>
 			</div>
 			<NewsletterSignup />
 			<div className={"container-full " + magazineStyles["container-full-content"]}>
 				<div className={"container-partial"}>
-					<div className={magazineStyles["container-cards"]}>{allPosts && allPosts.map((post, i) => <MagazineCard imageLink={post.imageUrl} title={post.title} summary={post.summary} postLink={post.postUrl} />)}</div>
+					<div className={magazineStyles["container-cards"]}>
+						{allPosts &&
+							allPosts.map((post, i) => (
+								<MagazineCard
+									imageLink={post.imageUrl}
+									title={post.title}
+									summary={post.summary}
+									postLink={post.postUrl}
+								/>
+							))}
+					</div>
 				</div>
-			</div>
+			</div> */}
 		</>
 	);
 }
