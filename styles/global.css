@@ -132,6 +132,10 @@ a {
 	font-weight: 600;
 }
 
+strong {
+	font-weight: 600;
+}
+
 small {
 	margin-top: 0.65em;
 	font-size: 0.85rem;

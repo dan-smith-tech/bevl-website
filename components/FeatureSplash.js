@@ -34,6 +34,7 @@ function FeatureSplash({ subheading, heading, tagline, demos }) {
 	function selectDemo(i) {
 		setCurrentDemo((currentDemo) => {
 			if (currentDemo != i) {
+				// if check causing responsive issue
 				var previousVideo = reelContainer.current.children[0].children[currentDemo].children[0];
 				previousVideo.pause();
 				previousVideo.currentTime = 0;

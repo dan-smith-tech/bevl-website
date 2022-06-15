@@ -56,7 +56,28 @@ export default function Header() {
 													Tasks
 												</span>
 												<span className={headerStyles["nav-bar-dropdown-link-info-description"]}>
-													Organsie every kind of todo.
+													Organise every kind of todo.
+												</span>
+											</div>
+										</a>
+									</Link>
+								</li>
+								<li>
+									<Link href="/features/lists">
+										<a className={headerStyles["nav-bar-dropdown-link"]}>
+											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+												<path
+													fill="#323a52"
+													fillOpacity="1"
+													d="M10 3H4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zm10 0h-6a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM10 13H4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1zm8 1h-2v2h-2v2h2v2h2v-2h2v-2h-2z"
+												></path>
+											</svg>
+											<div className={headerStyles["nav-bar-dropdown-link-info"]}>
+												<span className={headerStyles["nav-bar-dropdown-link-info-heading"]}>
+													Lists
+												</span>
+												<span className={headerStyles["nav-bar-dropdown-link-info-description"]}>
+													Keep track of wandering ideas.
 												</span>
 											</div>
 										</a>
@@ -77,28 +98,7 @@ export default function Header() {
 													Labels
 												</span>
 												<span className={headerStyles["nav-bar-dropdown-link-info-description"]}>
-													Keep all your tasks arranged.
-												</span>
-											</div>
-										</a>
-									</Link>
-								</li>
-								<li>
-									<Link href="/features/moodboard">
-										<a className={headerStyles["nav-bar-dropdown-link"]}>
-											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-												<path
-													fill="#323a52"
-													fillOpacity="1"
-													d="M10 3H4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zm10 0h-6a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM10 13H4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1zm8 1h-2v2h-2v2h2v2h2v-2h2v-2h-2z"
-												></path>
-											</svg>
-											<div className={headerStyles["nav-bar-dropdown-link-info"]}>
-												<span className={headerStyles["nav-bar-dropdown-link-info-heading"]}>
-													Moodboard
-												</span>
-												<span className={headerStyles["nav-bar-dropdown-link-info-description"]}>
-													Keep track of wandering ideas.
+													Group and filter plans.
 												</span>
 											</div>
 										</a>
@@ -204,7 +204,7 @@ export default function Header() {
 								</a>
 								<ul className={headerStyles["nav-menu-dropdown"]}>
 									<li>
-										<Link href="/features/moodboard">
+										<Link href="/features/lists">
 											<a className={headerStyles["nav-menu-dropdown-link"]}>Tasks</a>
 										</Link>
 									</li>

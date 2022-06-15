@@ -1,4 +1,5 @@
 import { useRef, useEffect, useState } from "react";
+import Head from "next/head";
 
 import CTA from "../components/CTA";
 import FeatureSummary from "../components/FeatureSummary";
@@ -45,10 +46,13 @@ function Landing() {
 
 	return (
 		<>
+			<Head>
+				<title>Bevl • Get Ahead of Life's Endeavors</title>
+			</Head>
 			<div className={"container-full " + landingStyles["container-full-splash"]}>
 				<div className={"container-partial " + landingStyles["container-partial-splash"]} ref={splashContent}>
 					<h1 className={landingStyles["heading"]}>Get Ahead of Life's Endeavors</h1>
-					<p className={landingStyles["tagline"]}>An app with a philosophy.</p>
+					<p className={landingStyles["tagline"]}>Spend less time planning, and more time doing.</p>
 					<CTA />
 				</div>
 			</div>
@@ -101,7 +105,7 @@ function Landing() {
 				}
 			>
 				<div className={getFeatureStyles()} ref={featuresIntersectionDetectorRef}>
-					<h1 className={landingStyles["features-title"]}>Features That Suit You</h1>
+					<h1 className={landingStyles["features-title"]}>Simple, Personal, Effective</h1>
 					<div className={landingStyles["container-partial-features-list"]}>
 						<div className={landingStyles["feature"]} style={{ backgroundColor: "#8E44AD" }}>
 							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
@@ -111,10 +115,7 @@ function Landing() {
 									d="M5 22h14c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2h-2V2h-2v2H9V2H7v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2zm11-6h-3v3h-2v-3H8v-2h3v-3h2v3h3v2zM5 7h14v2H5V7z"
 								></path>
 							</svg>
-							<p>
-								<strong>Deadlines</strong> allow you to plan when you will work on tasks, before they are
-								due, by dragging them onto a calendar.
-							</p>
+							<p>Assign time to work on todos by dragging them into the calendar.</p>
 						</div>
 						<div className={landingStyles["feature"]} style={{ backgroundColor: "#E74C3C" }}>
 							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
@@ -124,9 +125,7 @@ function Landing() {
 									d="M19 4h-2V2h-2v2H9V2H7v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm-1 15h-6v-6h6v6zm1-10H5V7h14v2z"
 								></path>
 							</svg>
-							<p>
-								<strong>Events</strong> let you input specific, one-off tasks or occasions.
-							</p>
+							<p>Set recurring events to create routines or develop habits.</p>
 						</div>
 						<div className={landingStyles["feature"]} style={{ backgroundColor: "#27AE60" }}>
 							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
@@ -136,10 +135,7 @@ function Landing() {
 									d="M21 20V6c0-1.103-.897-2-2-2h-2V2h-2v2H9V2H7v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2zM9 18H7v-2h2v2zm0-4H7v-2h2v2zm4 4h-2v-2h2v2zm0-4h-2v-2h2v2zm4 4h-2v-2h2v2zm0-4h-2v-2h2v2zm2-5H5V7h14v2z"
 								></path>
 							</svg>
-							<p>
-								<strong>Habits</strong> enable you to organsie recurring <strong>Events</strong> or
-								practices you want to develop.
-							</p>
+							<p>Break down tasks into smaller chunks, and organise each individually.</p>
 						</div>
 						<div className={landingStyles["feature"]} style={{ backgroundColor: "#3498DB" }}>
 							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
@@ -149,10 +145,7 @@ function Landing() {
 									d="M5 22h14c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2h-2V2h-2v2H9V2H7v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2zm10.707-4.707-1.414 1.414L12 16.414l-2.293 2.293-1.414-1.414L10.586 15l-2.293-2.293 1.414-1.414L12 13.586l2.293-2.293 1.414 1.414L13.414 15l2.293 2.293zM5 7h14v2H5V7z"
 								></path>
 							</svg>
-							<p>
-								<strong>Projects</strong> grant you the ability to break large tasks down into multiple{" "}
-								<strong>Deadlines</strong> and <strong>Events</strong>.
-							</p>
+							<p>Filter and drag tasks using the interactable calendar.</p>
 						</div>
 						<div className={landingStyles["feature"]} style={{ backgroundColor: "#34495E" }}>
 							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
@@ -162,9 +155,7 @@ function Landing() {
 									d="M10 3H4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zm10 0h-6a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM10 13H4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1zm8 1h-2v2h-2v2h2v2h2v-2h2v-2h-2z"
 								></path>
 							</svg>
-							<p>
-								Keep track of all your ideas and random notes in lists on the <strong>Moodboard</strong>.
-							</p>
+							<p>Keep track of random ideas and notes on custom lists.</p>
 						</div>
 						<div className={landingStyles["feature"]} style={{ backgroundColor: "#F39C12" }}>
 							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
@@ -174,50 +165,51 @@ function Landing() {
 									d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8 8a2 2 0 0 0 2.828 0l7.172-7.172a2 2 0 0 0 0-2.828l-8-8zM7 9a2 2 0 1 1 .001-4.001A2 2 0 0 1 7 9z"
 								></path>
 							</svg>
-							<p>
-								Organise all tasks and notes with customisable <strong>Labels</strong>. All tasks appear on
-								the calendar.
-							</p>
+							<p>All tasks and lists can be segmented with custom tags.</p>
 						</div>
 					</div>
 				</div>
 			</div>
 			<FeatureSummary
 				heading={"Tasks"}
-				summary={"Create tasks ranging from Deadlines, Events, Habits, and Projects!"}
 				link={"/features/tasks"}
 				image={"/images/screenshots/light/dashboard.png"}
 				imageFirst={false}
 				dark={false}
-			/>
+			>
+				<p>Organise every kind of todo with 4 unique task types.</p>
+			</FeatureSummary>
 			<FeatureSummary
-				heading={"Labels"}
-				summary={"Create tasks ranging from Deadlines, Events, Habits, and Projects!"}
-				link={"/features/labels"}
-				image={"/images/screenshots/light/labels.png"}
+				heading={"Lists"}
+				link={"/features/lists"}
+				image={"/images/screenshots/light/comingSoon.png"}
 				imageFirst={true}
 				dark={false}
-			/>
+			>
+				<p>Keep track of random notes and wandering ideas, without cluttering your todo list.</p>
+			</FeatureSummary>
 			<FeatureSummary
-				heading={"Moodboard"}
-				summary={"Keep track of those wandering ideas, without cluttering your todo list."}
-				link={"/features/moodboard"}
-				image={"/images/screenshots/light/comingSoon.png"}
+				heading={"Labels"}
+				link={"/features/labels"}
+				image={"/images/screenshots/light/labels.png"}
 				imageFirst={false}
 				dark={false}
-			/>
+			>
+				<p>Segment and filter content with customisable tags.</p>
+			</FeatureSummary>
 			{/* <Testimonials /> */}
 			<FeatureSummary
 				heading={"Productivity Resources"}
-				summary={"Create tasks ranging from Deadlines, Events, Habits, and Projects!"}
-				link={"/magazine"}
+				link={"/about#philosophy"}
 				image={"/images/screenshots/light/comingSoon.png"}
 				imageFirst={true}
 				dark={false}
-			/>
-
-			{/* <NewsletterSignup /> */}
-
+			>
+				<p>
+					Learn about the planning philosophy that Bevl was designed to facilitate, or explore the latest
+					issues of the magazine.
+				</p>
+			</FeatureSummary>
 			<CTA independent={true} />
 			<FAQ />
 		</>

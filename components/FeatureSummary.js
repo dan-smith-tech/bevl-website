@@ -4,7 +4,7 @@ import Image from "next/image";
 
 import featureSummaryStyles from "../styles/featureSummary.module.css";
 
-export default function FeatureSummary({ heading, summary, link, image, imageFirst, dark }) {
+export default function FeatureSummary({ heading, children, link, image, imageFirst, dark }) {
 	const [intersection, setIntersection] = useState();
 	const intersectionDetectorRef = useRef();
 
@@ -27,7 +27,7 @@ export default function FeatureSummary({ heading, summary, link, image, imageFir
 	const textElement = link ? (
 		<div className={getTextStyles()}>
 			<h2>{heading}</h2>
-			<p>{summary}</p>
+			{children}
 			<Link href={link}>
 				<button>
 					Learn More{" "}
@@ -40,7 +40,7 @@ export default function FeatureSummary({ heading, summary, link, image, imageFir
 	) : (
 		<div className={getTextStyles()}>
 			<h2>{heading}</h2>
-			<p>{summary}</p>
+			<p>{children}</p>
 		</div>
 	);
 
