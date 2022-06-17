@@ -4,7 +4,6 @@ import Head from "next/head";
 import CTA from "../components/CTA";
 import FeatureSummary from "../components/FeatureSummary";
 import Testimonials from "../components/Testimonials";
-import NewsletterSignup from "../components/NewsletterSignup";
 import FAQ from "../components/FAQ";
 
 import landingStyles from "../styles/landing.module.css";
@@ -33,15 +32,6 @@ function Landing() {
 			}
 		});
 		observer.observe(featuresIntersectionDetectorRef.current);
-
-		const onScroll = () => {
-			var scrolled = window.scrollY;
-			var rate = scrolled * 0.22;
-			if (splashContent.current) splashContent.current.style.transform = "translate3d(0px, " + rate + "px, 0px";
-		};
-		window.removeEventListener("scroll", onScroll);
-		window.addEventListener("scroll", onScroll, { passive: true });
-		return () => window.removeEventListener("scroll", onScroll);
 	}, []);
 
 	return (

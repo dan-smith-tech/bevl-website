@@ -1,0 +1,48 @@
+/* Confirmations */
+
+.container-full {
+	background-color: var(--color-neutral-grey);
+}
+
+.container-partial {
+	height: calc(100vh - var(--header-height));
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: var(--color-secondary-blue);
+}
+
+.container-partial h1 {
+	margin-bottom: 0.35em;
+}
+
+.container-form-button {
+	width: 18em;
+	margin-top: 1.85em;
+}
+
+@media (max-height: 285px), (max-width: 500px) {
+	.container-partial {
+		height: fit-content;
+		margin: 3.5em 0;
+		display: block;
+	}
+}
+
+@media (max-width: 500px) {
+	.container-form-button {
+		width: 100%;
+	}
+}
+
+/* Content */
+
+.container-full-content {
+	background-color: var(--color-neutral-grey) !important;
+	color: var(--color-secondary-blue) !important;
+}
+
+.container-full-content input:hover {
+	background-color: var(--color-neutral-white) !important;
+}

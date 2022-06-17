@@ -1,6 +1,7 @@
 .container-full {
 	height: 25em;
 	background-color: var(--color-secondary-blue);
+	color: var(--color-neutral-white);
 	/* border-bottom: 0.5em solid var(--color-primary-pink); */
 }
 
@@ -9,14 +10,16 @@
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	color: var(--color-neutral-white);
 }
 
 .container-info {
 	width: 35rem;
 }
 
-.container-info-title {
+.container-info-heading {
+	font-size: 2.15rem;
+	font-weight: 700;
+	line-height: 3.15rem;
 }
 
 .container-info-summary {

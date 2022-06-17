@@ -5,12 +5,12 @@ import FormButton from "./form/Button";
 
 import Modal from "./Modal";
 
-import newsletterSignupStyles from "../styles/newsletterSignupStyles.module.css";
+import newsletterSignupStyles from "../styles/ProductivityTipsSignupStyles.module.css";
 
 import sendFetchRequest from "../lib/fetch";
-import isEmail from "../lib/helpers";
+import { isEmail } from "../lib/helpers";
 
-export default function NewsletterSignup() {
+export default function ProductivityTipsSignup() {
 	const [showModal, setShowModal] = useState(false);
 
 	function handleSubmit(e) {
@@ -18,7 +18,9 @@ export default function NewsletterSignup() {
 		const email = e.target.email.value;
 		if (email.length > 0 && isEmail(email)) {
 			setShowModal(true);
-			sendFetchRequest("/api/email?productivityTips=true", "POST", { email: email });
+			sendFetchRequest("/api/newsletter/subscribe?optInStage=1&productivityTips=true", "POST", {
+				email,
+			});
 			e.target.email.value = null;
 		}
 	}
@@ -27,9 +29,12 @@ export default function NewsletterSignup() {
 		<div className={"container-full " + newsletterSignupStyles["container-full"]}>
 			<div className={"container-partial " + newsletterSignupStyles["container-partial"]}>
 				<div className={newsletterSignupStyles["container-info"]}>
-					<h1 className={newsletterSignupStyles["container-info-title"]}>Get Exclusive Productivity Tips, Straight To Your Inbox</h1>
+					<h2 className={newsletterSignupStyles["container-info-heading"]}>
+						Get Exclusive Productivity Tips, Straight To Your Inbox
+					</h2>
 					<p className={newsletterSignupStyles["container-info-summary"]}>
-						Bevl's <em>Productive Learning</em> is a no-nonsense, genuine newsletter for productivity enthusiasts.
+						Bevl's <em>Productive Learning</em> is a no-nonsense, genuine newsletter for productivity
+						enthusiasts.
 					</p>
 				</div>
 				<form onSubmit={handleSubmit} className={newsletterSignupStyles["container-form"]}>
@@ -39,7 +44,15 @@ export default function NewsletterSignup() {
 					</div>
 					<div className={newsletterSignupStyles["container-form-button"]}>
 						<FormButton type={"submit"} value="Sign Up" />
-						<Modal show={showModal} onClose={() => setShowModal(false)} heading={"Confirm Subscription"} body={"Go to your email and confirm stuff..."} buttonValue={"I've Confirmed My Email"} />
+						<Modal
+							show={showModal}
+							onClose={() => setShowModal(false)}
+							heading={"Confirm Subscription"}
+							body={
+								"Thank you for signing up to the newsletter! Please confirm your subscription through the email you have been sent."
+							}
+							buttonValue={"I've Confirmed My Email"}
+						/>
 					</div>
 				</form>
 			</div>

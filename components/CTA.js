@@ -17,7 +17,9 @@ export default function CTA({ independent }) {
 		const email = e.target.email.value;
 		if (email.length > 0 && isEmail(email)) {
 			setShowModal(true);
-			sendFetchRequest("/api/email?bevlAnnouncements=true", "POST", { email: email });
+			sendFetchRequest("/api/newsletter/subscribe?optInStage=1&bevlAnnouncements=true", "POST", {
+				email,
+			});
 			e.target.email.value = null;
 		}
 	}
@@ -35,12 +37,16 @@ export default function CTA({ independent }) {
 							show={showModal}
 							onClose={() => setShowModal(false)}
 							heading={"Confirm Subscription"}
-							body={"Thank you for signing up to the newsletter! Please confirm your subscription through the email you have been sent."}
+							body={
+								"Thank you for signing up to the newsletter! Please confirm your subscription through the email you have been sent."
+							}
 							buttonValue={"I've Confirmed My Email"}
 						/>
 					</div>
 				</form>
-				<small>Bevl is launching soon! Sign up to the announcements newsletter to get an exclusive deal at launch.</small>
+				<small>
+					Bevl is launching soon! Sign up to the announcements newsletter to get an exclusive deal at launch.
+				</small>
 			</div>
 		);
 	else
@@ -49,7 +55,9 @@ export default function CTA({ independent }) {
 				<div className={"container-partial " + ctaStyles["container-partial"]}>
 					<h1 className={ctaStyles["heading"]}>Up Your Productivity Game With Bevl</h1>
 					<form onSubmit={handleSubmit} className={ctaStyles["container-form"]}>
-						<div className={ctaStyles["container-form-input"] + " " + ctaStyles["container-form-input-light"]}>
+						<div
+							className={ctaStyles["container-form-input"] + " " + ctaStyles["container-form-input-light"]}
+						>
 							<FormInput type={"text"} name={"email"} placeholder="Enter email..." required={true} />
 						</div>
 						<div className={ctaStyles["container-form-button"]}>
@@ -58,12 +66,17 @@ export default function CTA({ independent }) {
 								show={showModal}
 								onClose={() => setShowModal(false)}
 								heading={"Confirm Subscription"}
-								body={"Thank you for signing up to the newsletter! Please confirm your subscription through the email you have been sent."}
+								body={
+									"Thank you for signing up to the newsletter! Please confirm your subscription through the email you have been sent."
+								}
 								buttonValue={"I've Confirmed My Email"}
 							/>
 						</div>
 					</form>
-					<small>Bevl is launching soon! Sign up to the announcements newsletter to get an exclusive deal at launch.</small>
+					<small>
+						Bevl is launching soon! Sign up to the announcements newsletter to get an exclusive deal at
+						launch.
+					</small>
 				</div>
 			</div>
 		);

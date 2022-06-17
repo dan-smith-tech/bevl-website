@@ -60,19 +60,8 @@ function FeatureSplash({ subheading, heading, tagline, demos }) {
 	useEffect(() => {
 		selectDemo(1);
 
-		const onScroll = () => {
-			var scrolled = window.scrollY;
-			var rate = scrolled * 0.22;
-			if (splashContent.current) splashContent.current.style.transform = "translate3d(0px, " + rate + "px, 0px";
-		};
-		window.removeEventListener("scroll", onScroll);
-		window.addEventListener("scroll", onScroll, { passive: true });
-
 		window.addEventListener("resize", () => selectDemo(1));
-
 		return () => {
-			window.removeEventListener("scroll", onScroll);
-
 			window.removeEventListener("resize", () => selectDemo(1));
 		};
 	}, []);
