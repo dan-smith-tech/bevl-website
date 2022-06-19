@@ -37,7 +37,7 @@ function Landing() {
 	return (
 		<>
 			<Head>
-				<title>Bevl • Get Ahead of Life's Endeavors</title>
+				<title>Bevl • Spend Less Time Planning and More Time Doing</title>
 			</Head>
 			<div className={"container-full " + landingStyles["container-full-splash"]}>
 				<div className={"container-partial " + landingStyles["container-partial-splash"]} ref={splashContent}>
@@ -125,7 +125,7 @@ function Landing() {
 									d="M21 20V6c0-1.103-.897-2-2-2h-2V2h-2v2H9V2H7v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2zM9 18H7v-2h2v2zm0-4H7v-2h2v2zm4 4h-2v-2h2v2zm0-4h-2v-2h2v2zm4 4h-2v-2h2v2zm0-4h-2v-2h2v2zm2-5H5V7h14v2z"
 								></path>
 							</svg>
-							<p>Break down tasks into smaller chunks, and organise each individually.</p>
+							<p>Split larger tasks into smaller tasks to organise individually.</p>
 						</div>
 						<div className={landingStyles["feature"]} style={{ backgroundColor: "#3498DB" }}>
 							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
@@ -155,7 +155,7 @@ function Landing() {
 									d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8 8a2 2 0 0 0 2.828 0l7.172-7.172a2 2 0 0 0 0-2.828l-8-8zM7 9a2 2 0 1 1 .001-4.001A2 2 0 0 1 7 9z"
 								></path>
 							</svg>
-							<p>All tasks and lists can be segmented with custom tags.</p>
+							<p>Group and filter tasks and lists with custom tags.</p>
 						</div>
 					</div>
 				</div>
@@ -167,7 +167,10 @@ function Landing() {
 				imageFirst={false}
 				dark={false}
 			>
-				<p>Organise every kind of todo with 4 unique task types.</p>
+				<p>
+					Plan any todo with 4 unique task types (Deadlines, Events, Habits, Projects) that suit every
+					situation.
+				</p>
 			</FeatureSummary>
 			<FeatureSummary
 				heading={"Lists"}
@@ -176,7 +179,7 @@ function Landing() {
 				imageFirst={true}
 				dark={false}
 			>
-				<p>Keep track of random notes and wandering ideas, without cluttering your todo list.</p>
+				<p>Keep track of less-organised notes and ideas, without cluttering your todo list.</p>
 			</FeatureSummary>
 			<FeatureSummary
 				heading={"Labels"}
@@ -185,12 +188,12 @@ function Landing() {
 				imageFirst={false}
 				dark={false}
 			>
-				<p>Segment and filter content with customisable tags.</p>
+				<p>Group and filter content with customisable tags, to organise the tasks at hand.</p>
 			</FeatureSummary>
 			{/* <Testimonials /> */}
 			<FeatureSummary
 				heading={"Productivity Resources"}
-				link={"/about#philosophy"}
+				link={"/philosophy"}
 				image={"/images/screenshots/light/comingSoon.png"}
 				imageFirst={true}
 				dark={false}

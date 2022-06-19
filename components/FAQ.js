@@ -33,7 +33,7 @@ export default function FAQ() {
 						<h3 className={faqStyles["question"]}>Is There a Specific Way I Should Use Bevl?</h3>
 						<p className={faqStyles["answer"]}>
 							Although Bevl was designed to facilitate{" "}
-							<Link href="/about">
+							<Link href="/philosophy">
 								<a>my philosophy</a>
 							</Link>
 							, it does not restrict you to this one method of planning (but it is more suited to it).

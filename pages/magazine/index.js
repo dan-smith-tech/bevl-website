@@ -1,12 +1,12 @@
 // import Image from "next/image";
 
-// import magazineStyles from "../../styles/magazine/magazine.module.css";
-
 // import MagazineCard from "../../components/magazine/Card";
-// import NewsletterSignup from "../../components/NewsletterSignup";
+import ProductivityTipsSignup from "../../components/ProductivityTipsSignup";
 
 // import dbConnect from "../../lib/dbConnect";
 // import MagazinePost from "../../models/MagazinePost";
+
+import magazineStyles from "../../styles/magazine/magazine.module.css";
 
 // export async function getStaticProps() {
 // 	await dbConnect();
@@ -25,17 +25,16 @@
 // 	};
 // }
 
-import helpStyles from "../../styles/help.module.css";
-
 function Magazine() {
 	// { recentPosts, allPosts }
 	return (
 		<>
 			<div className={"container-full"}>
-				<div className={"container-partial " + helpStyles["container-partial"]}>
-					<p>The Bevl magazine is launching soon.</p>
+				<div className={"container-partial " + magazineStyles["container-partial"]}>
+					<p>The Bevl magazine is launching soon. Sign up to the newsletter to get notified of new posts:</p>
 				</div>
 			</div>
+			<ProductivityTipsSignup />
 			{/* <div className={"container-full " + magazineStyles["container-full-content"]}>
 				<div className={"container-partial"}>
 					<div className={magazineStyles["title"]}>

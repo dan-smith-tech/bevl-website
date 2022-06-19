@@ -30,7 +30,7 @@ function Tasks() {
 				dark={false}
 			>
 				<p>
-					Drag tasks into the calendar to assign time to work on them: use <strong>Deadlines</strong> to plan
+					Drag tasks into the calendar to assign times to work on them: use <strong>Deadlines</strong> to plan
 					work that has a final due date, but needs to be completed over time.
 				</p>
 			</FeatureSummary>
@@ -79,7 +79,7 @@ function Tasks() {
 			{/* <Testimonials /> */}
 			<FeatureSummary
 				heading={"Philosophy"}
-				link={"/about"}
+				link={"/philosophy"}
 				image={"/images/screenshots/light/comingSoon.png"}
 				imageFirst={false}
 				dark={false}

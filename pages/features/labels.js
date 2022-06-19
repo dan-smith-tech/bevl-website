@@ -11,12 +11,12 @@ function Labels() {
 	return (
 		<>
 			<Head>
-				<title>Bevl • Filter and Segment Content</title>
+				<title>Bevl • Group and Filter Content</title>
 			</Head>
 			<FeatureSplash
 				subheading="LABELS"
-				heading="Group and Filter Plans"
-				tagline="Categorise tasks and lists to arrange content in any way."
+				heading="Group and Filter Content"
+				tagline="Group and filter content with customisable tags, to focus on the tasks at hand."
 				demos={[
 					{ heading: "Customise", src: "tasks.mp4" },
 					{ heading: "Segment", src: "tasks.mp4" },
@@ -24,13 +24,13 @@ function Labels() {
 				]}
 			/>
 			<FeatureSummary
-				heading={"Segment"}
+				heading={"Group"}
 				image={"/images/screenshots/light/comingSoon.png"}
 				imageFirst={true}
 				dark={false}
 			>
 				<p>
-					Group{" "}
+					Organise{" "}
 					<Link href={"/features/tasks"}>
 						<a>Tasks</a>
 					</Link>{" "}
@@ -80,7 +80,7 @@ function Labels() {
 			{/* <Testimonials /> */}
 			<FeatureSummary
 				heading={"Philosophy"}
-				link={"/about"}
+				link={"/philosophy"}
 				image={"/images/screenshots/light/comingSoon.png"}
 				imageFirst={false}
 				dark={false}

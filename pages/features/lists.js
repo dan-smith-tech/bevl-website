@@ -48,12 +48,14 @@ function Lists() {
 				imageFirst={false}
 				dark={false}
 			>
-				<p>Filter and reorder content for full organisational control.</p>
+				<p>
+					Filter and reorder <strong>Lists</strong> for full organisational control.
+				</p>
 			</FeatureSummary>
 			{/* <Testimonials /> */}
 			<FeatureSummary
 				heading={"Philosophy"}
-				link={"/about"}
+				link={"/philosophy"}
 				image={"/images/screenshots/light/comingSoon.png"}
 				imageFirst={true}
 				dark={false}

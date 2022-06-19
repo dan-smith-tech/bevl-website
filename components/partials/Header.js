@@ -134,7 +134,7 @@ export default function Header() {
 													Magazine
 												</span>
 												<span className={headerStyles["nav-bar-dropdown-link-info-description"]}>
-													Guides on how to productivity.
+													Explore productivity tips.
 												</span>
 											</div>
 										</a>
@@ -162,9 +162,63 @@ export default function Header() {
 									</Link>
 								</li>
 							</ul>
-							<Link href={"/about"}>
-								<a className={headerStyles["nav-bar-link"]}>About</a>
-							</Link>
+							<a
+								className={headerStyles["nav-bar-link"] + " " + headerStyles["nav-bar-dropdown-toggle"]}
+								tabIndex={0}
+							>
+								About{" "}
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+									<path
+										fill="#323a52"
+										fillOpacity="1"
+										d="M16.939 7.939 12 12.879l-4.939-4.94-2.122 2.122L12 17.121l7.061-7.06z"
+									></path>
+								</svg>
+							</a>
+							<ul className={headerStyles["nav-bar-dropdown"]}>
+								<li>
+									<Link href="/story">
+										<a className={headerStyles["nav-bar-dropdown-link"]}>
+											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+												<path
+													fill="#323a52"
+													fillOpacity="1"
+													d="M15.78 15.84S18.64 13 19.61 12c3.07-3 1.54-9.18 1.54-9.18S15 1.29 12 4.36C9.66 6.64 8.14 8.22 8.14 8.22S4.3 7.42 2 9.72L14.25 22c2.3-2.33 1.53-6.16 1.53-6.16zm-1.5-9a2 2 0 0 1 2.83 0 2 2 0 1 1-2.83 0zM3 21a7.81 7.81 0 0 0 5-2l-3-3c-2 1-2 5-2 5z"
+												></path>
+											</svg>
+											<div className={headerStyles["nav-bar-dropdown-link-info"]}>
+												<span className={headerStyles["nav-bar-dropdown-link-info-heading"]}>
+													My Story
+												</span>
+												<span className={headerStyles["nav-bar-dropdown-link-info-description"]}>
+													Explore my planning journey.
+												</span>
+											</div>
+										</a>
+									</Link>
+								</li>
+								<li>
+									<Link href="/philosophy">
+										<a className={headerStyles["nav-bar-dropdown-link"]}>
+											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+												<path
+													fill="#323a52"
+													fillOpacity="1"
+													d="M9 20h6v2H9zm7.906-6.288C17.936 12.506 19 11.259 19 9c0-3.859-3.141-7-7-7S5 5.141 5 9c0 2.285 1.067 3.528 2.101 4.73.358.418.729.851 1.084 1.349.144.206.38.996.591 1.921h-.792v2h8.032v-2h-.79c.213-.927.45-1.719.593-1.925.352-.503.726-.94 1.087-1.363z"
+												></path>
+											</svg>
+											<div className={headerStyles["nav-bar-dropdown-link-info"]}>
+												<span className={headerStyles["nav-bar-dropdown-link-info-heading"]}>
+													Philosophy
+												</span>
+												<span className={headerStyles["nav-bar-dropdown-link-info-description"]}>
+													Expore Bevl's inspiration.
+												</span>
+											</div>
+										</a>
+									</Link>
+								</li>
+							</ul>
 							<Link href={"/pricing"}>
 								<a className={headerStyles["nav-bar-link"]}>Pricing</a>
 							</Link>
@@ -175,7 +229,7 @@ export default function Header() {
 									Sign In
 								</a>
 							</Link>
-							<Link href={"https://open.bevl.app/signup"}>
+							<Link href={"/signup"}>
 								<a className={headerStyles["nav-bar-link"] + " " + headerStyles["nav-bar-app-button"]}>
 									Get Started
 								</a>
@@ -221,7 +275,7 @@ export default function Header() {
 								<Link href={"https://open.bevl.app/signin"}>
 									<a className={headerStyles["nav-menu-link"]}>Sign In</a>
 								</Link>
-								<Link href={"https://open.bevl.app/signup"}>
+								<Link href={"/signup"}>
 									<a className={headerStyles["nav-menu-link"] + " " + headerStyles["nav-menu-button"]}>
 										Get Started
 									</a>

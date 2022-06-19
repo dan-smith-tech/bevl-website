@@ -75,7 +75,7 @@
 }
 
 .nav-bar-dropdown {
-	width: 21em;
+	width: 20.5em;
 	padding: 0.65em;
 	top: 2.65em;
 	display: flex;
@@ -93,6 +93,10 @@
 
 .nav-bar-dropdown:nth-of-type(2) {
 	left: 7.65em;
+}
+
+.nav-bar-dropdown:nth-of-type(3) {
+	left: calc(7.65em * 2);
 }
 
 .nav-bar-dropdown li {
