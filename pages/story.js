@@ -1,10 +1,15 @@
-import Image from "next/image";
+import Head from "next/head";
+
+import CTA from "../components/CTA";
 
 import aboutStyles from "../styles/about.module.css";
 
 function Story() {
 	return (
 		<>
+			<Head>
+				<title>Bevl • Story</title>
+			</Head>
 			<div className={"container-full " + aboutStyles["container-full"]}>
 				<div className={"container-partial " + aboutStyles["container-partial"]}>
 					<div className={aboutStyles["content-text"]}>
@@ -37,6 +42,7 @@ function Story() {
 					</div>
 				</div>
 			</div>
+			<CTA independent={true} />
 		</>
 	);
 }

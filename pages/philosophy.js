@@ -1,10 +1,15 @@
-import Image from "next/image";
+import Head from "next/head";
+
+import CTA from "../components/CTA";
 
 import aboutStyles from "../styles/about.module.css";
 
 function Philosophy() {
 	return (
 		<>
+			<Head>
+				<title>Bevl • Philosophy</title>
+			</Head>
 			<div className={"container-full " + aboutStyles["container-full"]}>
 				<div className={"container-partial " + aboutStyles["container-partial"]}>
 					<div className={aboutStyles["content-text"]}>
@@ -31,6 +36,7 @@ function Philosophy() {
 					</div>
 				</div>
 			</div>
+			<CTA independent={true} />
 		</>
 	);
 }

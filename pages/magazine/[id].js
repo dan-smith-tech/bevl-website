@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -55,6 +56,9 @@ export async function getStaticProps(context) {
 function Post({ post, relatedPosts }) {
 	return (
 		<>
+			<Head>
+				<title>Bevl • {post.title}</title>
+			</Head>
 			<div className={"container-full " + postStyles["container-full"]}>
 				<div className={"container-partial " + postStyles["container-partial"]}>
 					<h1 className={postStyles["title"]}>{post.title}</h1>
@@ -65,7 +69,15 @@ function Post({ post, relatedPosts }) {
 								Bevl.app
 							</Link>
 						</h4>{" "}
-						<span> | </span> <h4>Updated {new Date(post.dateUpdated).toLocaleDateString("en-GB", { year: "numeric", month: "long", day: "numeric" })}</h4>
+						<span> | </span>{" "}
+						<h4>
+							Updated{" "}
+							{new Date(post.dateUpdated).toLocaleDateString("en-GB", {
+								year: "numeric",
+								month: "long",
+								day: "numeric",
+							})}
+						</h4>
 					</span>
 					<div className={postStyles["container-image"]}>
 						<Image src={post.imageUrl} layout="fill" className={postStyles["image"]} draggable="false" />
@@ -83,7 +95,17 @@ function Post({ post, relatedPosts }) {
 				<div className={"container-partial " + postStyles["container-partial"]}>
 					<div className={postStyles["container-footer-related"]}>
 						<h3 className={postStyles["footer-related-title"]}>Related Posts</h3>
-						<div className={postStyles["footer-related"]}>{relatedPosts && relatedPosts.map((post, i) => <MagazineCard imageLink={post.imageUrl} title={post.title} summary={post.summary} postLink={post.postUrl} />)}</div>
+						<div className={postStyles["footer-related"]}>
+							{relatedPosts &&
+								relatedPosts.map((post, i) => (
+									<MagazineCard
+										imageLink={post.imageUrl}
+										title={post.title}
+										summary={post.summary}
+										postLink={post.postUrl}
+									/>
+								))}
+						</div>
 					</div>
 				</div>
 			</div>

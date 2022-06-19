@@ -3,7 +3,7 @@
 }
 
 .container-partial {
-	margin: 8.5em 0;
+	margin: 6.5em 0;
 	scroll-margin-top: calc(8.5em + var(--header-height));
 	color: var(--color-secondary-blue);
 	display: flex;
@@ -16,7 +16,7 @@
 }
 
 .content-text h1 {
-	margin-bottom: 1.35rem;
+	margin-bottom: 1.35em;
 }
 
 .content-text p {
@@ -44,59 +44,95 @@
 }
 
 .graphic-1 {
+	border-radius: 64% 36% 33% 67% / 61% 31% 69% 39%;
 	background-color: var(--color-primary-pink);
 	z-index: 1;
-	animation-name: graphic1;
-	animation-duration: 15s;
-}
-
-@keyframes graphic1 {
-	0% {
-		border-radius: 49% 51% 40% 60% / 54% 67% 33% 46%;
-		transform: scale(0.9, 1.1);
-	}
-	30% {
-		transform: scale(1.1, 0.9);
-	}
-	50% {
-		border-radius: 64% 36% 33% 67% / 61% 31% 69% 39%;
-		transform: scale(1);
-	}
-	70% {
-		transform: scale(1.1, 0.9);
-	}
-	100% {
-		border-radius: 49% 51% 40% 60% / 54% 67% 33% 46%;
-		transform: scale(0.9, 1.1);
-	}
 }
 
 .graphic-2 {
+	border-radius: 61% 39% 55% 45% / 50% 42% 58% 50%;
 	background-color: var(--color-secondary-blue);
 	margin-top: 6.5em;
 	margin-right: 4.5em;
 	z-index: 0;
-	animation-name: graphic2;
-	animation-duration: 18s;
 }
 
-@keyframes graphic2 {
-	0% {
-		border-radius: 31% 69% 33% 67% / 37% 61% 39% 63%;
-		transform: scale(0.9, 1.1);
+@media (prefers-reduced-motion: no-preference) and (min-width: 1200px) {
+	.graphic-1 {
+		background-color: var(--color-primary-pink);
+		z-index: 1;
+		animation-name: graphic1;
+		animation-duration: 15s;
 	}
-	30% {
-		transform: scale(1.1, 0.9);
+
+	@keyframes graphic1 {
+		0% {
+			border-radius: 49% 51% 40% 60% / 54% 67% 33% 46%;
+			transform: scale(0.9, 1.1);
+		}
+		30% {
+			transform: scale(1.1, 0.9);
+		}
+		50% {
+			border-radius: 64% 36% 33% 67% / 61% 31% 69% 39%;
+			transform: scale(1);
+		}
+		70% {
+			transform: scale(1.1, 0.9);
+		}
+		100% {
+			border-radius: 49% 51% 40% 60% / 54% 67% 33% 46%;
+			transform: scale(0.9, 1.1);
+		}
 	}
-	50% {
-		border-radius: 61% 39% 55% 45% / 50% 42% 58% 50%;
-		transform: scale(1);
+
+	.graphic-2 {
+		background-color: var(--color-secondary-blue);
+		margin-top: 6.5em;
+		margin-right: 4.5em;
+		z-index: 0;
+		animation-name: graphic2;
+		animation-duration: 18s;
 	}
-	70% {
-		transform: scale(1.1, 0.9);
+
+	@keyframes graphic2 {
+		0% {
+			border-radius: 31% 69% 33% 67% / 37% 61% 39% 63%;
+			transform: scale(0.9, 1.1);
+		}
+		30% {
+			transform: scale(1.1, 0.9);
+		}
+		50% {
+			border-radius: 61% 39% 55% 45% / 50% 42% 58% 50%;
+			transform: scale(1);
+		}
+		70% {
+			transform: scale(1.1, 0.9);
+		}
+		100% {
+			border-radius: 31% 69% 33% 67% / 37% 61% 39% 63%;
+			transform: scale(0.9, 1.1);
+		}
 	}
-	100% {
-		border-radius: 31% 69% 33% 67% / 37% 61% 39% 63%;
-		transform: scale(0.9, 1.1);
+}
+
+@media (max-width: 1200px) {
+	.container-partial {
+		margin: 3.85em 0;
+	}
+
+	.content-text {
+		width: 100%;
+		text-align: left;
+	}
+
+	.content-text h1 {
+		margin-bottom: 0.85em;
+	}
+
+	.content-graphic {
+		display: none;
+		visibility: hidden;
 	}
 }

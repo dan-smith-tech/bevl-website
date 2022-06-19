@@ -1,3 +1,4 @@
+import Head from "next/head";
 // import Image from "next/image";
 
 // import MagazineCard from "../../components/magazine/Card";
@@ -29,6 +30,9 @@ function Magazine() {
 	// { recentPosts, allPosts }
 	return (
 		<>
+			<Head>
+				<title>Bevl • Magazine</title>
+			</Head>
 			<div className={"container-full"}>
 				<div className={"container-partial " + magazineStyles["container-partial"]}>
 					<p>The Bevl magazine is launching soon. Sign up to the newsletter to get notified of new posts:</p>
