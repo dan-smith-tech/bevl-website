@@ -21,13 +21,13 @@ function Philosophy() {
 							carrying them out. This is bad for both productivity and mental health.
 						</p>
 						<p>
-							Therefore, Bevl was created to support this idea that plans should be created without
-							assigning tasks to specific times during the day, but to appoint time to tasks using arbitrary
-							chunks – with the relative sizes of those chunks representing the distribution of your time
-							between the tasks. The goal of this is to have full organisational control, but to prevent us
-							from getting bogged down in details that cause us to overlook the unpredictable nature of our
-							todos (which often result in us taking longer to do things than we planned and therefore cause
-							our plans to constantly need adaptation).
+							Bevl was created to support this idea that plans should be created without assigning tasks to
+							specific times during the day, but to appoint time to tasks using arbitrary chunks, with the
+							relative sizes of these chunks representing the distribution of our time between the tasks.
+							The goal of this is to have full organisational control, but to prevent us from getting bogged
+							down in details that cause us to overlook the unpredictable nature of our todos (which often
+							result in us taking longer to do things than we planned and therefore cause our plans to
+							constantly need adaptation).
 						</p>
 					</div>
 					<div className={aboutStyles["content-graphic"]}>
