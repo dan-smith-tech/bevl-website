@@ -35,9 +35,9 @@ function FeatureSplash({ subheading, heading, tagline, demos }) {
 		setCurrentDemo((currentDemo) => {
 			if (currentDemo != i) {
 				// if check causing responsive issue
-				var previousVideo = reelContainer.current.children[0].children[currentDemo].children[0];
-				previousVideo.pause();
-				previousVideo.currentTime = 0;
+				// var previousVideo = reelContainer.current.children[0].children[currentDemo].children[0];
+				// previousVideo.pause();
+				// previousVideo.currentTime = 0;
 
 				const demos = reelContainer.current.children[0].children;
 				const nextWidth = i > currentDemo ? demos[i - 1].clientWidth : demos[i + 1].clientWidth;
@@ -48,9 +48,9 @@ function FeatureSplash({ subheading, heading, tagline, demos }) {
 				const offset = -(i * smallWidth) + (reelContainer.current.clientWidth - largeWidth) / 2;
 				reelContainer.current.children[0].style.marginLeft = offset + "px";
 
-				var nextVideo = demos[i].children[0];
-				nextVideo.play();
-				nextVideo.addEventListener("ended", (e) => {});
+				// var nextVideo = demos[i].children[0];
+				// nextVideo.play();
+				// nextVideo.addEventListener("ended", (e) => {});
 			}
 
 			return i;
@@ -82,7 +82,8 @@ function FeatureSplash({ subheading, heading, tagline, demos }) {
 						demos.map((demo, i) => (
 							<div className={getDemoStyles(i)} onClick={() => selectDemo(i)} key={i}>
 								<video className={featureSplashStyles["demo-video"]}>
-									<source src={"/videos/" + demo.src} />
+									<source src={"/videos/comingSoon.mp4"} />
+									{/* + demo.src */}
 								</video>
 								<h3 className={featureSplashStyles["demo-heading"]}>{demo.heading}</h3>
 							</div>

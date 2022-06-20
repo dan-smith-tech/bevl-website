@@ -25,7 +25,7 @@ function Labels() {
 			/>
 			<FeatureSummary
 				heading={"Group"}
-				image={"/images/screenshots/light/comingSoon.png"}
+				image={"/images/screenshots/comingSoon.png"}
 				imageFirst={true}
 				dark={false}
 			>
@@ -43,7 +43,7 @@ function Labels() {
 			</FeatureSummary>
 			<FeatureSummary
 				heading={"Customise"}
-				image={"/images/screenshots/light/comingSoon.png"}
+				image={"/images/screenshots/comingSoon.png"}
 				imageFirst={false}
 				dark={false}
 			>
@@ -61,7 +61,7 @@ function Labels() {
 			</FeatureSummary>
 			<FeatureSummary
 				heading={"Default"}
-				image={"/images/screenshots/light/comingSoon.png"}
+				image={"/images/screenshots/comingSoon.png"}
 				imageFirst={true}
 				dark={false}
 			>
@@ -81,7 +81,7 @@ function Labels() {
 			<FeatureSummary
 				heading={"Philosophy"}
 				link={"/philosophy"}
-				image={"/images/screenshots/light/comingSoon.png"}
+				image={"/images/screenshots/comingSoon.png"}
 				imageFirst={false}
 				dark={false}
 			>

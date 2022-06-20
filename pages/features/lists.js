@@ -25,7 +25,7 @@ function Lists() {
 			/>
 			<FeatureSummary
 				heading={"Document"}
-				image={"/images/screenshots/light/comingSoon.png"}
+				image={"/images/screenshots/comingSoon.png"}
 				imageFirst={false}
 				dark={false}
 			>
@@ -36,7 +36,7 @@ function Lists() {
 			</FeatureSummary>
 			<FeatureSummary
 				heading={"Bookmark"}
-				image={"/images/screenshots/light/comingSoon.png"}
+				image={"/images/screenshots/comingSoon.png"}
 				imageFirst={true}
 				dark={false}
 			>
@@ -44,7 +44,7 @@ function Lists() {
 			</FeatureSummary>
 			<FeatureSummary
 				heading={"Arrange"}
-				image={"/images/screenshots/light/comingSoon.png"}
+				image={"/images/screenshots/comingSoon.png"}
 				imageFirst={false}
 				dark={false}
 			>
@@ -56,7 +56,7 @@ function Lists() {
 			<FeatureSummary
 				heading={"Philosophy"}
 				link={"/philosophy"}
-				image={"/images/screenshots/light/comingSoon.png"}
+				image={"/images/screenshots/comingSoon.png"}
 				imageFirst={true}
 				dark={false}
 			>

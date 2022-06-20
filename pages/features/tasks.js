@@ -25,7 +25,7 @@ function Tasks() {
 			/>
 			<FeatureSummary
 				heading={"Deadlines"}
-				image={"/images/screenshots/light/comingSoon.png"}
+				image={"/images/screenshots/comingSoon.png"}
 				imageFirst={true}
 				dark={false}
 			>
@@ -36,7 +36,7 @@ function Tasks() {
 			</FeatureSummary>
 			<FeatureSummary
 				heading={"Events"}
-				image={"/images/screenshots/light/comingSoon.png"}
+				image={"/images/screenshots/comingSoon.png"}
 				imageFirst={false}
 				dark={false}
 			>
@@ -47,7 +47,7 @@ function Tasks() {
 			</FeatureSummary>
 			<FeatureSummary
 				heading={"Habits"}
-				image={"/images/screenshots/light/comingSoon.png"}
+				image={"/images/screenshots/comingSoon.png"}
 				imageFirst={true}
 				dark={false}
 			>
@@ -58,7 +58,7 @@ function Tasks() {
 			</FeatureSummary>
 			<FeatureSummary
 				heading={"Projects"}
-				image={"/images/screenshots/light/comingSoon.png"}
+				image={"/images/screenshots/comingSoon.png"}
 				imageFirst={false}
 				dark={false}
 			>
@@ -70,7 +70,7 @@ function Tasks() {
 			</FeatureSummary>
 			<FeatureSummary
 				heading={"Calendar"}
-				image={"/images/screenshots/light/dashboard.png"}
+				image={"/images/screenshots/comingSoon.png"}
 				imageFirst={true}
 				dark={false}
 			>
@@ -80,7 +80,7 @@ function Tasks() {
 			<FeatureSummary
 				heading={"Philosophy"}
 				link={"/philosophy"}
-				image={"/images/screenshots/light/comingSoon.png"}
+				image={"/images/screenshots/comingSoon.png"}
 				imageFirst={false}
 				dark={false}
 			>

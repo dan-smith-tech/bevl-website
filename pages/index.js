@@ -163,7 +163,7 @@ function Landing() {
 			<FeatureSummary
 				heading={"Tasks"}
 				link={"/features/tasks"}
-				image={"/images/screenshots/light/dashboard.png"}
+				image={"/images/screenshots/comingSoon.png"}
 				imageFirst={false}
 				dark={false}
 			>
@@ -175,7 +175,7 @@ function Landing() {
 			<FeatureSummary
 				heading={"Lists"}
 				link={"/features/lists"}
-				image={"/images/screenshots/light/comingSoon.png"}
+				image={"/images/screenshots/comingSoon.png"}
 				imageFirst={true}
 				dark={false}
 			>
@@ -184,7 +184,7 @@ function Landing() {
 			<FeatureSummary
 				heading={"Labels"}
 				link={"/features/labels"}
-				image={"/images/screenshots/light/labels.png"}
+				image={"/images/screenshots/comingSoon.png"}
 				imageFirst={false}
 				dark={false}
 			>
@@ -194,7 +194,7 @@ function Landing() {
 			<FeatureSummary
 				heading={"Productivity Resources"}
 				link={"/philosophy"}
-				image={"/images/screenshots/light/comingSoon.png"}
+				image={"/images/screenshots/comingSoon.png"}
 				imageFirst={true}
 				dark={false}
 			>
