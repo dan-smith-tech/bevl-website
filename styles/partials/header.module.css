@@ -197,6 +197,8 @@
 	}
 }
 
+/* Mobile */
+
 .nav-menu-toggle {
 	display: none;
 	visibility: hidden;
@@ -206,6 +208,7 @@
 
 .container-nav-menu {
 	max-height: calc(100% - var(--header-height));
+	padding: 1.5rem;
 	overflow-y: scroll;
 	display: none;
 	visibility: hidden;
@@ -222,29 +225,45 @@
 
 .nav-menu-link {
 	width: 100%;
-	margin: 1.15em 0;
-	padding: 0.65em 0;
+	margin: 0.65em 0;
+	padding: 0.65em 1.15em;
+	box-sizing: border-box;
 	font-weight: 500;
-	border-bottom: var(--border-size) solid var(--color-neutral-grey);
+	background-color: var(--color-neutral-grey);
+	border-radius: var(--border-radius);
 	color: var(--color-secondary-blue);
 	text-decoration: none;
+	line-height: 2rem;
+}
+
+.nav-menu-link:active {
+	opacity: 0.65;
 }
 
 .nav-menu-dropdown-toggle {
-	/* font-size: 0.85rem;
-	text-decoration: underline; */
+	margin-bottom: 0.65em;
+	font-weight: 600;
+	color: var(--color-secondary-blue);
 }
 
 .nav-menu-dropdown {
 	width: 100%;
+	margin-bottom: 2.5em;
+	padding-bottom: 0.65rem;
 	display: flex;
 	flex-direction: column;
 	list-style: none;
+	border-bottom: var(--border-size) solid var(--color-neutral-grey);
 }
 
 .nav-menu-dropdown-link {
 	width: 100%;
 	display: flex;
+}
+
+.nav-menu-button {
+	background-color: var(--color-primary-pink);
+	color: var(--color-neutral-white);
 }
 
 @media (max-width: 850px) {
@@ -263,63 +282,3 @@
 		visibility: visible;
 	}
 }
-
-/* 
-.nav-link-menu {
-	display: none;
-}
-
-.nav-link {
-	margin: 0 1.15em;
-	font-weight: 500;
-	color: var(--color-secondary-blue);
-	text-decoration: none;
-}
-
-.nav-link:last-child {
-	margin-right: 0;
-}
-
-.nav-link-button {
-	padding: 0.65em 0.85em;
-	border-radius: var(--border-radius);
-	background-color: var(--color-primary-pink);
-	color: var(--color-neutral-white);
-}
-
-@media (max-width: 850px) {
-	.nav-link-menu {
-		display: block;
-	}
-
-	.nav-link-menu:checked + .container-nav-link {
-		display: flex;
-	}
-
-	.container-nav-link {
-		max-width: calc(65rem + 2 * 1.5em);
-		max-height: calc(100% - var(--header-height));
-		padding: 0 1.5rem;
-		display: none;
-		flex-direction: column;
-		align-items: center;
-		inset: var(--header-height) 0 auto 0;
-		position: fixed;
-		background-color: var(--color-neutral-white);
-		box-shadow: var(--box-shadow);
-		overflow-y: scroll;
-		z-index: 99;
-	}
-
-	.nav-link {
-		margin: 0.85em 0;
-	}
-
-	.nav-link:first-child {
-		margin-top: 1.5em;
-	}
-
-	.nav-link:last-child {
-		margin-bottom: 1.5em;
-	}
-} */

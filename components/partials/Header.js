@@ -8,6 +8,10 @@ import headerStyles from "../../styles/partials/header.module.css";
 export default function Header() {
 	const [showNavMenu, setShowNavMenu] = useState(false);
 
+	function selectLink() {
+		setShowNavMenu(false);
+	}
+
 	return (
 		<>
 			<div className={"container-full " + headerStyles["container-full-relative"]}></div>
@@ -191,7 +195,7 @@ export default function Header() {
 													My Story
 												</span>
 												<span className={headerStyles["nav-bar-dropdown-link-info-description"]}>
-													Explore my planning journey.
+													Learn about Bevl's inspiration.
 												</span>
 											</div>
 										</a>
@@ -212,7 +216,7 @@ export default function Header() {
 													Philosophy
 												</span>
 												<span className={headerStyles["nav-bar-dropdown-link-info-description"]}>
-													Expore Bevl's inspiration.
+													Discover Bevl's intention.
 												</span>
 											</div>
 										</a>
@@ -237,7 +241,7 @@ export default function Header() {
 						</div>
 						<button className={headerStyles["nav-menu-toggle"]} onClick={() => setShowNavMenu(!showNavMenu)}>
 							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-								<path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path>
+								<path fill="#323a52" fillOpacity="1" d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path>
 							</svg>
 						</button>
 						{showNavMenu && (
@@ -249,34 +253,114 @@ export default function Header() {
 									headerStyles["container-nav-menu"]
 								}
 							>
-								<a
-									className={
-										headerStyles["nav-menu-link"] + " " + headerStyles["nav-menu-dropdown-toggle"]
-									}
-								>
-									Features
-								</a>
+								<a className={headerStyles["nav-menu-dropdown-toggle"]}>Features</a>
 								<ul className={headerStyles["nav-menu-dropdown"]}>
 									<li>
+										<Link href="/features/tasks">
+											<a
+												className={
+													headerStyles["nav-menu-link"] + " " + headerStyles["nav-menu-dropdown-link"]
+												}
+												onClick={selectLink}
+											>
+												Tasks
+											</a>
+										</Link>
+									</li>
+									<li>
 										<Link href="/features/lists">
-											<a className={headerStyles["nav-menu-dropdown-link"]}>Tasks</a>
+											<a
+												className={
+													headerStyles["nav-menu-link"] + " " + headerStyles["nav-menu-dropdown-link"]
+												}
+												onClick={selectLink}
+											>
+												Lists
+											</a>
+										</Link>
+									</li>
+									<li>
+										<Link href="/features/labels">
+											<a
+												className={
+													headerStyles["nav-menu-link"] + " " + headerStyles["nav-menu-dropdown-link"]
+												}
+												onClick={selectLink}
+											>
+												Labels
+											</a>
 										</Link>
 									</li>
 								</ul>
-								<Link href={"/magazine"}>
-									<a className={headerStyles["nav-menu-link"]}>Magazine</a>
-								</Link>
-								<Link href={"/help"}>
-									<a className={headerStyles["nav-menu-link"]}>Help</a>
-								</Link>
+								<a className={headerStyles["nav-menu-dropdown-toggle"]}>Resources</a>
+								<ul className={headerStyles["nav-menu-dropdown"]}>
+									<li>
+										<Link href="/magazine">
+											<a
+												className={
+													headerStyles["nav-menu-link"] + " " + headerStyles["nav-menu-dropdown-link"]
+												}
+												onClick={selectLink}
+											>
+												Magazine
+											</a>
+										</Link>
+									</li>
+									<li>
+										<Link href="/help">
+											<a
+												className={
+													headerStyles["nav-menu-link"] + " " + headerStyles["nav-menu-dropdown-link"]
+												}
+												onClick={selectLink}
+											>
+												Help
+											</a>
+										</Link>
+									</li>
+								</ul>
+								<a className={headerStyles["nav-menu-dropdown-toggle"]}>About</a>
+								<ul className={headerStyles["nav-menu-dropdown"]}>
+									<li>
+										<Link href="/story">
+											<a
+												className={
+													headerStyles["nav-menu-link"] + " " + headerStyles["nav-menu-dropdown-link"]
+												}
+												onClick={selectLink}
+											>
+												My Story
+											</a>
+										</Link>
+									</li>
+									<li>
+										<Link href="/philosophy">
+											<a
+												className={
+													headerStyles["nav-menu-link"] + " " + headerStyles["nav-menu-dropdown-link"]
+												}
+												onClick={selectLink}
+											>
+												Philosophy
+											</a>
+										</Link>
+									</li>
+								</ul>
 								<Link href={"/pricing"}>
-									<a className={headerStyles["nav-menu-link"]}>Pricing</a>
+									<a className={headerStyles["nav-menu-link"]} onClick={selectLink}>
+										Pricing
+									</a>
 								</Link>
 								<Link href={"https://open.bevl.app/signin"}>
-									<a className={headerStyles["nav-menu-link"]}>Sign In</a>
+									<a className={headerStyles["nav-menu-link"]} onClick={selectLink}>
+										Sign In
+									</a>
 								</Link>
 								<Link href={"/signup"}>
-									<a className={headerStyles["nav-menu-link"] + " " + headerStyles["nav-menu-button"]}>
+									<a
+										className={headerStyles["nav-menu-link"] + " " + headerStyles["nav-menu-button"]}
+										onClick={selectLink}
+									>
 										Get Started
 									</a>
 								</Link>
