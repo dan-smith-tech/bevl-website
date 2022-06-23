@@ -1,6 +1,8 @@
 .container-full {
 	background-color: var(--color-neutral-grey);
 	color: var(--color-secondary-blue);
+	background-color: var(--color-secondary-blue);
+	color: var(--color-neutral-white);
 }
 
 .container-partial {
@@ -8,7 +10,13 @@
 }
 
 .container-partial h1 {
-	margin-bottom: 1.5em;
+	margin-bottom: 1.85em;
+	text-align: center;
+}
+
+.container-partial form {
+	width: 45em;
+	margin: 0 auto;
 }
 
 .form-row {
@@ -39,18 +47,17 @@
 	font-weight: 600;
 }
 
-.form-element input:hover,
-.form-element textarea:hover {
-	background-color: var(--color-neutral-white);
-}
-
-.form-element input[type="textarea"] {
-	height: 8.5em;
-	border-radius: 2em;
+.form-element textarea {
+	height: 12.5em;
 }
 
 .form-p {
 	margin-bottom: 1.5rem;
+}
+
+.form-row:last-child {
+	width: 18em;
+	margin: 0 auto;
 }
 
 @media (max-width: 650px) {
