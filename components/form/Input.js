@@ -1,5 +1,25 @@
 import inputStyles from "../../styles/form/input.module.css";
 
 export default function FormInput({ type, name, placeholder, required }) {
-	return <input type={type} name={name} id={name} className={inputStyles["input"]} placeholder={placeholder} required={required}></input>;
+	if (type != "textarea")
+		return (
+			<input
+				type={type}
+				name={name}
+				id={name}
+				className={inputStyles["element"]}
+				placeholder={placeholder}
+				required={required}
+			></input>
+		);
+	else
+		return (
+			<textarea
+				name={name}
+				id={name}
+				className={inputStyles["element"] + " " + inputStyles["element-textarea"]}
+				placeholder={placeholder}
+				required={required}
+			></textarea>
+		);
 }

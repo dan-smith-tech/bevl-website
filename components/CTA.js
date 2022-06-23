@@ -4,7 +4,7 @@ import FormInput from "./form/Input";
 import FormButton from "./form/Button";
 import Modal from "./Modal";
 
-import ctaStyles from "../styles/ctaStyles.module.css";
+import ctaStyles from "../styles/cta.module.css";
 
 import { isEmail } from "../lib/helpers";
 import sendFetchRequest from "../lib/fetch";

@@ -5,7 +5,7 @@ import FormButton from "./form/Button";
 
 import Modal from "./Modal";
 
-import newsletterSignupStyles from "../styles/ProductivityTipsSignupStyles.module.css";
+import newsletterSignupStyles from "../styles/productivityTipsSignup.module.css";
 
 import sendFetchRequest from "../lib/fetch";
 import { isEmail } from "../lib/helpers";
