@@ -48,7 +48,7 @@
 }
 
 .form-element textarea {
-	height: 12.5em;
+	height: 15em;
 }
 
 .form-p {
@@ -60,9 +60,22 @@
 	margin: 0 auto;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 850px) {
+	.container-partial {
+		margin: 3.5em 0;
+	}
+
+	.container-partial h1 {
+		margin-bottom: 1.15em;
+	}
+
+	.container-partial form {
+		width: 100%;
+	}
+
 	.form-row {
 		flex-direction: column;
+		justify-content: flex-start;
 	}
 
 	.form-element {
