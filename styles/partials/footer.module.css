@@ -1,5 +1,15 @@
 .container-full-content {
 	box-shadow: var(--box-shadow);
+	position: relative;
+}
+
+.container-full-content::after {
+	content: "";
+	width: 100%;
+	height: 3px;
+	position: absolute;
+	bottom: -3px;
+	background-color: var(--color-neutral-white);
 }
 
 .container-partial-content {

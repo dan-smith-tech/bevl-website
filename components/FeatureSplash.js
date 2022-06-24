@@ -10,7 +10,12 @@ function FeatureSplash({ subheading, heading, tagline, demos }) {
 	var splashContent = useRef();
 
 	const getDemoStyles = (i) => {
-		if (i === currentDemo) return featureSplashStyles["demo"] + " " + featureSplashStyles["demo-current"];
+		if (i === currentDemo)
+			return (
+				featureSplashStyles["demo"] +
+				" " +
+				featureSplashStyles["demo-current"]
+			);
 		if (Math.abs(i - currentDemo) === 1) {
 			if (i < currentDemo)
 				return (
@@ -28,30 +33,37 @@ function FeatureSplash({ subheading, heading, tagline, demos }) {
 				featureSplashStyles["demo-back-next"]
 			);
 		}
-		return featureSplashStyles["demo"] + " " + featureSplashStyles["demo-hidden"];
+		return (
+			featureSplashStyles["demo"] + " " + featureSplashStyles["demo-hidden"]
+		);
 	};
 
 	function selectDemo(i) {
 		setCurrentDemo((currentDemo) => {
-			if (currentDemo != i) {
-				// if check causing responsive issue
-				// var previousVideo = reelContainer.current.children[0].children[currentDemo].children[0];
-				// previousVideo.pause();
-				// previousVideo.currentTime = 0;
+			// var previousVideo = reelContainer.current.children[0].children[currentDemo].children[0];
+			// previousVideo.pause();
+			// previousVideo.currentTime = 0;
 
-				const demos = reelContainer.current.children[0].children;
-				const nextWidth = i > currentDemo ? demos[i - 1].clientWidth : demos[i + 1].clientWidth;
-				const currentWidth = demos[i].clientWidth;
-				const largeWidth = Math.max(nextWidth, currentWidth);
-				const smallWidth = Math.min(nextWidth, currentWidth);
+			const demos = reelContainer.current.children[0].children;
 
-				const offset = -(i * smallWidth) + (reelContainer.current.clientWidth - largeWidth) / 2;
-				reelContainer.current.children[0].style.marginLeft = offset + "px";
+			var nextWidth;
+			if (i == demos.length - 1) nextWidth = demos[i - 1].clientWidth;
+			else if (i == 0) nextWidth = demos[1].clientWidth;
+			else if (i > currentDemo) nextWidth = demos[i - 1].clientWidth;
+			else nextWidth = demos[i + 1].clientWidth;
 
-				// var nextVideo = demos[i].children[0];
-				// nextVideo.play();
-				// nextVideo.addEventListener("ended", (e) => {});
-			}
+			const currentWidth = demos[i].clientWidth;
+			const largeWidth = Math.max(nextWidth, currentWidth);
+			const smallWidth = Math.min(nextWidth, currentWidth);
+
+			const offset =
+				-(i * smallWidth) +
+				(reelContainer.current.clientWidth - largeWidth) / 2;
+			reelContainer.current.children[0].style.marginLeft = offset + "px";
+
+			// var nextVideo = demos[i].children[0];
+			// nextVideo.play();
+			// nextVideo.addEventListener("ended", (e) => {});
 
 			return i;
 		});
@@ -68,24 +80,52 @@ function FeatureSplash({ subheading, heading, tagline, demos }) {
 
 	return (
 		<>
-			<div className={"container-full " + featureSplashStyles["container-full-content"]} ref={splashContent}>
-				<div className={"container-partial " + featureSplashStyles["container-partial-content"]}>
-					<h4 className={featureSplashStyles["subheading"]}>{subheading}</h4>
+			<div
+				className={
+					"container-full " + featureSplashStyles["container-full-content"]
+				}
+				ref={splashContent}
+			>
+				<div
+					className={
+						"container-partial " +
+						featureSplashStyles["container-partial-content"]
+					}
+				>
+					<h4 className={featureSplashStyles["subheading"]}>
+						{subheading}
+					</h4>
 					<h1 className={featureSplashStyles["heading"]}>{heading}</h1>
 					<p className={featureSplashStyles["tagline"]}>{tagline}</p>
 					<CTA />
 				</div>
 			</div>
-			<div className={"container-full " + featureSplashStyles["container-reel"]} ref={reelContainer}>
-				<div className={"container-full " + featureSplashStyles["container-video"]} style={{ marginLeft: 0 }}>
+			<div
+				className={
+					"container-full " + featureSplashStyles["container-reel"]
+				}
+				ref={reelContainer}
+			>
+				<div
+					className={
+						"container-full " + featureSplashStyles["container-video"]
+					}
+					style={{ marginLeft: 0 }}
+				>
 					{demos &&
 						demos.map((demo, i) => (
-							<div className={getDemoStyles(i)} onClick={() => selectDemo(i)} key={i}>
+							<div
+								className={getDemoStyles(i)}
+								onClick={() => selectDemo(i)}
+								key={i}
+							>
 								<video className={featureSplashStyles["demo-video"]}>
 									<source src={"/videos/comingSoon.mp4"} />
 									{/* + demo.src */}
 								</video>
-								<h3 className={featureSplashStyles["demo-heading"]}>{demo.heading}</h3>
+								<h3 className={featureSplashStyles["demo-heading"]}>
+									{demo.heading}
+								</h3>
 							</div>
 						))}
 				</div>
