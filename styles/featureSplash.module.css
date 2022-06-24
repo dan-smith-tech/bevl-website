@@ -1,7 +1,12 @@
+.container-main {
+	background-color: var(--color-secondary-blue);
+	color: var(--color-neutral-white);
+	overflow: hidden;
+}
+
 .container-full-content {
 	margin: 3.5rem 0;
 	box-sizing: border-box;
-	color: var(--color-secondary-blue);
 	position: relative;
 }
 
@@ -12,7 +17,8 @@
 	margin-bottom: 1.65em;
 	font-weight: 600;
 	letter-spacing: 0.15rem;
-	color: var(--color-secondary-blue-translucent);
+	color: var(--color-neutral-white);
+	opacity: 0.65;
 	text-align: center;
 }
 
@@ -36,6 +42,7 @@
 	justify-content: flex-start;
 	position: relative;
 	overflow-x: hidden;
+	transform: translateY(1px);
 }
 
 .container-video {
@@ -62,7 +69,7 @@
 }
 
 .demo-back {
-	opacity: 0.65;
+	opacity: 0.95;
 	filter: brightness(0.65);
 	cursor: pointer;
 }
@@ -100,7 +107,7 @@
 	left: 0 !important;
 	right: 0 !important;
 	bottom: 0;
-	transform: scaleX(2);
+	--transform: scaleX(2);
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -113,13 +120,13 @@
 
 	@keyframes animateWave {
 		0% {
-			transform: translateX(0) scaleX(2);
+			transform: translateX(0) var(--transform);
 		}
 		50% {
-			transform: translateX(-50%) scaleX(2);
+			transform: translateX(-50%) var(--transform);
 		}
 		100% {
-			transform: translateX(0) scaleX(2);
+			transform: translateX(0) var(--transform);
 		}
 	}
 }

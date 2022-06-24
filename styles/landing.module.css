@@ -4,7 +4,8 @@
 	position: relative;
 }
 
-.container-partial-splash {
+.container-partial-splash button:focus {
+	outline-color: var(--color-secondary-blue) !important;
 }
 
 .heading {

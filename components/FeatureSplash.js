@@ -79,7 +79,7 @@ function FeatureSplash({ subheading, heading, tagline, demos }) {
 	}, []);
 
 	return (
-		<>
+		<div className={featureSplashStyles["container-main"]}>
 			<div
 				className={
 					"container-full " + featureSplashStyles["container-full-content"]
@@ -142,7 +142,7 @@ function FeatureSplash({ subheading, heading, tagline, demos }) {
 					></path>
 				</svg>
 			</div>
-		</>
+		</div>
 	);
 }
 
