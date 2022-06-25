@@ -1,4 +1,5 @@
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 import FormButton from "../../../components/form/Button";
 
@@ -11,14 +12,25 @@ export async function getServerSideProps(context) {
 	const email = context.query.email ? context.query.email : null;
 	const id = encryptEmail(email);
 
-	const bevlAnnouncements = context.query.bevlAnnouncements == "true" ? true : false;
-	const productivityTips = context.query.productivityTips == "true" ? true : false;
+	const bevlAnnouncements =
+		context.query.bevlAnnouncements == "true" ? true : false;
+	const productivityTips =
+		context.query.productivityTips == "true" ? true : false;
 
-	return { props: { id, email, bevlAnnouncements, productivityTips, absoluteUrl: process.env.ABSOLUTE_URL } };
+	return {
+		props: {
+			id,
+			email,
+			bevlAnnouncements,
+			productivityTips,
+			absoluteUrl: process.env.ABSOLUTE_URL,
+		},
+	};
 }
 
 function NewsletterUnsubscribe(props) {
-	const { id, email, bevlAnnouncements, productivityTips, absoluteUrl } = props;
+	const { id, email, bevlAnnouncements, productivityTips, absoluteUrl } =
+		props;
 	const router = useRouter();
 
 	if (isEmail(email)) {
@@ -37,26 +49,58 @@ function NewsletterUnsubscribe(props) {
 		}
 
 		return (
-			<div className={"container-full " + newsletterStyles["container-full"]}>
-				<div className={"container-partial " + newsletterStyles["container-partial"]}>
-					<h1>Confirm Unsubscription</h1>
-					<p>Click below to confirm your unsubscription.</p>
-					<form onSubmit={handleSubmit}>
-						<div className={newsletterStyles["container-form-button"]}>
-							<FormButton type={"submit"} value="Unsubscribe" light={true} />
-						</div>
-					</form>
+			<>
+				<Head>
+					<title>Bevl • Newsletter Unsubscribe</title>
+				</Head>
+				<div
+					className={
+						"container-full " + newsletterStyles["container-full"]
+					}
+				>
+					<div
+						className={
+							"container-partial " +
+							newsletterStyles["container-partial"]
+						}
+					>
+						<h1>Confirm Unsubscription</h1>
+						<p>Click below to confirm your unsubscription.</p>
+						<form onSubmit={handleSubmit}>
+							<div className={newsletterStyles["container-form-button"]}>
+								<FormButton
+									type={"submit"}
+									value="Unsubscribe"
+									light={true}
+								/>
+							</div>
+						</form>
+					</div>
 				</div>
-			</div>
+			</>
 		);
 	} else {
 		return (
-			<div className={"container-full " + newsletterStyles["container-full"]}>
-				<div className={"container-partial " + newsletterStyles["container-partial"]}>
-					<h1>Error</h1>
-					<p>Please use a valid email address.</p>
+			<>
+				<Head>
+					<title>Bevl • Newsletter Unsubscribe</title>
+				</Head>
+				<div
+					className={
+						"container-full " + newsletterStyles["container-full"]
+					}
+				>
+					<div
+						className={
+							"container-partial " +
+							newsletterStyles["container-partial"]
+						}
+					>
+						<h1>Error</h1>
+						<p>Please use a valid email address.</p>
+					</div>
 				</div>
-			</div>
+			</>
 		);
 	}
 }

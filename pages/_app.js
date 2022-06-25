@@ -12,6 +12,10 @@ function MyApp({ Component, pageProps }) {
 				<link rel="icon" href="/images/favicon.svg" />
 				<title>Bevl</title>
 				<meta property="og:title" content="Bevl" key="title" />
+				<meta
+					property="og:image"
+					content="https://bevl.app/images/open-graph/index.png"
+				/>
 			</Head>
 			<Header />
 			<Component {...pageProps} />

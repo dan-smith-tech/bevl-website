@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Head from "next/head";
 
 import FormInput from "../../components/form/Input";
 import FormButton from "../../components/form/Button";
@@ -32,6 +33,18 @@ function Newsletter() {
 
 	return (
 		<>
+			<Head>
+				<title>Bevl • Newsletter</title>
+				<meta property="og:title" content="Bevl • Newsletter" />
+				<meta
+					name="description"
+					content="Stay up to date with the latest productivity tips and exclusive offers."
+				/>
+				<meta
+					property="og:description"
+					content="Stay up to date with the latest productivity tips and exclusive offers."
+				/>
+			</Head>
 			<div
 				className={
 					"container-full " +

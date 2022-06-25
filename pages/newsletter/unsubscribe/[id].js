@@ -1,3 +1,5 @@
+import Head from "next/head";
+
 import { decryptEmail } from "../../../lib/crypto";
 import { isEmail } from "../../../lib/helpers";
 import sendFetchRequest from "../../../lib/fetch";
@@ -9,14 +11,25 @@ export async function getServerSideProps(context) {
 
 	const email = decryptEmail(id);
 
-	const bevlAnnouncements = context.query.bevlAnnouncements == "true" ? true : false;
-	const productivityTips = context.query.productivityTips == "true" ? true : false;
+	const bevlAnnouncements =
+		context.query.bevlAnnouncements == "true" ? true : false;
+	const productivityTips =
+		context.query.productivityTips == "true" ? true : false;
 
-	return { props: { id, email, bevlAnnouncements, productivityTips, absoluteUrl: process.env.ABSOLUTE_URL } };
+	return {
+		props: {
+			id,
+			email,
+			bevlAnnouncements,
+			productivityTips,
+			absoluteUrl: process.env.ABSOLUTE_URL,
+		},
+	};
 }
 
 function NewsletterUnsubscribeConfirmation(props) {
-	const { id, email, bevlAnnouncements, productivityTips, absoluteUrl } = props;
+	const { id, email, bevlAnnouncements, productivityTips, absoluteUrl } =
+		props;
 
 	if (isEmail(email)) {
 		sendFetchRequest(
@@ -32,21 +45,49 @@ function NewsletterUnsubscribeConfirmation(props) {
 		);
 
 		return (
-			<div className={"container-full " + newsletterStyles["container-full"]}>
-				<div className={"container-partial " + newsletterStyles["container-partial"]}>
-					<h1>You're Unsubscribed</h1>
-					<p>I'm sorry to see you go!</p>
+			<>
+				<Head>
+					<title>Bevl • Newsletter Unsubscribe</title>
+				</Head>
+				<div
+					className={
+						"container-full " + newsletterStyles["container-full"]
+					}
+				>
+					<div
+						className={
+							"container-partial " +
+							newsletterStyles["container-partial"]
+						}
+					>
+						<h1>You're Unsubscribed</h1>
+						<p>I'm sorry to see you go!</p>
+					</div>
 				</div>
-			</div>
+			</>
 		);
 	} else {
 		return (
-			<div className={"container-full " + newsletterStyles["container-full"]}>
-				<div className={"container-partial " + newsletterStyles["container-partial"]}>
-					<h1>Unsubscription Failed</h1>
-					<p>Please use a valid email address.</p>
+			<>
+				<Head>
+					<title>Bevl • Newsletter Unsubscribe</title>
+				</Head>
+				<div
+					className={
+						"container-full " + newsletterStyles["container-full"]
+					}
+				>
+					<div
+						className={
+							"container-partial " +
+							newsletterStyles["container-partial"]
+						}
+					>
+						<h1>Unsubscription Failed</h1>
+						<p>Please use a valid email address.</p>
+					</div>
 				</div>
-			</div>
+			</>
 		);
 	}
 }

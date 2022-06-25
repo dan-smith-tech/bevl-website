@@ -12,6 +12,22 @@ function Labels() {
 		<>
 			<Head>
 				<title>Bevl • Group and Filter Content</title>
+				<meta
+					property="og:title"
+					content="Bevl • Group and Filter Content"
+				/>
+				<meta
+					name="description"
+					content="Group and filter content with customisable tags, to focus on the tasks at hand."
+				/>
+				<meta
+					property="og:description"
+					content="Group and filter content with customisable tags, to focus on the tasks at hand."
+				/>
+				<meta
+					property="og:image"
+					content="https://bevl.app/images/open-graph/labels.png"
+				/>
 			</Head>
 			<FeatureSplash
 				subheading="LABELS"
@@ -38,7 +54,8 @@ function Labels() {
 					<Link href={"/features/lists"}>
 						<a>Lists</a>
 					</Link>{" "}
-					so they can be filtered: use <strong>Labels</strong> to arrange content in categories.
+					so they can be filtered: use <strong>Labels</strong> to arrange
+					content in categories.
 				</p>
 			</FeatureSummary>
 			<FeatureSummary
@@ -48,7 +65,8 @@ function Labels() {
 				dark={false}
 			>
 				<p>
-					Name, colour, and change the background pattern of <strong>Labels</strong> to organise{" "}
+					Name, colour, and change the background pattern of{" "}
+					<strong>Labels</strong> to organise{" "}
 					<Link href={"/features/tasks"}>
 						<a>Tasks</a>
 					</Link>{" "}
@@ -66,7 +84,8 @@ function Labels() {
 				dark={false}
 			>
 				<p>
-					Set the most fequently used <strong>Label</strong>, to save time when creating new{" "}
+					Set the most fequently used <strong>Label</strong>, to save time
+					when creating new{" "}
 					<Link href={"/features/tasks"}>
 						<a>Tasks</a>
 					</Link>{" "}
@@ -85,7 +104,10 @@ function Labels() {
 				imageFirst={false}
 				dark={false}
 			>
-				<p>Learn about the planning philosophy that Bevl was designed to facilitate.</p>
+				<p>
+					Learn about the planning philosophy that Bevl was designed to
+					facilitate.
+				</p>
 			</FeatureSummary>
 			<CTA independent={true} />
 			<FAQ />

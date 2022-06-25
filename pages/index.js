@@ -37,17 +37,26 @@ function Landing() {
 		observer.observe(featuresIntersectionDetectorRef.current);
 	}, []);
 
-	// console.log(
-	// 	{
-	// 		development: "http://localhost:5000",
-	// 		production: "https://mydomain.com",
-	// 	}[process.env.NODE_ENV]
-	// );
-
 	return (
 		<>
 			<Head>
-				<title>Bevl • Spend Less Time Planning and More Time Doing</title>
+				<title>Bevl • A Modern Todo List for Productive Visual Plans</title>
+				<meta
+					property="og:title"
+					content="Bevl • A Modern Todo List for Productive Visual Plans"
+				/>
+				<meta
+					name="description"
+					content="Spend less time planning, and more time doing. Drag and drop todos to make visual plans, and keep track of wandering ideas. Bevl is an app with a philosophy."
+				/>
+				<meta
+					property="og:description"
+					content="Spend less time planning, and more time doing. Drag and drop todos to make visual plans, and keep track of wandering ideas. Bevl is an app with a philosophy."
+				/>
+				<meta
+					property="og:image"
+					content="https://bevl.app/images/open-graph/landing.png"
+				/>
 			</Head>
 			<div
 				className={

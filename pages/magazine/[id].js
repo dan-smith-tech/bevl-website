@@ -60,6 +60,11 @@ function Post({ post, relatedPosts }) {
 		<>
 			<Head>
 				<title>Bevl • {post.title}</title>
+				{/* <link
+					rel="canonical"
+					href="https://example.com/blog/original-post"
+					key="canonical"
+				/> */}
 			</Head>
 			<div className={"container-full " + postStyles["container-full"]}>
 				<div

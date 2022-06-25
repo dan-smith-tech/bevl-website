@@ -11,6 +11,22 @@ function Tasks() {
 		<>
 			<Head>
 				<title>Bevl • Organise Every Kind of Todo</title>
+				<meta
+					property="og:title"
+					content="Bevl • Organise Every Kind of Todo"
+				/>
+				<meta
+					name="description"
+					content="Plan any todo with 4 unique task types, that suit every situation."
+				/>
+				<meta
+					property="og:description"
+					content="Plan any todo with 4 unique task types, that suit every situation."
+				/>
+				<meta
+					property="og:image"
+					content="https://bevl.app/images/open-graph/tasks.png"
+				/>
 			</Head>
 			<FeatureSplash
 				subheading="TASKS"
@@ -30,8 +46,9 @@ function Tasks() {
 				dark={false}
 			>
 				<p>
-					Drag tasks into the calendar to assign times to work on them: use <strong>Deadlines</strong> to plan
-					work that has a final due date, but needs to be completed over time.
+					Drag tasks into the calendar to assign times to work on them: use{" "}
+					<strong>Deadlines</strong> to plan work that has a final due
+					date, but needs to be completed over time.
 				</p>
 			</FeatureSummary>
 			<FeatureSummary
@@ -41,8 +58,8 @@ function Tasks() {
 				dark={false}
 			>
 				<p>
-					Set tasks that only occur once: use <strong>Events</strong> for one-off occasions, such as meetings
-					or activities.
+					Set tasks that only occur once: use <strong>Events</strong> for
+					one-off occasions, such as meetings or activities.
 				</p>
 			</FeatureSummary>
 			<FeatureSummary
@@ -52,8 +69,8 @@ function Tasks() {
 				dark={false}
 			>
 				<p>
-					Arrange recurring tasks that can be individually customised: use <strong>Habits</strong> to create
-					routines or develop practices.
+					Arrange recurring tasks that can be individually customised: use{" "}
+					<strong>Habits</strong> to create routines or develop practices.
 				</p>
 			</FeatureSummary>
 			<FeatureSummary
@@ -63,9 +80,10 @@ function Tasks() {
 				dark={false}
 			>
 				<p>
-					Break tasks down into smaller <strong>Deadlines</strong> and <strong>Events</strong>, so they can be
-					individually organised: use <strong>Projects</strong> to split larger pieces of work into multiple
-					chunks.
+					Break tasks down into smaller <strong>Deadlines</strong> and{" "}
+					<strong>Events</strong>, so they can be individually organised:
+					use <strong>Projects</strong> to split larger pieces of work into
+					multiple chunks.
 				</p>
 			</FeatureSummary>
 			<FeatureSummary
@@ -74,7 +92,10 @@ function Tasks() {
 				imageFirst={true}
 				dark={false}
 			>
-				<p>View all tasks on the fully-interactable calendar, where they can be filtered and organised.</p>
+				<p>
+					View all tasks on the fully-interactable calendar, where they can
+					be filtered and organised.
+				</p>
 			</FeatureSummary>
 			{/* <Testimonials /> */}
 			<FeatureSummary
@@ -84,7 +105,10 @@ function Tasks() {
 				imageFirst={false}
 				dark={false}
 			>
-				<p>Learn about the planning philosophy that Bevl was designed to facilitate.</p>
+				<p>
+					Learn about the planning philosophy that Bevl was designed to
+					facilitate.
+				</p>
 			</FeatureSummary>
 			<CTA independent={true} />
 			<FAQ />

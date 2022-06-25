@@ -12,6 +12,22 @@ function Lists() {
 		<>
 			<Head>
 				<title>Bevl • Keep Track of Wandering Ideas</title>
+				<meta
+					property="og:title"
+					content="Bevl • Keep Track of Wandering Ideas"
+				/>
+				<meta
+					name="description"
+					content="Record less-organised notes and ideas, without cluttering your todo list."
+				/>
+				<meta
+					property="og:description"
+					content="Record less-organised notes and ideas, without cluttering your todo list."
+				/>
+				<meta
+					property="og:image"
+					content="https://bevl.app/images/open-graph/lists.png"
+				/>
 			</Head>
 			<FeatureSplash
 				subheading="LISTS"
@@ -30,8 +46,9 @@ function Lists() {
 				dark={false}
 			>
 				<p>
-					Collect notes and ideas: use <strong>Lists</strong> to collate information that doesn't belong on a
-					todo list, but does need to be remembered.
+					Collect notes and ideas: use <strong>Lists</strong> to collate
+					information that doesn't belong on a todo list, but does need to
+					be remembered.
 				</p>
 			</FeatureSummary>
 			<FeatureSummary
@@ -40,7 +57,10 @@ function Lists() {
 				imageFirst={true}
 				dark={false}
 			>
-				<p>Link notes and ideas to external resources (such as websites and files).</p>
+				<p>
+					Link notes and ideas to external resources (such as websites and
+					files).
+				</p>
 			</FeatureSummary>
 			<FeatureSummary
 				heading={"Arrange"}
@@ -49,7 +69,8 @@ function Lists() {
 				dark={false}
 			>
 				<p>
-					Filter and reorder <strong>Lists</strong> for full organisational control.
+					Filter and reorder <strong>Lists</strong> for full organisational
+					control.
 				</p>
 			</FeatureSummary>
 			{/* <Testimonials /> */}
@@ -60,7 +81,10 @@ function Lists() {
 				imageFirst={true}
 				dark={false}
 			>
-				<p>Learn about the planning philosophy that Bevl was designed to facilitate.</p>
+				<p>
+					Learn about the planning philosophy that Bevl was designed to
+					facilitate.
+				</p>
 			</FeatureSummary>
 			<CTA independent={true} />
 			<FAQ />
