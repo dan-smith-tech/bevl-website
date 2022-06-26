@@ -14,6 +14,7 @@
 			format("truetype"),
 		/* Safari, Android, iOS */
 			url("/fonts/work-sans-v17-latin-300.svg#WorkSans") format("svg"); /* Legacy iOS */
+	font-display: swap;
 }
 
 /* work-sans-regular - latin */
@@ -33,6 +34,7 @@
 			format("truetype"),
 		/* Safari, Android, iOS */
 			url("/fonts/work-sans-v17-latin-regular.svg#WorkSans") format("svg"); /* Legacy iOS */
+	font-display: swap;
 }
 
 /* work-sans-600 - latin */
@@ -51,6 +53,7 @@
 			format("truetype"),
 		/* Safari, Android, iOS */
 			url("/fonts/work-sans-v17-latin-600.svg#WorkSans") format("svg"); /* Legacy iOS */
+	font-display: swap;
 }
 
 /* work-sans-700 - latin */
@@ -69,6 +72,7 @@
 			format("truetype"),
 		/* Safari, Android, iOS */
 			url("/fonts/work-sans-v17-latin-700.svg#WorkSans") format("svg"); /* Legacy iOS */
+	font-display: swap;
 }
 
 * {

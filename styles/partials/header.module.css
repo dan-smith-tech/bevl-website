@@ -52,9 +52,12 @@
 
 .nav-bar-link {
 	margin: 0 1em;
+	font-size: 1rem;
 	font-weight: 500;
 	color: var(--color-secondary-blue);
 	text-decoration: none;
+	background-color: transparent;
+	border: none;
 	user-select: none;
 }
 

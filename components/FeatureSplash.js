@@ -123,9 +123,9 @@ function FeatureSplash({ subheading, heading, tagline, demos }) {
 									<source src={"/videos/comingSoon.mp4"} />
 									{/* + demo.src */}
 								</video>
-								<h3 className={featureSplashStyles["demo-heading"]}>
+								<h2 className={featureSplashStyles["demo-heading"]}>
 									{demo.heading}
-								</h3>
+								</h2>
 							</div>
 						))}
 				</div>

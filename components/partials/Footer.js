@@ -19,6 +19,7 @@ export default function Footer() {
 							<a>
 								<Image
 									src={"/images/logo-complete.svg"}
+									alt={"Bevl Logo"}
 									layout="fill"
 									className={footerStyles["image"]}
 									draggable="false"

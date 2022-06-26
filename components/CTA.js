@@ -17,9 +17,13 @@ export default function CTA({ independent }) {
 		const email = e.target.email.value;
 		if (email.length > 0 && isEmail(email)) {
 			setShowModal(true);
-			sendFetchRequest("/api/newsletter/subscribe?optInStage=1&bevlAnnouncements=true", "POST", {
-				email,
-			});
+			sendFetchRequest(
+				"/api/newsletter/subscribe?optInStage=1&bevlAnnouncements=true",
+				"POST",
+				{
+					email,
+				}
+			);
 			e.target.email.value = null;
 		}
 	}
@@ -27,9 +31,17 @@ export default function CTA({ independent }) {
 	if (!independent)
 		return (
 			<div>
-				<form onSubmit={handleSubmit} className={ctaStyles["container-form"]}>
+				<form
+					onSubmit={handleSubmit}
+					className={ctaStyles["container-form"]}
+				>
 					<div className={ctaStyles["container-form-input"]}>
-						<FormInput type={"text"} name={"email"} placeholder="Enter email..." required={true} />
+						<FormInput
+							type={"text"}
+							name={"email1"}
+							placeholder="Enter email..."
+							required={true}
+						/>
 					</div>
 					<div className={ctaStyles["container-form-button"]}>
 						<FormButton type={"submit"} value="Sign Up" light={true} />
@@ -45,20 +57,37 @@ export default function CTA({ independent }) {
 					</div>
 				</form>
 				<small>
-					Bevl is launching soon! Sign up to the announcements newsletter to get an exclusive deal at launch.
+					Bevl is launching soon! Sign up to the announcements newsletter
+					to get an exclusive deal at launch.
 				</small>
 			</div>
 		);
 	else
 		return (
 			<div className={"container-full " + ctaStyles["container-full"]}>
-				<div className={"container-partial " + ctaStyles["container-partial"]}>
-					<h1 className={ctaStyles["heading"]}>Up Your Productivity Game With Bevl</h1>
-					<form onSubmit={handleSubmit} className={ctaStyles["container-form"]}>
+				<div
+					className={"container-partial " + ctaStyles["container-partial"]}
+				>
+					<h1 className={ctaStyles["heading"]}>
+						Up Your Productivity Game With Bevl
+					</h1>
+					<form
+						onSubmit={handleSubmit}
+						className={ctaStyles["container-form"]}
+					>
 						<div
-							className={ctaStyles["container-form-input"] + " " + ctaStyles["container-form-input-light"]}
+							className={
+								ctaStyles["container-form-input"] +
+								" " +
+								ctaStyles["container-form-input-light"]
+							}
 						>
-							<FormInput type={"text"} name={"email"} placeholder="Enter email..." required={true} />
+							<FormInput
+								type={"text"}
+								name={"email2"}
+								placeholder="Enter email..."
+								required={true}
+							/>
 						</div>
 						<div className={ctaStyles["container-form-button"]}>
 							<FormButton type={"submit"} value="Sign Up" light={true} />
@@ -74,8 +103,8 @@ export default function CTA({ independent }) {
 						</div>
 					</form>
 					<small>
-						Bevl is launching soon! Sign up to the announcements newsletter to get an exclusive deal at
-						launch.
+						Bevl is launching soon! Sign up to the announcements
+						newsletter to get an exclusive deal at launch.
 					</small>
 				</div>
 			</div>

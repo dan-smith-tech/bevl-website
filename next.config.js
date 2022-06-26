@@ -1,5 +1,7 @@
 module.exports = {
-	images: {
-		domains: ["images.unsplash.com", "media.istockphoto.com"],
+	i18n: {
+		locales: ["en"],
+		defaultLocale: "en",
 	},
+	productionBrowserSourceMaps: true,
 };

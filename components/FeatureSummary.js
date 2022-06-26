@@ -41,7 +41,7 @@ export default function FeatureSummary({
 			{children}
 			<Link href={link}>
 				<a className={featureSummaryStyles["button"]}>
-					Learn More{" "}
+					Explore{" "}
 					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
 						<path
 							fill="#fe4c5f"
@@ -55,7 +55,7 @@ export default function FeatureSummary({
 	) : (
 		<div className={getTextStyles()}>
 			<h2>{heading}</h2>
-			<p>{children}</p>
+			{children}
 		</div>
 	);
 
@@ -72,6 +72,7 @@ export default function FeatureSummary({
 		<div className={getImageStyles()} ref={intersectionDetectorRef}>
 			<Image
 				src={image}
+				alt={heading + " Demo"}
 				layout="fill"
 				className={featureSummaryStyles["content-image"]}
 				draggable="false"

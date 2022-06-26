@@ -31,6 +31,7 @@ export default function Header() {
 								<a>
 									<Image
 										src={"/images/logo-complete.svg"}
+										alt={"Bevl Logo"}
 										layout="fill"
 										className={headerStyles["image"]}
 										draggable="false"
@@ -41,7 +42,7 @@ export default function Header() {
 					</div>
 					<div className={headerStyles["nav-links"]}>
 						<div className={headerStyles["container-nav-bar"]}>
-							<a
+							<button
 								className={
 									headerStyles["nav-bar-link"] +
 									" " +
@@ -61,7 +62,7 @@ export default function Header() {
 										d="M16.939 7.939 12 12.879l-4.939-4.94-2.122 2.122L12 17.121l7.061-7.06z"
 									></path>
 								</svg>
-							</a>
+							</button>
 							<ul className={headerStyles["nav-bar-dropdown"]}>
 								<li>
 									<Link href="/features/tasks">
@@ -205,7 +206,7 @@ export default function Header() {
 									</Link>
 								</li>
 							</ul>
-							<a
+							<button
 								className={
 									headerStyles["nav-bar-link"] +
 									" " +
@@ -225,7 +226,7 @@ export default function Header() {
 										d="M16.939 7.939 12 12.879l-4.939-4.94-2.122 2.122L12 17.121l7.061-7.06z"
 									></path>
 								</svg>
-							</a>
+							</button>
 							<ul className={headerStyles["nav-bar-dropdown"]}>
 								<li>
 									<Link href="/magazine">
@@ -322,7 +323,7 @@ export default function Header() {
 									</Link>
 								</li>
 							</ul>
-							<a
+							<button
 								className={
 									headerStyles["nav-bar-link"] +
 									" " +
@@ -342,7 +343,7 @@ export default function Header() {
 										d="M16.939 7.939 12 12.879l-4.939-4.94-2.122 2.122L12 17.121l7.061-7.06z"
 									></path>
 								</svg>
-							</a>
+							</button>
 							<ul className={headerStyles["nav-bar-dropdown"]}>
 								<li>
 									<Link href="/story">
@@ -470,6 +471,7 @@ export default function Header() {
 						<button
 							className={headerStyles["nav-menu-toggle"]}
 							onClick={() => setShowNavMenu(!showNavMenu)}
+							aria-label={"Navigation Menu Toggle"}
 						>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
