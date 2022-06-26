@@ -27,6 +27,11 @@
 	position: relative;
 }
 
+.container-image a {
+	position: absolute;
+	inset: 0;
+}
+
 .image {
 	object-fit: contain;
 	cursor: pointer;

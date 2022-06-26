@@ -4,13 +4,24 @@ import Image from "next/image";
 
 import featureSummaryStyles from "../styles/featureSummary.module.css";
 
-export default function FeatureSummary({ heading, children, link, image, imageFirst, dark }) {
+export default function FeatureSummary({
+	heading,
+	children,
+	link,
+	image,
+	imageFirst,
+	dark,
+}) {
 	const [intersection, setIntersection] = useState();
 	const intersectionDetectorRef = useRef();
 
 	const getTextStyles = () => {
 		if (!intersection) return featureSummaryStyles["content-container-text"];
-		return featureSummaryStyles["content-container-text"] + " " + featureSummaryStyles["text-animation"];
+		return (
+			featureSummaryStyles["content-container-text"] +
+			" " +
+			featureSummaryStyles["text-animation"]
+		);
 	};
 
 	useEffect(() => {
@@ -29,12 +40,16 @@ export default function FeatureSummary({ heading, children, link, image, imageFi
 			<h2>{heading}</h2>
 			{children}
 			<Link href={link}>
-				<button>
+				<a className={featureSummaryStyles["button"]}>
 					Learn More{" "}
 					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-						<path fill="#fe4c5f" fillOpacity="1" d="m19 12-7-6v5H6v2h6v5z"></path>
+						<path
+							fill="#fe4c5f"
+							fillOpacity="1"
+							d="m19 12-7-6v5H6v2h6v5z"
+						></path>
 					</svg>
-				</button>
+				</a>
 			</Link>
 		</div>
 	) : (
@@ -46,19 +61,38 @@ export default function FeatureSummary({ heading, children, link, image, imageFi
 
 	const getImageStyles = () => {
 		if (!intersection) return featureSummaryStyles["content-container-image"];
-		return featureSummaryStyles["content-container-image"] + " " + featureSummaryStyles["image-animation"];
+		return (
+			featureSummaryStyles["content-container-image"] +
+			" " +
+			featureSummaryStyles["image-animation"]
+		);
 	};
 
 	const imageElement = (
 		<div className={getImageStyles()} ref={intersectionDetectorRef}>
-			<Image src={image} layout="fill" className={featureSummaryStyles["content-image"]} draggable="false" />
+			<Image
+				src={image}
+				layout="fill"
+				className={featureSummaryStyles["content-image"]}
+				draggable="false"
+			/>
 		</div>
 	);
 
 	if (!dark && !imageFirst)
 		return (
-			<div className={"container-full " + featureSummaryStyles["container-full-content"]}>
-				<div className={"container-partial " + featureSummaryStyles["container-partial-content"]}>
+			<div
+				className={
+					"container-full " +
+					featureSummaryStyles["container-full-content"]
+				}
+			>
+				<div
+					className={
+						"container-partial " +
+						featureSummaryStyles["container-partial-content"]
+					}
+				>
 					{textElement}
 					{imageElement}
 				</div>
@@ -66,7 +100,12 @@ export default function FeatureSummary({ heading, children, link, image, imageFi
 		);
 	else if (!dark && imageFirst)
 		return (
-			<div className={"container-full " + featureSummaryStyles["container-full-content"]}>
+			<div
+				className={
+					"container-full " +
+					featureSummaryStyles["container-full-content"]
+				}
+			>
 				<div
 					className={
 						"container-partial " +

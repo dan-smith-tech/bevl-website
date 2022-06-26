@@ -76,7 +76,9 @@
 	border-radius: var(--border-radius);
 	background-color: var(--color-secondary-blue-translucent);
 	background-color: var(--color-neutral-grey);
-	transition: background-color 150ms ease-in;
+	transition-property: background-color;
+	transition-duration: var(--transition-duration);
+	transition-timing-function: ease-out;
 }
 
 .nav-element-selected {

@@ -90,6 +90,8 @@
 	--border-radius: 0.5rem;
 
 	--header-height: 3.5rem;
+
+	--transition-duration: 150ms;
 }
 
 html,
@@ -145,13 +147,23 @@ li {
 	line-height: 2rem;
 }
 
-/* p::selection {
-	background-color: var(--color-primary-pink);
-} */
-
 a {
 	color: var(--color-primary-pink);
 	font-weight: 600;
+}
+
+a:focus {
+	outline: var(--border-size) solid var(--color-primary-pink);
+	border-radius: var(--border-radius);
+	outline-offset: 0.25em;
+}
+
+:focus:not(:focus-visible) {
+	outline: none;
+}
+
+a:active {
+	opacity: 0.5;
 }
 
 strong {

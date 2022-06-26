@@ -52,13 +52,17 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	transition: all 350ms ease-out;
+	transition-property: margin-left;
+	transition-duration: 350ms;
+	transition-timing-function: ease-out;
 }
 
 .demo {
 	width: 35em;
 	z-index: 1;
-	transition: all 350ms ease-out;
+	transition-property: transform, opacity, filter, width;
+	transition-duration: 350ms;
+	transition-timing-function: ease-out;
 }
 
 .demo-current {

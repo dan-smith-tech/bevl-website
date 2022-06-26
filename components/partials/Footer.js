@@ -5,36 +5,54 @@ import footerStyles from "../../styles/partials/footer.module.css";
 
 export default function Footer() {
 	return (
-		<div className={"container-full " + footerStyles["container-full-content"]}>
-			<div className={"container-partial " + footerStyles["container-partial-content"]}>
+		<div
+			className={"container-full " + footerStyles["container-full-content"]}
+		>
+			<div
+				className={
+					"container-partial " + footerStyles["container-partial-content"]
+				}
+			>
 				<div>
 					<div className={footerStyles["container-image"]}>
 						<Link href="/">
-							<Image
-								src={"/images/logo-complete.svg"}
-								layout="fill"
-								className={footerStyles["image"]}
-								draggable="false"
-							/>
+							<a>
+								<Image
+									src={"/images/logo-complete.svg"}
+									layout="fill"
+									className={footerStyles["image"]}
+									draggable="false"
+								/>
+							</a>
 						</Link>
 					</div>
-					<p className={footerStyles["copyright"]}>All Rights Reserved © bevl.app</p>
+					<p className={footerStyles["copyright"]}>
+						All Rights Reserved © bevl.app
+					</p>
 				</div>
 				<div className={footerStyles["container-content"]}>
 					<div className={footerStyles["content-column"]}>
-						<h4 className={footerStyles["content-column-heading"]}>Features</h4>
+						<h4 className={footerStyles["content-column-heading"]}>
+							Features
+						</h4>
 						<ul className={footerStyles["content-column-list"]}>
-							<li className={footerStyles["content-column-list-element"]}>
+							<li
+								className={footerStyles["content-column-list-element"]}
+							>
 								<Link href={"/features/tasks"}>
 									<a>Tasks</a>
 								</Link>
 							</li>
-							<li className={footerStyles["content-column-list-element"]}>
+							<li
+								className={footerStyles["content-column-list-element"]}
+							>
 								<Link href={"/features/lists"}>
 									<a>Lists</a>
 								</Link>
 							</li>
-							<li className={footerStyles["content-column-list-element"]}>
+							<li
+								className={footerStyles["content-column-list-element"]}
+							>
 								<Link href={"/features/labels"}>
 									<a>Labels</a>
 								</Link>
@@ -42,24 +60,34 @@ export default function Footer() {
 						</ul>
 					</div>
 					<div className={footerStyles["content-column"]}>
-						<h4 className={footerStyles["content-column-heading"]}>Resources</h4>
+						<h4 className={footerStyles["content-column-heading"]}>
+							Resources
+						</h4>
 						<ul className={footerStyles["content-column-list"]}>
-							<li className={footerStyles["content-column-list-element"]}>
+							<li
+								className={footerStyles["content-column-list-element"]}
+							>
 								<Link href={"/magazine"}>
 									<a>Magazine</a>
 								</Link>
 							</li>
-							<li className={footerStyles["content-column-list-element"]}>
+							<li
+								className={footerStyles["content-column-list-element"]}
+							>
 								<Link href={"/newsletter"}>
 									<a>Newsletter</a>
 								</Link>
 							</li>
-							<li className={footerStyles["content-column-list-element"]}>
+							<li
+								className={footerStyles["content-column-list-element"]}
+							>
 								<Link href={"/help"}>
 									<a>Help</a>
 								</Link>
 							</li>
-							<li className={footerStyles["content-column-list-element"]}>
+							<li
+								className={footerStyles["content-column-list-element"]}
+							>
 								<Link href={"/contact"}>
 									<a>Contact</a>
 								</Link>
@@ -67,14 +95,20 @@ export default function Footer() {
 						</ul>
 					</div>
 					<div className={footerStyles["content-column"]}>
-						<h4 className={footerStyles["content-column-heading"]}>About</h4>
+						<h4 className={footerStyles["content-column-heading"]}>
+							About
+						</h4>
 						<ul className={footerStyles["content-column-list"]}>
-							<li className={footerStyles["content-column-list-element"]}>
+							<li
+								className={footerStyles["content-column-list-element"]}
+							>
 								<Link href={"/story"}>
 									<a>My Story</a>
 								</Link>
 							</li>
-							<li className={footerStyles["content-column-list-element"]}>
+							<li
+								className={footerStyles["content-column-list-element"]}
+							>
 								<Link href={"/philosophy"}>
 									<a>Philosophy</a>
 								</Link>
@@ -82,23 +116,37 @@ export default function Footer() {
 						</ul>
 					</div>
 					<div className={footerStyles["content-column"]}>
-						<h4 className={footerStyles["content-column-heading"]}>App</h4>
+						<h4 className={footerStyles["content-column-heading"]}>
+							App
+						</h4>
 						<ul className={footerStyles["content-column-list"]}>
-							<li className={footerStyles["content-column-list-element"]}>
+							<li
+								className={footerStyles["content-column-list-element"]}
+							>
 								<Link href={"/pricing"}>
 									<a>Pricing</a>
 								</Link>
 							</li>
-							<li className={footerStyles["content-column-list-element"]}>
+							<li
+								className={footerStyles["content-column-list-element"]}
+							>
 								<a href="https://open.bevl.app/signin">Sign In</a>
 							</li>
-							<li className={footerStyles["content-column-list-element"]}>
+							<li
+								className={footerStyles["content-column-list-element"]}
+							>
 								<a href="/signup">Sign Up</a>
 							</li>
-							<li className={footerStyles["content-column-list-element"]}>
-								<a href="https://feedback.bevl.app/b/nvkqngvr/feature-ideas">Feedback</a>
+							<li
+								className={footerStyles["content-column-list-element"]}
+							>
+								<a href="https://feedback.bevl.app/b/nvkqngvr/feature-ideas">
+									Feedback
+								</a>
 							</li>
-							<li className={footerStyles["content-column-list-element"]}>
+							<li
+								className={footerStyles["content-column-list-element"]}
+							>
 								<a href="https://feedback.bevl.app/roadmap">Roadmap</a>
 							</li>
 						</ul>

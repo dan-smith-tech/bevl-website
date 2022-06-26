@@ -34,7 +34,8 @@
 	font-size: 1.65rem;
 }
 
-.content-container-text button {
+.button {
+	width: fit-content;
 	margin-top: 2.35em;
 	display: flex;
 	align-items: center;
@@ -43,10 +44,11 @@
 	color: var(--color-primary-pink);
 	font-size: 1rem;
 	font-weight: 600;
+	text-decoration: none;
 	cursor: pointer;
 }
 
-.content-container-text button svg {
+.button svg {
 	margin-left: 0.15em;
 }
 
@@ -91,7 +93,7 @@
 		height: calc(9em * 2.5);
 	}
 
-	.content-container-text button {
+	.button {
 		margin-top: 1.65em;
 	}
 }

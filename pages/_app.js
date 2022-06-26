@@ -13,6 +13,10 @@ function MyApp({ Component, pageProps }) {
 				<title>Bevl</title>
 				<meta property="og:title" content="Bevl" key="title" />
 				<meta
+					name="keywords"
+					content="todo, task, list, plan, organise, productivity"
+				/>
+				<meta
 					property="og:image"
 					content="https://bevl.app/images/open-graph/index.png"
 				/>
