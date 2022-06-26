@@ -70,7 +70,7 @@ export default async function emailHandler(req, res) {
 		default:
 			res.status(400).json({
 				success: false,
-				message: "Incorrect request method.",
+				message: "Incorrect request method: " + method,
 			});
 			break;
 	}
