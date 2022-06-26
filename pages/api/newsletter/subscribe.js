@@ -8,24 +8,42 @@ export default async function emailHandler(req, res) {
 	switch (method) {
 		case "POST":
 			try {
-				if (req.query.hasOwnProperty("optInStage") && req.query["optInStage"] == "1") {
-					var link = process.env.ABSOLUTE_URL + "/newsletter/subscribe/" + encryptEmail(email) + "?";
+				if (
+					req.query.hasOwnProperty("optInStage") &&
+					req.query["optInStage"] == "1"
+				) {
+					var link =
+						process.env.ABSOLUTE_URL +
+						"/newsletter/subscribe/" +
+						encryptEmail(email) +
+						"?";
 
-					if (req.query.hasOwnProperty("bevlAnnouncements") && req.query["bevlAnnouncements"] == "true")
+					if (
+						req.query.hasOwnProperty("bevlAnnouncements") &&
+						req.query["bevlAnnouncements"] == "true"
+					)
 						link += "bevlAnnouncements=true&";
-					if (req.query.hasOwnProperty("productivityTips") && req.query["productivityTips"] == "true")
+					if (
+						req.query.hasOwnProperty("productivityTips") &&
+						req.query["productivityTips"] == "true"
+					)
 						link += "productivityTips=true&";
 
 					sendinblue.sendEmail(email, { link }, 6);
 
 					res.status(201).json({ success: true, data: { email } });
-				} else if (req.query.hasOwnProperty("optInStage") && req.query["optInStage"] == "2") {
+				} else if (
+					req.query.hasOwnProperty("optInStage") &&
+					req.query["optInStage"] == "2"
+				) {
 					var bevlAnnouncements =
-						req.query.hasOwnProperty("bevlAnnouncements") && req.query["bevlAnnouncements"] == "true"
+						req.query.hasOwnProperty("bevlAnnouncements") &&
+						req.query["bevlAnnouncements"] == "true"
 							? true
 							: false;
 					var productivityTips =
-						req.query.hasOwnProperty("productivityTips") && req.query["productivityTips"] == "true"
+						req.query.hasOwnProperty("productivityTips") &&
+						req.query["productivityTips"] == "true"
 							? true
 							: false;
 
@@ -46,11 +64,14 @@ export default async function emailHandler(req, res) {
 				}
 			} catch (err) {
 				console.log(err);
-				res.status(400).json({ success: false });
+				res.status(400).json({ success: false, message: err });
 			}
 			break;
 		default:
-			res.status(400).json({ success: false });
+			res.status(400).json({
+				success: false,
+				message: "Incorrect request method.",
+			});
 			break;
 	}
 }

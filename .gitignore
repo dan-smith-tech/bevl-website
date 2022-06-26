@@ -7,3 +7,6 @@
 /out/
 /build
 npm-debug.log*
+
+# Local Netlify folder
+.netlify
