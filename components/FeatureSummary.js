@@ -76,6 +76,7 @@ export default function FeatureSummary({
 				layout="fill"
 				className={featureSummaryStyles["content-image"]}
 				draggable="false"
+				quality={50}
 				loading={"eager"}
 				blurDataURL={
 					"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP85xNfDwAGIwIqqYhd4AAAAABJRU5ErkJggg=="
