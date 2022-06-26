@@ -35,6 +35,7 @@ export default function Header() {
 										layout="fill"
 										className={headerStyles["image"]}
 										draggable="false"
+										loading={"eager"}
 									/>
 								</a>
 							</Link>

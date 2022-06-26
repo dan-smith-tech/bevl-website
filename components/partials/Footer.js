@@ -23,6 +23,7 @@ export default function Footer() {
 									layout="fill"
 									className={footerStyles["image"]}
 									draggable="false"
+									loading={"eager"}
 								/>
 							</a>
 						</Link>
