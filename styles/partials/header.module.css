@@ -83,6 +83,12 @@
 	transform: translateY(0);
 }
 
+.nav-bar-dropdown-toggle:focus {
+	outline: var(--border-size) solid var(--color-primary-pink);
+	border-radius: var(--border-radius);
+	outline-offset: 0.25em;
+}
+
 .nav-bar-dropdown {
 	width: 20.5em;
 	padding: 0.65em;
