@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -11,6 +11,40 @@ export default function Header() {
 	function selectLink() {
 		setShowNavMenu(false);
 	}
+
+	function handleNavbarClick() {
+		this.blur();
+	}
+
+	function preventFocus(e) {
+		e.preventDefault();
+	}
+
+	useEffect(() => {
+		const toggles = document.querySelectorAll(
+			"." + headerStyles["nav-bar-dropdown-toggle"]
+		);
+		const links = document.querySelectorAll(
+			"." + headerStyles["nav-bar-dropdown-link"]
+		);
+		toggles.forEach((toggle) => {
+			toggle.addEventListener("mousedown", (e) => preventFocus(e));
+		});
+		links.forEach((link) => {
+			link.addEventListener("click", handleNavbarClick);
+		});
+		return () => {
+			toggles.forEach((toggle) => {
+				toggle.removeEventListener(
+					"mousedown",
+					(e) => (e) => preventFocus(e)
+				);
+			});
+			links.forEach((link) => {
+				link.removeEventListener("click", handleNavbarClick);
+			});
+		};
+	}, [handleNavbarClick]);
 
 	return (
 		<>

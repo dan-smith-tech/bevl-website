@@ -14,7 +14,7 @@ export default function CTA({ independent }) {
 
 	function handleSubmit(e) {
 		e.preventDefault();
-		const email = e.target.email1.value
+		const email = e.target.email1
 			? e.target.email1.value
 			: e.target.email2.value;
 		if (email.length > 0 && isEmail(email)) {
@@ -26,7 +26,7 @@ export default function CTA({ independent }) {
 					email,
 				}
 			);
-			e.target.email1.value
+			e.target.email1
 				? (e.target.email1.value = null)
 				: (e.target.email2.value = null);
 		}

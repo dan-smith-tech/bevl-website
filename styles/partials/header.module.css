@@ -70,6 +70,10 @@
 	cursor: pointer;
 }
 
+.nav-bar-dropdown-toggle:focus:not(:focus-visible) {
+	outline: none;
+}
+
 .nav-bar-dropdown-toggle svg {
 	transform: scale(0.65);
 }
