@@ -72,6 +72,7 @@ export default async function emailHandler(req, res) {
 				success: false,
 				message: "Incorrect request method: " + method,
 			});
+			console.log("Incorrect request method" + method);
 			break;
 	}
 }
