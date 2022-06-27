@@ -29,8 +29,6 @@ export default async function emailHandler(req, res) {
 					)
 						link += "productivityTips=true&";
 
-					console.log("hi");
-
 					sendinblue.sendEmail(email, { link }, 6);
 
 					res.status(201).json({ success: true, data: { email } });

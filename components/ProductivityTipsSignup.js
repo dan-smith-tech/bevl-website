@@ -18,28 +18,49 @@ export default function ProductivityTipsSignup() {
 		const email = e.target.email.value;
 		if (email.length > 0 && isEmail(email)) {
 			setShowModal(true);
-			sendFetchRequest("/api/newsletter/subscribe?optInStage=1&productivityTips=true", "POST", {
-				email,
-			});
+			sendFetchRequest(
+				"/api/newsletter/subscribe?optInStage=1&productivityTips=true",
+				"POST",
+				{
+					email,
+				}
+			);
 			e.target.email.value = null;
 		}
 	}
 
 	return (
-		<div className={"container-full " + newsletterSignupStyles["container-full"]}>
-			<div className={"container-partial " + newsletterSignupStyles["container-partial"]}>
+		<div
+			className={
+				"container-full " + newsletterSignupStyles["container-full"]
+			}
+		>
+			<div
+				className={
+					"container-partial " +
+					newsletterSignupStyles["container-partial"]
+				}
+			>
 				<div className={newsletterSignupStyles["container-info"]}>
 					<h2 className={newsletterSignupStyles["container-info-heading"]}>
 						Get Exclusive Productivity Tips, Straight To Your Inbox
 					</h2>
 					<p className={newsletterSignupStyles["container-info-summary"]}>
-						Bevl's <em>Productive Learning</em> is a no-nonsense, genuine newsletter for productivity
-						enthusiasts.
+						Bevl's <em>Productive Learning</em> is a no-nonsense, genuine
+						newsletter for productivity enthusiasts.
 					</p>
 				</div>
-				<form onSubmit={handleSubmit} className={newsletterSignupStyles["container-form"]}>
+				<form
+					onSubmit={handleSubmit}
+					className={newsletterSignupStyles["container-form"]}
+				>
 					<div className={newsletterSignupStyles["container-form-input"]}>
-						<FormInput type={"text"} name={"email"} placeholder="Enter email..." required={"true"} />
+						<FormInput
+							type={"text"}
+							name={"email"}
+							placeholder="Enter email..."
+							required={"true"}
+						/>
 						<small>No spam. Unsubscribe at any time.</small>
 					</div>
 					<div className={newsletterSignupStyles["container-form-button"]}>
