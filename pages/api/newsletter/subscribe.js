@@ -29,9 +29,9 @@ export default async function emailHandler(req, res) {
 					)
 						link += "productivityTips=true&";
 
-					sendinblue.sendEmail(email, { link }, 6);
-
-					res.status(201).json({ success: true, data: { email } });
+					sendinblue.sendEmail(email, { link }, 6).then((data) => {
+						res.status(201).json({ success: true, data: { email } });
+					});
 				} else if (
 					req.query.hasOwnProperty("optInStage") &&
 					req.query["optInStage"] == "2"
@@ -55,12 +55,12 @@ export default async function emailHandler(req, res) {
 					if (bevlAnnouncements) listIds.push(6);
 					if (productivityTips) listIds.push(7);
 
-					sendinblue.doesContactExist(contact.email, (exists) => {
+					sendinblue.doesContactExist(contact.email).then((exists) => {
 						if (!exists) sendinblue.addContact(contact, listIds);
 						else sendinblue.updateContact(contact, listIds, []);
-					});
 
-					res.status(201).json({ success: true, data: { email } });
+						res.status(201).json({ success: true, data: { email } });
+					});
 				}
 			} catch (err) {
 				console.log(err);

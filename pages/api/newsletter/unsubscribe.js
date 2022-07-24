@@ -9,11 +9,13 @@ export default async function emailHandler(req, res) {
 		case "POST":
 			try {
 				var bevlAnnouncements =
-					req.query.hasOwnProperty("bevlAnnouncements") && req.query["bevlAnnouncements"] == "true"
+					req.query.hasOwnProperty("bevlAnnouncements") &&
+					req.query["bevlAnnouncements"] == "true"
 						? true
 						: false;
 				var productivityTips =
-					req.query.hasOwnProperty("productivityTips") && req.query["productivityTips"] == "true"
+					req.query.hasOwnProperty("productivityTips") &&
+					req.query["productivityTips"] == "true"
 						? true
 						: false;
 
@@ -25,11 +27,12 @@ export default async function emailHandler(req, res) {
 				if (bevlAnnouncements) unlinkListIds.push(6);
 				if (productivityTips) unlinkListIds.push(7);
 
-				sendinblue.updateContact(contact, [], unlinkListIds);
-
-				res.status(201).json({ success: true, data: { email } });
+				sendinblue
+					.updateContact(contact, [], unlinkListIds)
+					.then((data) => {
+						res.status(201).json({ success: true, data: { email } });
+					});
 			} catch (err) {
-				console.log(err);
 				res.status(400).json({ success: false });
 			}
 			break;
