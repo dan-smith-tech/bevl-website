@@ -31,17 +31,21 @@ function NewsletterSubscribeConfirmation(props) {
 		props;
 
 	if (isEmail(email)) {
-		sendFetchRequest(
-			absoluteUrl +
-				"/api/newsletter/subscribe?optInStage=2&bevlAnnouncements=" +
-				bevlAnnouncements +
-				"&productivityTips=" +
-				productivityTips,
-			"POST",
-			{
-				email: id,
-			}
-		);
+		var executed = false;
+		if (!executed) {
+			executed = true;
+			sendFetchRequest(
+				absoluteUrl +
+					"/api/newsletter/subscribe?optInStage=2&bevlAnnouncements=" +
+					bevlAnnouncements +
+					"&productivityTips=" +
+					productivityTips,
+				"POST",
+				{
+					email: id,
+				}
+			);
+		}
 
 		return (
 			<>
