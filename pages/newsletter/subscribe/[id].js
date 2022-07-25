@@ -33,8 +33,7 @@ function NewsletterSubscribeConfirmation(props) {
 	if (isEmail(email)) {
 		console.log("API request");
 		sendFetchRequest(
-			absoluteUrl +
-				"/api/newsletter/subscribe?optInStage=2&bevlAnnouncements=" +
+			"/api/newsletter/subscribe?optInStage=2&bevlAnnouncements=" +
 				bevlAnnouncements +
 				"&productivityTips=" +
 				productivityTips,
