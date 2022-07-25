@@ -55,24 +55,26 @@ export default async function emailHandler(req, res) {
 					if (bevlAnnouncements) listIds.push(6);
 					if (productivityTips) listIds.push(7);
 
-					sendinblue.doesContactExist(contact.email).then((exists) => {
-						if (!exists)
-							sendinblue.addContact(contact, listIds).then((data) => {
-								res.status(201).json({
-									success: true,
-									data: { email },
-								});
-							});
-						else
-							sendinblue
-								.updateContact(contact, listIds, [])
-								.then((data) => {
-									res.status(201).json({
-										success: true,
-										data: { email },
-									});
-								});
+					sendinblue.addContact(contact, listIds).then((data) => {
+						res.status(201).json({
+							success: true,
+							data: { email },
+						});
 					});
+
+					// sendinblue.doesContactExist(contact.email).then((exists) => {
+					// 	if (!exists)
+
+					// 	else
+					// 		sendinblue
+					// 			.updateContact(contact, listIds, [])
+					// 			.then((data) => {
+					// 				res.status(201).json({
+					// 					success: true,
+					// 					data: { email },
+					// 				});
+					// 			});
+					// });
 				}
 			} catch (err) {
 				console.log(err);
