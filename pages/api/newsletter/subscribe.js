@@ -36,8 +36,6 @@ export default async function emailHandler(req, res) {
 					req.query.hasOwnProperty("optInStage") &&
 					req.query["optInStage"] == "2"
 				) {
-					console.log("API hit");
-
 					var bevlAnnouncements =
 						req.query.hasOwnProperty("bevlAnnouncements") &&
 						req.query["bevlAnnouncements"] == "true"
