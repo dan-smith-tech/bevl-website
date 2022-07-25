@@ -36,6 +36,8 @@ export default async function emailHandler(req, res) {
 					req.query.hasOwnProperty("optInStage") &&
 					req.query["optInStage"] == "2"
 				) {
+					console.log("working?");
+
 					var bevlAnnouncements =
 						req.query.hasOwnProperty("bevlAnnouncements") &&
 						req.query["bevlAnnouncements"] == "true"
@@ -56,23 +58,22 @@ export default async function emailHandler(req, res) {
 					if (productivityTips) listIds.push(7);
 
 					sendinblue.doesContactExist(contact.email).then((exists) => {
-						console.log(exists);
-						// if (!exists)
-						// 	sendinblue.addContact(contact, listIds).then((data) => {
-						// 		res.status(201).json({
-						// 			success: true,
-						// 			data: { email },
-						// 		});
-						// 	});
-						// else
-						// 	sendinblue
-						// 		.updateContact(contact, listIds, [])
-						// 		.then((data) => {
-						// 			res.status(201).json({
-						// 				success: true,
-						// 				data: { email },
-						// 			});
-						// 		});
+						if (!exists)
+							sendinblue.addContact(contact, listIds).then((data) => {
+								res.status(201).json({
+									success: true,
+									data: { email },
+								});
+							});
+						else
+							sendinblue
+								.updateContact(contact, listIds, [])
+								.then((data) => {
+									res.status(201).json({
+										success: true,
+										data: { email },
+									});
+								});
 					});
 				}
 			} catch (err) {
