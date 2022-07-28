@@ -43,7 +43,6 @@ function Lists() {
 				heading={"Document"}
 				image={"/images/screenshots/comingSoon.png"}
 				imageFirst={false}
-				dark={false}
 			>
 				<p>
 					Collect notes and ideas: use <strong>Lists</strong> to collate
@@ -55,7 +54,6 @@ function Lists() {
 				heading={"Bookmark"}
 				image={"/images/screenshots/comingSoon.png"}
 				imageFirst={true}
-				dark={false}
 			>
 				<p>
 					Link notes and ideas to external resources (such as websites and
@@ -66,7 +64,6 @@ function Lists() {
 				heading={"Arrange"}
 				image={"/images/screenshots/comingSoon.png"}
 				imageFirst={false}
-				dark={false}
 			>
 				<p>
 					Filter and reorder <strong>Lists</strong> for full organisational
@@ -79,7 +76,6 @@ function Lists() {
 				link={"/philosophy"}
 				image={"/images/screenshots/comingSoon.png"}
 				imageFirst={true}
-				dark={false}
 			>
 				<p>
 					Learn about the planning philosophy that Bevl was designed to

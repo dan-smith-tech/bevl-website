@@ -43,7 +43,6 @@ function Tasks() {
 				heading={"Deadlines"}
 				image={"/images/screenshots/comingSoon.png"}
 				imageFirst={true}
-				dark={false}
 			>
 				<p>
 					Drag tasks into the calendar to assign times to work on them: use{" "}
@@ -55,7 +54,6 @@ function Tasks() {
 				heading={"Events"}
 				image={"/images/screenshots/comingSoon.png"}
 				imageFirst={false}
-				dark={false}
 			>
 				<p>
 					Set tasks that only occur once: use <strong>Events</strong> for
@@ -66,7 +64,6 @@ function Tasks() {
 				heading={"Habits"}
 				image={"/images/screenshots/comingSoon.png"}
 				imageFirst={true}
-				dark={false}
 			>
 				<p>
 					Arrange recurring tasks that can be individually customised: use{" "}
@@ -77,7 +74,6 @@ function Tasks() {
 				heading={"Projects"}
 				image={"/images/screenshots/comingSoon.png"}
 				imageFirst={false}
-				dark={false}
 			>
 				<p>
 					Break tasks down into smaller <strong>Deadlines</strong> and{" "}
@@ -90,7 +86,6 @@ function Tasks() {
 				heading={"Calendar"}
 				image={"/images/screenshots/comingSoon.png"}
 				imageFirst={true}
-				dark={false}
 			>
 				<p>
 					View all tasks on the fully-interactable calendar, where they can
@@ -103,7 +98,6 @@ function Tasks() {
 				link={"/philosophy"}
 				image={"/images/screenshots/comingSoon.png"}
 				imageFirst={false}
-				dark={false}
 			>
 				<p>
 					Learn about the planning philosophy that Bevl was designed to

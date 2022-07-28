@@ -210,9 +210,8 @@ function Landing() {
 			<FeatureSummary
 				heading={"Tasks"}
 				link={"/features/tasks"}
-				image={"/images/screenshots/comingSoon.png"}
+				image={"/images/screenshots/tasks.png"}
 				imageFirst={false}
-				dark={false}
 			>
 				<p>
 					Plan any todo with 4 unique task types (Deadlines, Events,
@@ -222,9 +221,8 @@ function Landing() {
 			<FeatureSummary
 				heading={"Lists"}
 				link={"/features/lists"}
-				image={"/images/screenshots/comingSoon.png"}
+				image={"/images/screenshots/lists.png"}
 				imageFirst={true}
-				dark={false}
 			>
 				<p>
 					Keep track of less-organised notes and ideas, without cluttering
@@ -234,9 +232,8 @@ function Landing() {
 			<FeatureSummary
 				heading={"Labels"}
 				link={"/features/labels"}
-				image={"/images/screenshots/comingSoon.png"}
+				image={"/images/screenshots/labels.png"}
 				imageFirst={false}
-				dark={false}
 			>
 				<p>
 					Group and filter content with customisable tags, to organise the
@@ -249,7 +246,6 @@ function Landing() {
 				link={"/philosophy"}
 				image={"/images/screenshots/comingSoon.png"}
 				imageFirst={true}
-				dark={false}
 			>
 				<p>
 					Learn about the planning philosophy that Bevl was designed to

@@ -43,7 +43,6 @@ function Labels() {
 				heading={"Group"}
 				image={"/images/screenshots/comingSoon.png"}
 				imageFirst={true}
-				dark={false}
 			>
 				<p>
 					Organise{" "}
@@ -62,7 +61,6 @@ function Labels() {
 				heading={"Customise"}
 				image={"/images/screenshots/comingSoon.png"}
 				imageFirst={false}
-				dark={false}
 			>
 				<p>
 					Name, colour, and change the background pattern of{" "}
@@ -81,7 +79,6 @@ function Labels() {
 				heading={"Default"}
 				image={"/images/screenshots/comingSoon.png"}
 				imageFirst={true}
-				dark={false}
 			>
 				<p>
 					Set the most fequently used <strong>Label</strong>, to save time
@@ -102,7 +99,6 @@ function Labels() {
 				link={"/philosophy"}
 				image={"/images/screenshots/comingSoon.png"}
 				imageFirst={false}
-				dark={false}
 			>
 				<p>
 					Learn about the planning philosophy that Bevl was designed to

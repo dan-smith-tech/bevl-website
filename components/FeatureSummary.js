@@ -11,7 +11,6 @@ export default function FeatureSummary({
 	link,
 	image,
 	imageFirst,
-	dark,
 }) {
 	const [intersection, setIntersection] = useState();
 	const intersectionDetectorRef = useRef();
@@ -80,7 +79,7 @@ export default function FeatureSummary({
 		</div>
 	);
 
-	if (!dark && !imageFirst)
+	if (!imageFirst)
 		return (
 			<div
 				className={
@@ -99,7 +98,7 @@ export default function FeatureSummary({
 				</div>
 			</div>
 		);
-	else if (!dark && imageFirst)
+	else if (imageFirst)
 		return (
 			<div
 				className={
