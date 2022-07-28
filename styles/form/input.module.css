@@ -2,19 +2,19 @@
 	width: 100%;
 	padding: 1.35em;
 	box-sizing: border-box;
-	background-color: var(--color-neutral-white);
+	background-color: var(--color-secondary-100);
 	border: none;
 	border-radius: 3.5em;
 	font-size: 1rem;
-	color: var(--color-secondary-blue);
+	color: var(--color-primary-400);
 }
 
 .element:hover {
-	background-color: var(--color-neutral-grey);
+	background-color: var(--color-secondary-400);
 }
 
 .element:focus {
-	outline: var(--border-size) solid var(--color-primary-pink);
+	outline: var(--border-size) solid var(--color-accent-400);
 }
 
 .element-textarea {

@@ -1,6 +1,15 @@
 /* Temp */
+.container-full {
+	min-height: 100vh;
+	padding-top: var(--header-height);
+	color: var(--color-secondary-100);
+}
+
 .container-partial {
 	margin: 3.5em 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	text-align: center;
 }
 
@@ -11,12 +20,7 @@
 
 .title h1 {
 	font-size: 2.85rem;
-	color: var(--color-secondary-blue);
 	text-align: center;
-}
-
-.container-full-content {
-	background-color: var(--color-neutral-grey);
 }
 
 .container-cards {

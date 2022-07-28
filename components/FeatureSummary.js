@@ -2,6 +2,7 @@ import { useRef, useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
+import "boxicons/css/boxicons.min.css";
 import featureSummaryStyles from "../styles/featureSummary.module.css";
 
 export default function FeatureSummary({
@@ -41,14 +42,7 @@ export default function FeatureSummary({
 			{children}
 			<Link href={link}>
 				<a className={featureSummaryStyles["button"]}>
-					Explore{" "}
-					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-						<path
-							fill="#fe4c5f"
-							fillOpacity="1"
-							d="m19 12-7-6v5H6v2h6v5z"
-						></path>
-					</svg>
+					Explore <i class="bx bxs-chevron-right"></i>
 				</a>
 			</Link>
 		</div>
@@ -117,54 +111,6 @@ export default function FeatureSummary({
 					className={
 						"container-partial " +
 						featureSummaryStyles["container-partial-content"] +
-						" " +
-						featureSummaryStyles["container-partial-content-reorder"]
-					}
-				>
-					{imageElement}
-					{textElement}
-				</div>
-			</div>
-		);
-	else if (dark && !imageFirst)
-		return (
-			<div
-				className={
-					"container-full " +
-					featureSummaryStyles["container-full-content"] +
-					" " +
-					featureSummaryStyles["container-full-content-dark"]
-				}
-			>
-				<div
-					className={
-						"container-partial " +
-						featureSummaryStyles["container-partial-content"] +
-						" " +
-						featureSummaryStyles["container-partial-content-dark"]
-					}
-				>
-					{textElement}
-					{imageElement}
-				</div>
-			</div>
-		);
-	else if (dark && imageFirst)
-		return (
-			<div
-				className={
-					"container-full " +
-					featureSummaryStyles["container-full-content"] +
-					" " +
-					featureSummaryStyles["container-full-content-dark"]
-				}
-			>
-				<div
-					className={
-						"container-partial " +
-						featureSummaryStyles["container-partial-content"] +
-						" " +
-						featureSummaryStyles["container-partial-content-dark"] +
 						" " +
 						featureSummaryStyles["container-partial-content-reorder"]
 					}

@@ -2,12 +2,12 @@
 	width: 100%;
 	padding: 1.35em;
 	box-sizing: border-box;
-	background-color: var(--color-primary-pink);
+	background-color: var(--color-accent-400);
+	color: var(--color-secondary-100);
 	border: none;
 	border-radius: 3.5em;
 	font-size: 1rem;
 	font-weight: 600;
-	color: var(--color-neutral-white);
 	cursor: pointer;
 	transition: transform 150ms, opacity 150ms;
 }
@@ -18,9 +18,5 @@
 }
 
 .button:focus {
-	outline: var(--border-size) solid var(--color-neutral-white);
-}
-
-.button-light:focus {
-	outline: var(--border-size) solid var(--color-secondary-blue);
+	outline: var(--border-size) solid var(--color-secondary-100);
 }

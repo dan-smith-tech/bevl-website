@@ -72,20 +72,14 @@ export default function CTA({ independent }) {
 				<div
 					className={"container-partial " + ctaStyles["container-partial"]}
 				>
-					<h1 className={ctaStyles["heading"]}>
+					<h2 className={ctaStyles["heading"]}>
 						Up Your Productivity Game With Bevl
-					</h1>
+					</h2>
 					<form
 						onSubmit={handleSubmit}
 						className={ctaStyles["container-form"]}
 					>
-						<div
-							className={
-								ctaStyles["container-form-input"] +
-								" " +
-								ctaStyles["container-form-input-light"]
-							}
-						>
+						<div className={ctaStyles["container-form-input"]}>
 							<FormInput
 								type={"text"}
 								name={"email2"}
@@ -94,7 +88,7 @@ export default function CTA({ independent }) {
 							/>
 						</div>
 						<div className={ctaStyles["container-form-button"]}>
-							<FormButton type={"submit"} value="Sign Up" light={true} />
+							<FormButton type={"submit"} value="Sign Up" />
 							<Modal
 								show={showModal}
 								onClose={() => setShowModal(false)}

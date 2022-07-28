@@ -1,8 +1,7 @@
 .container-full {
-	background-color: var(--color-neutral-grey);
-	color: var(--color-secondary-blue);
-	background-color: var(--color-secondary-blue);
-	color: var(--color-neutral-white);
+	padding-top: var(--header-height);
+	background-color: var(--color-primary-400);
+	color: var(--color-secondary-100);
 }
 
 .container-partial {

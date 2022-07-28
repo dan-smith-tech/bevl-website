@@ -11,7 +11,7 @@ function Help() {
 				<meta name="description" content="Learn how to use Bevl." />
 				<meta property="og:description" content="Learn how to use Bevl." />
 			</Head>
-			<div className={"container-full"}>
+			<div className={"container-full " + helpStyles["container-full"]}>
 				<div
 					className={
 						"container-partial " + helpStyles["container-partial"]

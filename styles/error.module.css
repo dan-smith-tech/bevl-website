@@ -1,23 +1,24 @@
 .container {
 	width: 100%;
-	height: calc(100% - var(--header-height));
+	min-height: 100vh;
+	padding: calc(var(--header-height) + 3.5rem) 0 3.5rem 0;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
+	background-color: var(--color-primary-400);
 }
 
 .code {
 	padding-right: 1.85rem;
-	color: var(--color-primary-pink);
+	color: var(--color-accent-400);
 	font-size: 5rem;
 	font-weight: 600;
-	border-right: 0.15rem solid var(--color-neutral-grey);
 }
 
 .summary {
 	padding-left: 1.85rem;
-	color: var(--color-secondary-blue);
+	color: var(--color-secondary-100);
 }
 
 @media (max-width: 550px), (max-height: 250px) {
@@ -32,7 +33,6 @@
 
 	.summary {
 		padding-left: 0;
-		color: var(--color-secondary-blue);
 	}
 }
 

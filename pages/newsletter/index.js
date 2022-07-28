@@ -109,7 +109,7 @@ function Newsletter() {
 					</form>
 				</div>
 			</div>
-			<ProductivityTipsSignup />
+			{/* <ProductivityTipsSignup /> */}
 		</>
 	);
 }

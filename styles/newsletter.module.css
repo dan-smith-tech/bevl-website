@@ -1,16 +1,16 @@
 /* Confirmations */
 
 .container-full {
-	background-color: var(--color-neutral-grey);
+	height: 100vh;
+	padding-top: var(--header-height);
+	color: var(--color-secondary-100);
 }
 
 .container-partial {
-	height: calc(100vh - var(--header-height));
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	color: var(--color-secondary-blue);
 }
 
 .container-partial h1 {
@@ -23,8 +23,11 @@
 }
 
 @media (max-height: 285px), (max-width: 500px) {
-	.container-partial {
+	.container-full {
 		height: fit-content;
+	}
+
+	.container-partial {
 		margin: 3.5em 0;
 		display: block;
 	}
@@ -39,10 +42,7 @@
 /* Content */
 
 .container-full-content {
-	background-color: var(--color-neutral-grey) !important;
-	color: var(--color-secondary-blue) !important;
-}
-
-.container-full-content input:hover {
-	background-color: var(--color-neutral-white) !important;
+	padding-top: var(--header-height);
+	box-sizing: content-box;
+	color: var(--color-secondary-100);
 }

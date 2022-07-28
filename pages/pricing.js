@@ -1,8 +1,8 @@
 import Head from "next/head";
 
-import helpStyles from "../styles/help.module.css";
+import helpStyles from "../styles/pricing.module.css";
 
-function Pricing() {
+export default function Pricing() {
 	return (
 		<>
 			<Head>
@@ -17,20 +17,15 @@ function Pricing() {
 					content="Explore Bevl's pricing options."
 				/>
 			</Head>
-			<div className={"container-full"}>
+			<div className={"container-full " + helpStyles["container-full"]}>
 				<div
 					className={
 						"container-partial " + helpStyles["container-partial"]
 					}
 				>
-					<p>
-						The pricing schemes for Bevl will be released closer to
-						launch.
-					</p>
+					<p>The pricing plans will release closer to launch.</p>
 				</div>
 			</div>
 		</>
 	);
 }
-
-export default Pricing;

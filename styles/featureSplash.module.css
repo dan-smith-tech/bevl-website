@@ -1,6 +1,7 @@
 .container-main {
-	background-color: var(--color-secondary-blue);
-	color: var(--color-neutral-white);
+	padding-top: var(--header-height);
+	background-color: var(--color-primary-100);
+	color: var(--color-secondary-100);
 	overflow: hidden;
 }
 
@@ -17,8 +18,7 @@
 	margin-bottom: 1.65em;
 	font-weight: 600;
 	letter-spacing: 0.15rem;
-	color: var(--color-neutral-white);
-	opacity: 0.65;
+	color: var(--color-secondary-400);
 	text-align: center;
 }
 
@@ -47,7 +47,7 @@
 
 .container-video {
 	width: fit-content;
-	height: 32em;
+	height: 35em;
 	margin-left: -10px;
 	display: flex;
 	justify-content: center;
@@ -93,7 +93,6 @@
 .demo-video {
 	width: 100%;
 	border-radius: var(--border-radius);
-	box-shadow: var(--box-shadow);
 }
 
 .demo-heading {

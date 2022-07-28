@@ -1,15 +1,21 @@
 /* Splash */
 .container-full-splash {
-	color: var(--color-secondary-blue);
+	padding-top: var(--header-height);
 	position: relative;
+	background-color: var(--color-secondary-100);
+	color: var(--color-primary-400);
+}
+
+.container-partial-splash {
+	margin: 3.5em 0 5em 0;
 }
 
 .container-partial-splash button:focus {
-	outline-color: var(--color-secondary-blue) !important;
+	outline-color: var(--color-primary-400) !important;
 }
 
 .heading {
-	margin: 5rem 0 0.35em 0;
+	margin-bottom: 0.35em;
 	font-size: 2.85rem;
 	text-align: center;
 	line-height: 3.35rem;
@@ -18,6 +24,10 @@
 .tagline {
 	margin-bottom: 2.35em;
 	text-align: center;
+}
+
+.container-full-splash input {
+	background-color: var(--color-secondary-400);
 }
 
 @media (max-width: 650px) {
@@ -29,10 +39,10 @@
 /* Splash: Waves */
 .container-waves {
 	height: 22em;
-	margin-top: 5rem;
 	position: relative;
 	overflow-x: hidden;
-	z-index: -100;
+	background-color: var(--color-secondary-100);
+	/* z-index: -100; */
 }
 
 .wave {
@@ -80,24 +90,25 @@
 
 /* Features */
 .container-full-features {
-	background-color: var(--color-secondary-blue);
-	color: var(--color-neutral-white);
+	background-color: var(--color-primary-400);
+	color: var(--color-secondary-100);
 }
 
 .container-partial-features {
-	margin: 3.5em 0;
+	margin: 3.5em 0 8.5em 0;
 }
 
 .features-title {
-	margin-bottom: 2.15em;
+	margin-bottom: 3.85rem;
+	font-size: 2.35rem;
+	font-weight: 600;
 	text-align: center;
 }
 
 .container-partial-features-list {
-	margin-bottom: 2.35rem;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	gap: 2.35rem;
+	gap: 2.5rem;
 }
 
 .feature {
@@ -115,13 +126,13 @@
 	z-index: 1;
 }
 
-.feature svg {
-	width: 1.85em;
-	padding: 1em;
-	transform: scale(1.5);
+.feature i {
+	color: var(--color-secondary-100);
+	font-size: 2.15rem;
 }
 
 .feature p {
+	margin-top: 1.15em;
 	width: 100%;
 }
 

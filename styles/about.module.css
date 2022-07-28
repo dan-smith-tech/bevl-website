@@ -1,11 +1,12 @@
 .container-full {
-	background-color: var(--color-neutral-grey);
+	padding-top: var(--header-height);
+	background-color: var(--color-primary-400);
+	color: var(--color-secondary-100);
 }
 
 .container-partial {
 	margin: 6.5em 0;
 	scroll-margin-top: calc(8.5em + var(--header-height));
-	color: var(--color-secondary-blue);
 	display: flex;
 	justify-content: space-between;
 }
@@ -45,13 +46,13 @@
 
 .graphic-1 {
 	border-radius: 64% 36% 33% 67% / 61% 31% 69% 39%;
-	background-color: var(--color-primary-pink);
+	background-color: var(--color-accent-400);
 	z-index: 1;
 }
 
 .graphic-2 {
 	border-radius: 61% 39% 55% 45% / 50% 42% 58% 50%;
-	background-color: var(--color-secondary-blue);
+	background-color: var(--color-secondary-100);
 	margin-top: 6.5em;
 	margin-right: 4.5em;
 	z-index: 0;
@@ -59,7 +60,7 @@
 
 @media (prefers-reduced-motion: no-preference) and (min-width: 1200px) {
 	.graphic-1 {
-		background-color: var(--color-primary-pink);
+		background-color: var(--color-accent-400);
 		z-index: 1;
 		animation-name: graphic1;
 		animation-duration: 15s;
@@ -87,7 +88,7 @@
 	}
 
 	.graphic-2 {
-		background-color: var(--color-secondary-blue);
+		background-color: var(--color-secondary-400);
 		margin-top: 6.5em;
 		margin-right: 4.5em;
 		z-index: 0;

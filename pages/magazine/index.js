@@ -7,7 +7,7 @@ import ProductivityTipsSignup from "../../components/ProductivityTipsSignup";
 // import dbConnect from "../../lib/dbConnect";
 // import MagazinePost from "../../models/MagazinePost";
 
-import magazineStyles from "../../styles/magazine/magazine.module.css";
+import magazineStyles from "../../styles/magazine/index.module.css";
 
 // export async function getStaticProps() {
 // 	await dbConnect();
@@ -33,12 +33,15 @@ function Magazine() {
 			<Head>
 				<title>Bevl • Magazine</title>
 			</Head>
-			<div className={"container-full"}>
-				<div className={"container-partial " + magazineStyles["container-partial"]}>
-					<p>The Bevl magazine is launching soon. Sign up to the newsletter to get notified of new posts:</p>
+			<div className={"container-full " + magazineStyles["container-full"]}>
+				<div
+					className={
+						"container-partial " + magazineStyles["container-partial"]
+					}
+				>
+					<p>The Bevl magazine is launching soon.</p>
 				</div>
 			</div>
-			<ProductivityTipsSignup />
 			{/* <div className={"container-full " + magazineStyles["container-full-content"]}>
 				<div className={"container-partial"}>
 					<div className={magazineStyles["title"]}>
