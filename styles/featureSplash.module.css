@@ -23,7 +23,7 @@
 }
 
 .heading {
-	margin-bottom: 0.35em;
+	margin-bottom: 0.15em;
 	text-align: center;
 }
 
@@ -71,7 +71,7 @@
 }
 
 .demo-back {
-	opacity: 0.95;
+	opacity: 0.75;
 	filter: brightness(0.65);
 	cursor: pointer;
 }
@@ -94,10 +94,19 @@
 }
 
 .demo-heading {
-	margin-top: 1.15em;
+	margin-top: 0.85em;
+	font-size: 1rem;
 	font-weight: 600;
 	color: var(--color-secondary-blue);
 	text-align: center;
+	transition: font-size, margin;
+	transition-duration: var(--transition-duration);
+	transition-timing-function: ease-out;
+}
+
+.demo-current .demo-heading {
+	margin-top: 0.65em;
+	font-size: 1.35rem;
 }
 
 .wave {

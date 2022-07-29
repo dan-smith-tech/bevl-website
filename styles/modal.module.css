@@ -4,8 +4,16 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: var(--color-primary-100);
+
 	z-index: 1001 !important;
+}
+
+.container::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background-color: var(--color-primary-100);
+	opacity: 0.85;
 }
 
 .element {
@@ -35,15 +43,20 @@
 	border: none;
 	border-radius: var(--border-radius);
 	background-color: transparent;
+	color: var(--color-secondary-100);
 	font-size: 1.15rem;
 }
 
 .button-close:hover {
-	background-color: var(--color-secondary-100);
+	background-color: var(--color-primary-100);
 }
 
 .button-close:focus {
 	outline: var(--border-size) solid var(--color-accent-400);
+}
+
+.button-close:active {
+	opacity: 0.5;
 }
 
 .container-button {

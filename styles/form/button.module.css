@@ -20,3 +20,7 @@
 .button:focus {
 	outline: var(--border-size) solid var(--color-secondary-100);
 }
+
+.button:active {
+	opacity: 0.5;
+}
