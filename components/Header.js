@@ -3,7 +3,7 @@ import { useRef, useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import headerStyles from "../../styles/partials/header.module.css";
+import headerStyles from "../styles/header.module.css";
 
 export default function Header() {
 	const [showNavMenu, setShowNavMenu] = useState(false);
