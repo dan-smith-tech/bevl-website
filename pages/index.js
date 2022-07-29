@@ -153,7 +153,7 @@ function Landing() {
 							className={landingStyles["feature"]}
 							style={{ backgroundColor: "#6C5CE7" }}
 						>
-							<i class="bx bxs-hand"></i>
+							<i className="bx bxs-hand"></i>
 							<p>
 								Assign time to work on todos by dragging them into the
 								calendar.
@@ -163,7 +163,7 @@ function Landing() {
 							className={landingStyles["feature"]}
 							style={{ backgroundColor: "#E17055" }}
 						>
-							<i class="bx bxs-calendar"></i>
+							<i className="bx bxs-calendar"></i>
 							<p>
 								Set recurring events to create routines or develop
 								habits.
@@ -173,7 +173,7 @@ function Landing() {
 							className={landingStyles["feature"]}
 							style={{ backgroundColor: "#16A085" }}
 						>
-							<i class="bx bxs-extension"></i>
+							<i className="bx bxs-extension"></i>
 							<p>
 								Split larger tasks into smaller tasks to organise
 								individually.
@@ -183,7 +183,7 @@ function Landing() {
 							className={landingStyles["feature"]}
 							style={{ backgroundColor: "#E75C86" }}
 						>
-							<i class="bx bxs-filter-alt"></i>
+							<i className="bx bxs-filter-alt"></i>
 							<p>
 								Filter and drag tasks using the interactable calendar.
 							</p>
@@ -192,7 +192,7 @@ function Landing() {
 							className={landingStyles["feature"]}
 							style={{ backgroundColor: "#E7AF5C" }}
 						>
-							<i class="bx bxs-customize"></i>
+							<i className="bx bxs-customize"></i>
 							<p>
 								Keep track of random ideas and notes on custom lists.
 							</p>
@@ -201,7 +201,7 @@ function Landing() {
 							className={landingStyles["feature"]}
 							style={{ backgroundColor: "#EF5353" }}
 						>
-							<i class="bx bxs-purchase-tag"></i>
+							<i className="bx bxs-purchase-tag"></i>
 							<p>Group and filter tasks and lists with custom tags.</p>
 						</div>
 					</div>
