@@ -233,7 +233,7 @@
 	color: var(--color-secondary-100) !important;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 900px) {
 	.nav-bar-app {
 		margin-right: 2em;
 	}
@@ -341,7 +341,7 @@
 	color: var(--color-secondary-100);
 }
 
-@media (max-width: 850px) {
+@media (max-width: 900px) {
 	.container-nav-bar {
 		display: none;
 		visibility: hidden;
