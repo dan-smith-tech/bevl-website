@@ -88,7 +88,7 @@ body,
 	--color-dark-100: #424d70;
 	--color-dark-400: #323a52;
 	--color-light-100: #ffffff;
-	--color-light-400: #f3f3f3;
+	--color-light-400: #ececec;
 
 	--color-primary-100: var(--color-dark-100);
 	--color-primary-400: var(--color-dark-400);
