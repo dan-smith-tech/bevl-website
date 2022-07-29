@@ -381,17 +381,7 @@ export default function Header() {
 						onClick={() => setShowNavMenu(!showNavMenu)}
 						aria-label={"Navigation Menu Toggle"}
 					>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							width="24"
-							height="24"
-						>
-							<path
-								fill="#323a52"
-								fillOpacity="1"
-								d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"
-							></path>
-						</svg>
+						<i class="bx bx-menu-alt-right"></i>
 					</button>
 					{showNavMenu && (
 						<div
@@ -402,9 +392,9 @@ export default function Header() {
 								headerStyles["container-nav-menu"]
 							}
 						>
-							<a className={headerStyles["nav-menu-dropdown-toggle"]}>
+							<h3 className={headerStyles["nav-menu-dropdown-toggle"]}>
 								Features
-							</a>
+							</h3>
 							<ul className={headerStyles["nav-menu-dropdown"]}>
 								<li>
 									<Link href="/features/tasks">
@@ -449,9 +439,9 @@ export default function Header() {
 									</Link>
 								</li>
 							</ul>
-							<a className={headerStyles["nav-menu-dropdown-toggle"]}>
+							<h3 className={headerStyles["nav-menu-dropdown-toggle"]}>
 								Resources
-							</a>
+							</h3>
 							<ul className={headerStyles["nav-menu-dropdown"]}>
 								<li>
 									<Link href="/magazine">
@@ -482,9 +472,9 @@ export default function Header() {
 									</Link>
 								</li>
 							</ul>
-							<a className={headerStyles["nav-menu-dropdown-toggle"]}>
+							<h3 className={headerStyles["nav-menu-dropdown-toggle"]}>
 								About
-							</a>
+							</h3>
 							<ul className={headerStyles["nav-menu-dropdown"]}>
 								<li>
 									<Link href="/story">
