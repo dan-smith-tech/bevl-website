@@ -381,7 +381,7 @@ export default function Header() {
 						onClick={() => setShowNavMenu(!showNavMenu)}
 						aria-label={"Navigation Menu Toggle"}
 					>
-						<i class="bx bx-menu-alt-right"></i>
+						<i className="bx bx-menu-alt-right"></i>
 					</button>
 					{showNavMenu && (
 						<div

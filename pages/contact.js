@@ -1,9 +1,11 @@
 import Head from "next/head";
+import Script from "next/script";
 
 import FormInput from "../components/form/Input";
 import FormButton from "../components/form/Button";
 
 import contactStyles from "../styles/contact.module.css";
+import buttonStyles from "../styles/form/button.module.css";
 
 function Contact() {
 	return (
@@ -19,6 +21,11 @@ function Contact() {
 					property="og:description"
 					content="Get in contact with Bevl's developer."
 				/>
+				<link
+					rel="stylesheet"
+					href="https://s.pageclip.co/v1/pageclip.css"
+					media="screen"
+				/>
 			</Head>
 			<div className={"container-full " + contactStyles["container-full"]}>
 				<div
@@ -27,12 +34,14 @@ function Contact() {
 					}
 				>
 					<h1>Contact</h1>
+					<Script
+						src="https://s.pageclip.co/v1/pageclip.js"
+						charset="utf-8"
+					/>
 					<form
+						action="https://send.pageclip.co/tRZk9KV8VnRfjrFiDI6s2h7xHc6onB8a/Contact"
 						method={"POST"}
-						name={"Contact"}
-						netlify={true}
-						data-netlify={true}
-						netlify-honeypot={"bot-field"}
+						className="pageclip-form"
 					>
 						<input type="hidden" name="form-name" value="Contact" />
 						<div className={contactStyles["form-row"]}>
@@ -67,11 +76,14 @@ function Contact() {
 							</div>
 						</div>
 						<div className={contactStyles["form-row"]}>
-							<FormButton
-								type="submit"
-								primary={true}
-								value="Send Message"
-							/>
+							<button
+								type={"submit"}
+								className={
+									buttonStyles["button"] + " pageclip-form__submit"
+								}
+							>
+								<span>Send Message</span>
+							</button>
 						</div>
 					</form>
 				</div>

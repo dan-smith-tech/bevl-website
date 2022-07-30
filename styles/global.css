@@ -192,6 +192,16 @@ small {
 	display: block;
 }
 
+.pageclip-form__success {
+	inset: -0.15rem;
+	background-color: var(--color-primary-400);
+	opacity: 0.85;
+}
+
+.pageclip-form__success__message {
+	color: var(--color-secondary-100);
+}
+
 @media (max-width: 550px) {
 	.container-partial {
 		max-width: calc(65rem + 2 * 1.5em);
