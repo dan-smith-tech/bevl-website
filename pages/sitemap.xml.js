@@ -1,50 +1,50 @@
-// const EXTERNAL_DATA_URL = "https://bevl.app";
+// const EXTERNAL_DATA_URL = "https://www.bevl.app";
 
 function generateSiteMap(posts, date) {
 	return `<?xml version="1.0" encoding="UTF-8"?>
    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
      <url>
-       <loc>https://bevl.app</loc>
+       <loc>https://www.bevl.app</loc>
 		 <lastmod>${date}</lastmod>
      </url>
      <url>
-       <loc>https://bevl.app/features/tasks</loc>
+       <loc>https://www.bevl.app/features/tasks</loc>
 		 <lastmod>${date}</lastmod>
      </url>
      <url>
-       <loc>https://bevl.app/features/lists</loc>
+       <loc>https://www.bevl.app/features/lists</loc>
 		 <lastmod>${date}</lastmod>
      </url>
      <url>
-       <loc>https://bevl.app/features/labels</loc>
+       <loc>https://www.bevl.app/features/labels</loc>
 		 <lastmod>${date}</lastmod>
      </url>
      <url>
-       <loc>https://bevl.app/magazine</loc>
+       <loc>https://www.bevl.app/magazine</loc>
 		 <lastmod>${date}</lastmod>
      </url>
      <url>
-       <loc>https://bevl.app/newsletter</loc>
+       <loc>https://www.bevl.app/newsletter</loc>
 		 <lastmod>${date}</lastmod>
      </url>
      <url>
-       <loc>https://bevl.app/help</loc>
+       <loc>https://www.bevl.app/help</loc>
 		 <lastmod>${date}</lastmod>
      </url>
      <url>
-       <loc>https://bevl.app/contact</loc>
+       <loc>https://www.bevl.app/contact</loc>
 		 <lastmod>${date}</lastmod>
      </url>
      <url>
-       <loc>https://bevl.app/story</loc>
+       <loc>https://www.bevl.app/story</loc>
 		 <lastmod>${date}</lastmod>
      </url>
      <url>
-       <loc>https://bevl.app/philosophy</loc>
+       <loc>https://www.bevl.app/philosophy</loc>
 		 <lastmod>${date}</lastmod>
      </url>
      <url>
-       <loc>https://bevl.app/pricing</loc>
+       <loc>https://www.bevl.app/pricing</loc>
 		 <lastmod>${date}</lastmod>
      </url>
      ${posts

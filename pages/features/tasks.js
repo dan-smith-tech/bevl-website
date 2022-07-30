@@ -25,7 +25,7 @@ function Tasks() {
 				/>
 				<meta
 					property="og:image"
-					content="https://bevl.app/images/open-graph/tasks.png"
+					content="https://www.bevl.app/images/open-graph/tasks.png"
 				/>
 			</Head>
 			<FeatureSplash

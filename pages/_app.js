@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps }) {
 				/>
 				<meta
 					property="og:image"
-					content="https://bevl.app/images/open-graph/index.png"
+					content="https://www.bevl.app/images/open-graph/index.png"
 				/>
 			</Head>
 			<Header />

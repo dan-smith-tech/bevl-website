@@ -56,7 +56,7 @@ function Landing() {
 				/>
 				<meta
 					property="og:image"
-					content="https://bevl.app/images/open-graph/landing.png"
+					content="https://www.bevl.app/images/open-graph/landing.png"
 				/>
 			</Head>
 			<div

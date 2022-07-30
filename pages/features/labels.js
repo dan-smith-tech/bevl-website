@@ -26,7 +26,7 @@ function Labels() {
 				/>
 				<meta
 					property="og:image"
-					content="https://bevl.app/images/open-graph/labels.png"
+					content="https://www.bevl.app/images/open-graph/labels.png"
 				/>
 			</Head>
 			<FeatureSplash

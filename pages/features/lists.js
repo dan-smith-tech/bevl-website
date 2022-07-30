@@ -26,7 +26,7 @@ function Lists() {
 				/>
 				<meta
 					property="og:image"
-					content="https://bevl.app/images/open-graph/lists.png"
+					content="https://www.bevl.app/images/open-graph/lists.png"
 				/>
 			</Head>
 			<FeatureSplash
