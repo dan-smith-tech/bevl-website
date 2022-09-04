@@ -39,7 +39,7 @@ function Contact() {
 						charset="utf-8"
 					/>
 					<form
-						action="https://send.pageclip.co/tRZk9KV8VnRfjrFiDI6s2h7xHc6onB8a/Contact"
+						action="https://send.pageclip.co/92FMod1rpAg6GX3cDoCW21G3Z41ftFGu/contact"
 						method={"POST"}
 						className="pageclip-form"
 					>
