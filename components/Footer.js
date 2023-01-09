@@ -132,7 +132,7 @@ export default function Footer() {
 							<li
 								className={footerStyles["content-column-list-element"]}
 							>
-								<a href="https://open.bevl.app/signin">Sign In</a>
+								<a href="https://my.bevl.app/signin">Sign In</a>
 							</li>
 							<li
 								className={footerStyles["content-column-list-element"]}

@@ -353,7 +353,7 @@ export default function Header() {
 						</Link>
 					</div>
 					<div className={headerStyles["nav-bar-app"]}>
-						<Link href={"https://open.bevl.app/signin"}>
+						<Link href={"https://my.bevl.app/signin"}>
 							<a
 								className={
 									headerStyles["nav-bar-link"] +
@@ -513,7 +513,7 @@ export default function Header() {
 									Pricing
 								</a>
 							</Link>
-							<Link href={"https://open.bevl.app/signin"}>
+							<Link href={"https://my.bevl.app/signin"}>
 								<a
 									className={headerStyles["nav-menu-link"]}
 									onClick={selectLink}
