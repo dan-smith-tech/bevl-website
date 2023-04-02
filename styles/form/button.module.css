@@ -1,26 +1,71 @@
-.button {
-	width: 100%;
-	padding: 1.35em;
+.element {
+	width: 10.65em;
+	height: 3.65rem;
 	box-sizing: border-box;
-	background-color: var(--color-accent-400);
-	color: var(--color-secondary-100);
-	border: none;
-	border-radius: 3.5em;
-	font-size: 1rem;
+	background-color: transparent;
+	border-radius: 0.85em;
+	font-size: 1.1rem;
 	font-weight: 600;
+	color: var(--color-secondary-100);
+	border: var(--border-size) solid var(--color-accent-400);
+	flex-grow: 0;
+	position: relative;
 	cursor: pointer;
-	transition: transform 150ms, opacity 150ms;
+	transition-property: transform, opacity;
+	transition-duration: 100ms;
+	transition-timing-function: ease-out;
+	z-index: 0;
 }
 
-.button:hover {
-	transform: scale(1.15);
+.element-secondary {
+	color: var(--color-accent-400);
+	border-color: var(--color-secondary-400);
+}
+
+.element::before {
+	content: "";
+	position: absolute;
+	inset: -1px;
+	border-radius: 0.5rem;
+	z-index: -1;
+	transition-property: opacity;
+	transition-duration: 100ms;
+	transition-timing-function: ease-out;
+}
+
+.element::before {
+	background-color: var(--color-accent-400);
+}
+
+.element-secondary::before {
+	background-color: var(--color-secondary-400);
+}
+
+.element:hover {
+	transform: scale(1.065);
+}
+
+.element:hover::before {
 	opacity: 0.75;
 }
 
-.button:focus {
-	outline: var(--border-size) solid var(--color-secondary-100);
+.element:focus {
+	outline-offset: var(--border-size);
+	outline: var(--border-size) solid var(--color-neutral-white);
 }
 
-.button:active {
-	opacity: 0.5;
+.element:active {
+	transition: none;
+	transform: scale(0.95);
+	opacity: 0.35;
+}
+
+@media (max-width: 650px) {
+	.element {
+		width: 100%;
+	}
+
+	.element:hover {
+		transform: scale(1.05);
+	}
 }

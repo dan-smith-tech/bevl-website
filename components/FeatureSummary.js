@@ -7,6 +7,7 @@ import featureSummaryStyles from "../styles/featureSummary.module.css";
 
 export default function FeatureSummary({
 	heading,
+	description,
 	children,
 	link,
 	image,
@@ -38,7 +39,7 @@ export default function FeatureSummary({
 	const textElement = link ? (
 		<div className={getTextStyles()}>
 			<h2>{heading}</h2>
-			{children}
+			<p>{description}</p>
 			<Link href={link}>
 				<a className={featureSummaryStyles["button"]}>
 					Explore <i className="bx bxs-chevron-right"></i>
@@ -53,31 +54,14 @@ export default function FeatureSummary({
 	);
 
 	const getImageStyles = () => {
-		if (!intersection) return featureSummaryStyles["content-container-image"];
+		if (!intersection)
+			return featureSummaryStyles["content-container-graphic"];
 		return (
-			featureSummaryStyles["content-container-image"] +
+			featureSummaryStyles["content-container-graphic"] +
 			" " +
 			featureSummaryStyles["image-animation"]
 		);
 	};
-
-	const imageElement = (
-		<div className={getImageStyles()} ref={intersectionDetectorRef}>
-			<Image
-				src={image}
-				alt={heading + " Demo"}
-				layout="fill"
-				className={featureSummaryStyles["content-image"]}
-				draggable="false"
-				quality={50}
-				loading={"eager"}
-				blurDataURL={
-					"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP85xNfDwAGIwIqqYhd4AAAAABJRU5ErkJggg=="
-				}
-				placeholder={"blur"}
-			/>
-		</div>
-	);
 
 	if (!imageFirst)
 		return (
@@ -94,7 +78,19 @@ export default function FeatureSummary({
 					}
 				>
 					{textElement}
-					{imageElement}
+					<div className={getImageStyles()} ref={intersectionDetectorRef}>
+						{children}
+						<div className={featureSummaryStyles["container-shape"]}>
+							<Image
+								src={"/images/graphics/Feature-Container.svg"}
+								alt={"Container Shape"}
+								layout="fill"
+								className={featureSummaryStyles["shape"]}
+								draggable="false"
+								quality={50}
+							/>
+						</div>
+					</div>
 				</div>
 			</div>
 		);
@@ -114,7 +110,25 @@ export default function FeatureSummary({
 						featureSummaryStyles["container-partial-content-reorder"]
 					}
 				>
-					{imageElement}
+					<div className={getImageStyles()} ref={intersectionDetectorRef}>
+						{children}
+						<div
+							className={
+								featureSummaryStyles["container-shape"] +
+								" " +
+								featureSummaryStyles["container-shape-rotate"]
+							}
+						>
+							<Image
+								src={"/images/graphics/Feature-Container.svg"}
+								alt={"Container Shape"}
+								layout="fill"
+								className={featureSummaryStyles["shape"]}
+								draggable="false"
+								quality={50}
+							/>
+						</div>
+					</div>
 					{textElement}
 				</div>
 			</div>

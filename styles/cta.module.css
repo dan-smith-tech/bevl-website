@@ -55,18 +55,40 @@
 }
 
 /* Independant */
-.container-full {
-	background-color: var(--color-primary-100);
-	color: var(--color-secondary-100);
-}
-
 .container-partial {
 	margin: 6.5em 0;
 }
 
-.container-full .heading {
-	margin-bottom: 1.15em;
-	font-size: 2.35rem;
-	font-weight: 600;
+.container-content {
+	padding: 2.65em;
+	background-color: var(--color-accent-400);
+	border-radius: var(--border-radius);
+	display: flex;
+}
+
+.container-info {
+	width: 55%;
+}
+
+.container-content .heading {
+	margin-bottom: 1em;
+	font-size: 2.85rem;
+	line-height: 3.85rem;
+}
+
+.container-content .container-form {
+	margin: 0;
+}
+
+.container-content .container-form + small {
+	width: 28em;
+	margin: 1.35em 0 0 6.5rem;
 	text-align: center;
+}
+
+.container-graphic {
+	flex-grow: 1;
+	position: relative;
+	border-radius: var(--border-radius);
+	overflow-x: visible;
 }

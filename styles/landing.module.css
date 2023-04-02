@@ -1,6 +1,7 @@
 /* Splash */
 .container-full-splash {
-	padding-top: var(--header-height);
+	padding-top: 0.85em;
+	/* padding-top: var(--header-height); */
 	position: relative;
 	background-color: var(--color-secondary-100);
 	color: var(--color-primary-400);
@@ -17,11 +18,13 @@
 .heading {
 	margin-bottom: 0.15em;
 	text-align: center;
+	color: var(--color-primary-400);
 }
 
 .tagline {
 	margin-bottom: 2.35em;
 	text-align: center;
+	color: var(--color-primary-400);
 }
 
 .container-full-splash input {
@@ -112,6 +115,14 @@
 .feature {
 	padding: 1.15em;
 	box-sizing: border-box;
+	border: var(--border-size) solid var(--color-accent-400);
+	background: var(--color-primary-400);
+	background: linear-gradient(
+		145deg,
+		rgba(255, 107, 123, 0) 0%,
+		rgba(255, 107, 123, 0.325) 100%
+	);
+	box-shadow: var(--shadow-card);
 	border-radius: var(--border-radius);
 	position: relative;
 	overflow: hidden;
@@ -125,8 +136,8 @@
 }
 
 .feature i {
-	color: var(--color-secondary-100);
-	font-size: 2.15rem;
+	color: var(--color-accent-400);
+	font-size: 2.85rem;
 }
 
 .feature p {
@@ -136,7 +147,7 @@
 
 @media (prefers-reduced-motion: no-preference) and (min-width: 1201px) {
 	.feature {
-		transform: scale(0.35);
+		transform: scale(0.15);
 	}
 
 	.features-animation .feature {

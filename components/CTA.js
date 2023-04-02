@@ -8,6 +8,7 @@ import ctaStyles from "../styles/cta.module.css";
 
 import { isEmail } from "../lib/helpers";
 import sendFetchRequest from "../lib/fetch";
+import DrawingsGraphic from "./graphics/Drawings";
 
 export default function CTA({ independent }) {
 	const [showModal, setShowModal] = useState(false);
@@ -43,12 +44,14 @@ export default function CTA({ independent }) {
 						<FormInput
 							type={"text"}
 							name={"email1"}
-							placeholder="Enter email..."
+							placeholder="Enter email address..."
 							required={true}
 						/>
 					</div>
 					<div className={ctaStyles["container-form-button"]}>
-						<FormButton type={"submit"} value="Sign Up" light={true} />
+						<FormButton type={"submit"} light={true}>
+							Sign Up
+						</FormButton>
 						<Modal
 							show={showModal}
 							onClose={() => setShowModal(false)}
@@ -60,10 +63,6 @@ export default function CTA({ independent }) {
 						/>
 					</div>
 				</form>
-				<small>
-					Bevl is launching soon! Sign up to the announcements newsletter
-					to get an exclusive deal at launch.
-				</small>
 			</div>
 		);
 	else
@@ -72,38 +71,35 @@ export default function CTA({ independent }) {
 				<div
 					className={"container-partial " + ctaStyles["container-partial"]}
 				>
-					<h2 className={ctaStyles["heading"]}>
-						Up Your Productivity Game With Bevl
-					</h2>
-					<form
-						onSubmit={handleSubmit}
-						className={ctaStyles["container-form"]}
-					>
-						<div className={ctaStyles["container-form-input"]}>
-							<FormInput
-								type={"text"}
-								name={"email2"}
-								placeholder="Enter email..."
-								required={true}
-							/>
+					<div className={ctaStyles["container-content"]}>
+						<div className={ctaStyles["container-info"]}>
+							<h2 className={ctaStyles["heading"]}>
+								Up Your Productivity Game With Bevl
+							</h2>
+							<form
+								onSubmit={handleSubmit}
+								className={ctaStyles["container-form"]}
+							>
+								<div className={ctaStyles["container-form-button"]}>
+									<FormButton type={"submit"} secondary={true}>
+										Sign Up
+									</FormButton>
+									<Modal
+										show={showModal}
+										onClose={() => setShowModal(false)}
+										heading={"Confirm Subscription"}
+										body={
+											"Thank you for signing up to the newsletter! Please confirm your subscription through the email you have been sent."
+										}
+										buttonValue={"I've Confirmed My Email"}
+									/>
+								</div>
+							</form>
 						</div>
-						<div className={ctaStyles["container-form-button"]}>
-							<FormButton type={"submit"} value="Sign Up" />
-							<Modal
-								show={showModal}
-								onClose={() => setShowModal(false)}
-								heading={"Confirm Subscription"}
-								body={
-									"Thank you for signing up to the newsletter! Please confirm your subscription through the email you have been sent."
-								}
-								buttonValue={"I've Confirmed My Email"}
-							/>
+						<div className={ctaStyles["container-graphic"]}>
+							<DrawingsGraphic />
 						</div>
-					</form>
-					<small>
-						Bevl is launching soon! Sign up to the announcements
-						newsletter to get an exclusive deal at launch.
-					</small>
+					</div>
 				</div>
 			</div>
 		);

@@ -4,10 +4,15 @@ import Head from "next/head";
 import CTA from "../components/CTA";
 import FeatureSummary from "../components/FeatureSummary";
 import Testimonials from "../components/Testimonials";
-import FAQ from "../components/FAQ";
+import FAQ from "../components/faq/Index";
+
+import TasksGraphic from "../components/graphics/Tasks";
 
 import "boxicons/css/boxicons.min.css";
 import landingStyles from "../styles/landing.module.css";
+import ListsGraphic from "../components/graphics/Lists";
+import LabelsGraphic from "../components/graphics/Labels";
+import ResourcesGraphic from "../components/graphics/Resources";
 
 function Landing() {
 	const featuresIntersectionDetectorRef = useRef();
@@ -93,7 +98,7 @@ function Landing() {
 					}
 				>
 					<path
-						fill="#ececec"
+						fill="#eaefff"
 						fillOpacity="1"
 						d="M0,32L34.3,32C68.6,32,137,32,206,26.7C274.3,21,343,11,411,26.7C480,43,549,85,617,96C685.7,107,754,85,823,69.3C891.4,53,960,43,1029,64C1097.1,85,1166,139,1234,170.7C1302.9,203,1371,213,1406,218.7L1440,224L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"
 					></path>
@@ -123,7 +128,7 @@ function Landing() {
 					}
 				>
 					<path
-						fill="#323a52"
+						fill="#292f44"
 						fillOpacity="1"
 						d="M0,192L60,202.7C120,213,240,235,360,229.3C480,224,600,192,720,176C840,160,960,160,1080,181.3C1200,203,1320,245,1380,266.7L1440,288L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
 					></path>
@@ -149,58 +154,40 @@ function Landing() {
 					<div
 						className={landingStyles["container-partial-features-list"]}
 					>
-						<div
-							className={landingStyles["feature"]}
-							style={{ backgroundColor: "#6C5CE7" }}
-						>
+						<div className={landingStyles["feature"]}>
 							<i className="bx bxs-hand"></i>
 							<p>
 								Assign time to work on todos by dragging them into the
 								calendar.
 							</p>
 						</div>
-						<div
-							className={landingStyles["feature"]}
-							style={{ backgroundColor: "#E17055" }}
-						>
+						<div className={landingStyles["feature"]}>
 							<i className="bx bxs-calendar"></i>
 							<p>
 								Set recurring events to create routines or develop
 								habits.
 							</p>
 						</div>
-						<div
-							className={landingStyles["feature"]}
-							style={{ backgroundColor: "#16A085" }}
-						>
+						<div className={landingStyles["feature"]}>
 							<i className="bx bxs-extension"></i>
 							<p>
 								Split larger tasks into smaller tasks to organise
 								individually.
 							</p>
 						</div>
-						<div
-							className={landingStyles["feature"]}
-							style={{ backgroundColor: "#E75C86" }}
-						>
+						<div className={landingStyles["feature"]}>
 							<i className="bx bxs-filter-alt"></i>
 							<p>
 								Filter and drag tasks using the interactable calendar.
 							</p>
 						</div>
-						<div
-							className={landingStyles["feature"]}
-							style={{ backgroundColor: "#E7AF5C" }}
-						>
+						<div className={landingStyles["feature"]}>
 							<i className="bx bxs-customize"></i>
 							<p>
 								Keep track of random ideas and notes on custom lists.
 							</p>
 						</div>
-						<div
-							className={landingStyles["feature"]}
-							style={{ backgroundColor: "#EF5353" }}
-						>
+						<div className={landingStyles["feature"]}>
 							<i className="bx bxs-purchase-tag"></i>
 							<p>Group and filter tasks and lists with custom tags.</p>
 						</div>
@@ -209,48 +196,47 @@ function Landing() {
 			</div>
 			<FeatureSummary
 				heading={"Tasks"}
+				description={
+					"Plan any todo with 4 unique task types (Deadlines, Events, Habits, Projects) that suit every situation."
+				}
 				link={"/features/tasks"}
 				image={"/images/screenshots/tasks.png"}
 				imageFirst={false}
 			>
-				<p>
-					Plan any todo with 4 unique task types (Deadlines, Events,
-					Habits, Projects) that suit every situation.
-				</p>
+				<TasksGraphic />
 			</FeatureSummary>
 			<FeatureSummary
 				heading={"Lists"}
+				description={
+					"Keep track of less-organised notes and ideas, without cluttering your todo list."
+				}
 				link={"/features/lists"}
 				image={"/images/screenshots/lists.png"}
 				imageFirst={true}
 			>
-				<p>
-					Keep track of less-organised notes and ideas, without cluttering
-					your todo list.
-				</p>
+				<ListsGraphic />
 			</FeatureSummary>
 			<FeatureSummary
 				heading={"Labels"}
+				description={
+					"Group and filter content with customisable tags, to organise the tasks at hand."
+				}
 				link={"/features/labels"}
 				image={"/images/screenshots/labels.png"}
 				imageFirst={false}
 			>
-				<p>
-					Group and filter content with customisable tags, to organise the
-					tasks at hand.
-				</p>
+				<LabelsGraphic />
 			</FeatureSummary>
-			{/* <Testimonials /> */}
 			<FeatureSummary
 				heading={"Productivity Resources"}
+				description={
+					"Learn about the planning philosophy that Bevl was designed to facilitate, or explore the latest issues of the magazine."
+				}
 				link={"/philosophy"}
 				image={"/images/screenshots/comingSoon.png"}
 				imageFirst={true}
 			>
-				<p>
-					Learn about the planning philosophy that Bevl was designed to
-					facilitate, or explore the latest issues of the magazine.
-				</p>
+				<ResourcesGraphic />
 			</FeatureSummary>
 			<CTA independent={true} />
 			<FAQ />

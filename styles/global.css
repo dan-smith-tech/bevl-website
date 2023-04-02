@@ -1,78 +1,59 @@
-/* work-sans-300 - latin */
+/* roboto-slab-regular - latin */
 @font-face {
-	font-family: "Work Sans";
-	font-style: normal;
-	font-weight: 300;
-	src: url("/fonts/work-sans-v17-latin-300.eot"); /* IE9 Compat Modes */
-	src: local(""),
-		url("/fonts/work-sans-v17-latin-300.eot?#iefix")
-			format("embedded-opentype"),
-		/* IE6-IE8 */ url("/fonts/work-sans-v17-latin-300.woff2") format("woff2"),
-		/* Super Modern Browsers */ url("/fonts/work-sans-v17-latin-300.woff")
-			format("woff"),
-		/* Modern Browsers */ url("/fonts/work-sans-v17-latin-300.ttf")
-			format("truetype"),
-		/* Safari, Android, iOS */
-			url("/fonts/work-sans-v17-latin-300.svg#WorkSans") format("svg"); /* Legacy iOS */
-	font-display: swap;
-}
-
-/* work-sans-regular - latin */
-@font-face {
-	font-family: "Work Sans";
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: "Roboto Slab";
 	font-style: normal;
 	font-weight: 400;
-	src: url("/fonts/work-sans-v17-latin-regular.eot"); /* IE9 Compat Modes */
-	src: local(""),
-		url("/fonts/work-sans-v17-latin-regular.eot?#iefix")
+	src: url("/fonts/roboto-slab-v24-latin-regular.eot"); /* IE9 Compat Modes */
+	src: url("/fonts/roboto-slab-v24-latin-regular.eot?#iefix")
 			format("embedded-opentype"),
-		/* IE6-IE8 */ url("/fonts/work-sans-v17-latin-regular.woff2")
+		/* IE6-IE8 */ url("/fonts/roboto-slab-v24-latin-regular.woff2")
 			format("woff2"),
-		/* Super Modern Browsers */ url("/fonts/work-sans-v17-latin-regular.woff")
-			format("woff"),
-		/* Modern Browsers */ url("/fonts/work-sans-v17-latin-regular.ttf")
+		/* Super Modern Browsers */
+			url("/fonts/roboto-slab-v24-latin-regular.woff") format("woff"),
+		/* Modern Browsers */ url("/fonts/roboto-slab-v24-latin-regular.ttf")
 			format("truetype"),
 		/* Safari, Android, iOS */
-			url("/fonts/work-sans-v17-latin-regular.svg#WorkSans") format("svg"); /* Legacy iOS */
-	font-display: swap;
+			url("/fonts/roboto-slab-v24-latin-regular.svg#RobotoSlab")
+			format("svg"); /* Legacy iOS */
 }
 
-/* work-sans-600 - latin */
+/* roboto-slab-500 - latin */
 @font-face {
-	font-family: "Work Sans";
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: "Roboto Slab";
 	font-style: normal;
-	font-weight: 600;
-	src: url("/fonts/work-sans-v17-latin-600.eot"); /* IE9 Compat Modes */
-	src: local(""),
-		url("/fonts/work-sans-v17-latin-600.eot?#iefix")
+	font-weight: 500;
+	src: url("/fonts/roboto-slab-v24-latin-500.eot"); /* IE9 Compat Modes */
+	src: url("/fonts/roboto-slab-v24-latin-500.eot?#iefix")
 			format("embedded-opentype"),
-		/* IE6-IE8 */ url("/fonts/work-sans-v17-latin-600.woff2") format("woff2"),
-		/* Super Modern Browsers */ url("/fonts/work-sans-v17-latin-600.woff")
+		/* IE6-IE8 */ url("/fonts/roboto-slab-v24-latin-500.woff2")
+			format("woff2"),
+		/* Super Modern Browsers */ url("/fonts/roboto-slab-v24-latin-500.woff")
 			format("woff"),
-		/* Modern Browsers */ url("/fonts/work-sans-v17-latin-600.ttf")
+		/* Modern Browsers */ url("/fonts/roboto-slab-v24-latin-500.ttf")
 			format("truetype"),
 		/* Safari, Android, iOS */
-			url("/fonts/work-sans-v17-latin-600.svg#WorkSans") format("svg"); /* Legacy iOS */
-	font-display: swap;
+			url("/fonts/roboto-slab-v24-latin-500.svg#RobotoSlab") format("svg"); /* Legacy iOS */
 }
 
-/* work-sans-700 - latin */
+/* roboto-slab-700 - latin */
 @font-face {
-	font-family: "Work Sans";
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: "Roboto Slab";
 	font-style: normal;
 	font-weight: 700;
-	src: url("/fonts/work-sans-v17-latin-700.eot"); /* IE9 Compat Modes */
-	src: local(""),
-		url("/fonts/work-sans-v17-latin-700.eot?#iefix")
+	src: url("/fonts/roboto-slab-v24-latin-700.eot"); /* IE9 Compat Modes */
+	src: url("/fonts/roboto-slab-v24-latin-700.eot?#iefix")
 			format("embedded-opentype"),
-		/* IE6-IE8 */ url("/fonts/work-sans-v17-latin-700.woff2") format("woff2"),
-		/* Super Modern Browsers */ url("/fonts/work-sans-v17-latin-700.woff")
+		/* IE6-IE8 */ url("/fonts/roboto-slab-v24-latin-700.woff2")
+			format("woff2"),
+		/* Super Modern Browsers */ url("/fonts/roboto-slab-v24-latin-700.woff")
 			format("woff"),
-		/* Modern Browsers */ url("/fonts/work-sans-v17-latin-700.ttf")
+		/* Modern Browsers */ url("/fonts/roboto-slab-v24-latin-700.ttf")
 			format("truetype"),
 		/* Safari, Android, iOS */
-			url("/fonts/work-sans-v17-latin-700.svg#WorkSans") format("svg"); /* Legacy iOS */
-	font-display: swap;
+			url("/fonts/roboto-slab-v24-latin-700.svg#RobotoSlab") format("svg"); /* Legacy iOS */
 }
 
 html,
@@ -85,20 +66,31 @@ body,
 :root {
 	--color-accent-100: #ff6b7b;
 	--color-accent-400: #fe4c5f;
-	--color-dark-100: #424d70;
-	--color-dark-400: #323a52;
+	--color-dark-100: #323a52;
+	--color-dark-400: #292f44;
 	--color-light-100: #ffffff;
-	--color-light-400: #ececec;
+	--color-light-400: #eaefff;
 
 	--color-primary-100: var(--color-dark-100);
 	--color-primary-400: var(--color-dark-400);
 	--color-secondary-100: var(--color-light-100);
 	--color-secondary-400: var(--color-light-400);
 
-	--border-size: 0.15rem;
-	--border-radius: 0.5rem;
+	--border-size: 0.2rem;
+	--border-radius: 1.35rem;
 
-	--header-height: 3.5rem;
+	--shadow-color: 227deg 36% 15%;
+	--shadow-card: 0px 0.6px 0.7px hsl(var(--shadow-color) / 0.13),
+		0px 2.7px 3.3px -0.2px hsl(var(--shadow-color) / 0.15),
+		0px 4.6px 5.7px -0.4px hsl(var(--shadow-color) / 0.16),
+		0px 6.9px 8.5px -0.7px hsl(var(--shadow-color) / 0.17),
+		0px 9.9px 12.3px -0.9px hsl(var(--shadow-color) / 0.18),
+		0px 14.1px 17.4px -1.1px hsl(var(--shadow-color) / 0.2),
+		-0.1px 19.9px 24.6px -1.3px hsl(var(--shadow-color) / 0.21),
+		-0.1px 27.8px 34.4px -1.5px hsl(var(--shadow-color) / 0.22),
+		-0.1px 38.2px 47.3px -1.7px hsl(var(--shadow-color) / 0.23);
+
+	--header-height: 6.15rem;
 
 	--transition-duration: 150ms;
 }
@@ -106,7 +98,8 @@ body,
 * {
 	margin: 0;
 	padding: 0;
-	font-family: "Work Sans", sans-serif;
+	font-family: "Roboto Slab", serif;
+	color: var(--color-secondary-400);
 	box-sizing: border-box;
 }
 
@@ -130,15 +123,15 @@ h1 {
 }
 
 h2 {
-	font-size: 1.35rem;
+	font-size: 1.85rem;
 	font-weight: 600;
 	line-height: 2.15rem;
 }
 
 h3 {
-	font-size: 1rem;
-	font-weight: 600;
-	line-height: 1.65rem;
+	font-size: 1.35rem;
+	font-weight: 500;
+	line-height: 1.85rem;
 }
 
 h4 {
@@ -153,6 +146,7 @@ h5 {
 
 p,
 li {
+	font-size: 1.1rem;
 	font-weight: 400;
 	line-height: 2rem;
 }

@@ -1,0 +1,82 @@
+import Image from "next/image";
+
+import graphicStyles from "../..//styles/graphics.module.css";
+
+export default function ResourcesGraphic() {
+	return (
+		<>
+			<div
+				id={graphicStyles["container-question"]}
+				className={graphicStyles["container-image"]}
+			>
+				<Image
+					src={"/images/graphics/Question.png"}
+					alt={"Question"}
+					layout="fill"
+					className={graphicStyles["image"]}
+					draggable="false"
+					quality={50}
+					loading={"eager"}
+					blurDataURL={
+						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP85xNfDwAGIwIqqYhd4AAAAABJRU5ErkJggg=="
+					}
+					placeholder={"blur"}
+				/>
+			</div>
+			<div
+				id={graphicStyles["container-rocket"]}
+				className={graphicStyles["container-image"]}
+			>
+				<Image
+					src={"/images/graphics/Rocket.png"}
+					alt={"Rocket"}
+					layout="fill"
+					className={graphicStyles["image"]}
+					draggable="false"
+					quality={50}
+					loading={"eager"}
+					blurDataURL={
+						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP85xNfDwAGIwIqqYhd4AAAAABJRU5ErkJggg=="
+					}
+					placeholder={"blur"}
+				/>
+			</div>
+			<div
+				id={graphicStyles["container-mail"]}
+				className={graphicStyles["container-image"]}
+			>
+				<Image
+					src={"/images/graphics/Mail.png"}
+					alt={"Mail"}
+					layout="fill"
+					className={graphicStyles["image"]}
+					draggable="false"
+					quality={50}
+					loading={"eager"}
+					blurDataURL={
+						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP85xNfDwAGIwIqqYhd4AAAAABJRU5ErkJggg=="
+					}
+					placeholder={"blur"}
+				/>
+			</div>
+			<div
+				id={graphicStyles["container-bulb"]}
+				className={graphicStyles["container-image"]}
+			>
+				<Image
+					src={"/images/graphics/Bulb.png"}
+					alt={"Bulb"}
+					layout="fill"
+					className={graphicStyles["image"]}
+					draggable="false"
+					quality={50}
+					loading={"eager"}
+					blurDataURL={
+						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP85xNfDwAGIwIqqYhd4AAAAABJRU5ErkJggg=="
+					}
+					placeholder={"blur"}
+				/>
+			</div>
+		</>
+	);
+}

@@ -1,10 +1,11 @@
 .element {
 	width: 100%;
-	padding: 1.35em;
+	height: 3.65rem;
+	padding: 0 1.35em;
 	box-sizing: border-box;
 	background-color: var(--color-secondary-100);
 	border: none;
-	border-radius: 3.5em;
+	border-radius: var(--border-radius);
 	font-size: 1rem;
 	color: var(--color-primary-400);
 }
