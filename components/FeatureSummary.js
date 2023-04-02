@@ -80,16 +80,6 @@ export default function FeatureSummary({
 					{textElement}
 					<div className={getImageStyles()} ref={intersectionDetectorRef}>
 						{children}
-						<div className={featureSummaryStyles["container-shape"]}>
-							<Image
-								src={"/images/graphics/Feature-Container.svg"}
-								alt={"Container Shape"}
-								layout="fill"
-								className={featureSummaryStyles["shape"]}
-								draggable="false"
-								quality={50}
-							/>
-						</div>
 					</div>
 				</div>
 			</div>
@@ -112,22 +102,6 @@ export default function FeatureSummary({
 				>
 					<div className={getImageStyles()} ref={intersectionDetectorRef}>
 						{children}
-						<div
-							className={
-								featureSummaryStyles["container-shape"] +
-								" " +
-								featureSummaryStyles["container-shape-rotate"]
-							}
-						>
-							<Image
-								src={"/images/graphics/Feature-Container.svg"}
-								alt={"Container Shape"}
-								layout="fill"
-								className={featureSummaryStyles["shape"]}
-								draggable="false"
-								quality={50}
-							/>
-						</div>
 					</div>
 					{textElement}
 				</div>
