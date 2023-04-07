@@ -63,6 +63,10 @@ body,
 	background-color: var(--color-dark-400);
 }
 
+body {
+	overflow-x: hidden;
+}
+
 :root {
 	--color-accent-100: #ff6b7b;
 	--color-accent-400: #fe4c5f;
