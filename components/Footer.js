@@ -29,7 +29,7 @@ export default function Footer() {
 						</Link>
 					</div>
 					<p className={footerStyles["copyright"]}>
-						All Rights Reserved © bevl.app
+						All rights reserved © bevl.app.
 					</p>
 				</div>
 				<div className={footerStyles["container-content"]}>
