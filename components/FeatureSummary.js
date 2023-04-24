@@ -42,7 +42,8 @@ export default function FeatureSummary({
 			<p>{description}</p>
 			<Link href={link}>
 				<a className={featureSummaryStyles["button"]}>
-					Explore <i className="bx bxs-chevron-right"></i>
+					<span>Explore</span>
+					<i class="bx bxs-chevrons-right" />
 				</a>
 			</Link>
 		</div>

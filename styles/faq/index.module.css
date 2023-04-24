@@ -1,6 +1,6 @@
 .container-partial {
-	margin-top: 3.5em;
-	margin-bottom: 4.85em; /* fix offset caused by skewed backdrop */
+	margin-top: 5em;
+	margin-bottom: 8.5em;
 	position: relative;
 }
 

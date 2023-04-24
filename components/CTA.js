@@ -80,6 +80,14 @@ export default function CTA({ independent }) {
 								onSubmit={handleSubmit}
 								className={ctaStyles["container-form"]}
 							>
+								<div className={ctaStyles["container-form-input"]}>
+									<FormInput
+										type={"text"}
+										name={"email1"}
+										placeholder="Enter email address..."
+										required={true}
+									/>
+								</div>
 								<div className={ctaStyles["container-form-button"]}>
 									<FormButton type={"submit"} secondary={true}>
 										Sign Up

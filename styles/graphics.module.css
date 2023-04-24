@@ -265,10 +265,10 @@
 
 @keyframes tasks {
 	0% {
-		transform: translateX(-1%) translateY(1.5%);
+		transform: translateX(-0.35%) translateY(0.65%);
 	}
 	100% {
-		transform: translateX(1%) translateY(-2.5%);
+		transform: translateX(0.85%) translateY(-0.65%);
 	}
 }
 
@@ -284,10 +284,10 @@
 
 @keyframes today {
 	0% {
-		transform: translateX(1.5%) translateY(2%);
+		transform: translateX(0.65%) translateY(0.35%);
 	}
 	100% {
-		transform: translateX(-0.5%) translateY(-2.5%);
+		transform: translateX(-0.65%) translateY(-1.5%);
 	}
 }
 
@@ -297,15 +297,15 @@
 	right: 12%;
 	z-index: 3;
 	animation-name: tomorrow;
-	animation-duration: 1.5s;
+	animation-duration: 1.85s;
 	animation-delay: 0.75s;
 }
 
 @keyframes tomorrow {
 	0% {
-		transform: translateX(1.35%) translateY(-2%);
+		transform: translateX(0.35%) translateY(1.15%);
 	}
 	100% {
-		transform: translateX(-1%) translateY(1.5%);
+		transform: translateX(-0.35%) translateY(-1.35%);
 	}
 }

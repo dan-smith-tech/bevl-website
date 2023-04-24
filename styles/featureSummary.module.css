@@ -32,6 +32,7 @@
 .button {
 	width: fit-content;
 	margin-top: 2.35em;
+	padding: 0.7em 1em 0.65em 1.15em;
 	display: flex;
 	align-items: center;
 	border: none;
@@ -39,7 +40,42 @@
 	font-size: 1rem;
 	font-weight: 600;
 	text-decoration: none;
+	position: relative;
+	border: var(--border-size) solid var(--color-accent-400);
+	border-radius: 0.85rem;
 	cursor: pointer;
+	transition-property: transform;
+	transition-duration: var(--transition-duration);
+	transition-timing-function: ease-out;
+}
+
+.button:hover {
+	transform: scale(1.065);
+}
+
+.button:active {
+	transform: scale(0.95);
+	transition: none;
+}
+
+.button::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	border-radius: 5px;
+	background-color: var(--color-accent-400);
+	z-index: -1;
+	transition-property: opacity;
+	transition-duration: var(--transition-duration);
+	transition-timing-function: ease-out;
+}
+
+.button:hover::before {
+	opacity: 0.65;
+}
+
+.button span {
+	margin-bottom: 0.2em;
 }
 
 .button i {
@@ -51,7 +87,7 @@
 	width: calc(16em * 2.5);
 	height: calc(9em * 2.5);
 	position: relative;
-	border-radius: var(--border-radius);
+	border-radius: var(--border-radius-large);
 }
 
 /* .content-container-graphic::after {
@@ -65,7 +101,7 @@
 .content-container-graphic::before {
 	content: "";
 	position: absolute;
-	inset: -3.5em -4.35em -3.5em -13.5rem;
+	inset: -4.35em -4.35em -4.35em -12.35rem;
 	background-color: var(--color-primary-100);
 	border-radius: 1.85em;
 	transform: skew(0deg, 3deg);
@@ -73,8 +109,8 @@
 }
 
 .container-partial-content-reorder .content-container-graphic::before {
-	left: -3.35em;
-	right: -13.5rem;
+	left: -4.35em;
+	right: -12.35rem;
 	transform: skew(0, -3deg);
 }
 

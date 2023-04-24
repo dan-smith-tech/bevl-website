@@ -199,7 +199,7 @@ function Landing() {
 				description={
 					"Plan any todo with 4 unique task types (Deadlines, Events, Habits, Projects) that suit every situation."
 				}
-				link={"/features/tasks"}
+				link={"/signup"}
 				image={"/images/screenshots/tasks.png"}
 				imageFirst={false}
 			>

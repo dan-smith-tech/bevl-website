@@ -1,5 +1,5 @@
 .container-form {
-	width: 35em;
+	width: 32em;
 	margin: 0 auto;
 	display: flex;
 	flex-direction: row;
@@ -57,13 +57,14 @@
 /* Independant */
 
 .container-partial {
-	margin: 6.5em 0;
+	margin: 8.5em 0;
 }
 
 .container-content {
 	padding: 2.65em;
 	border-radius: var(--border-radius);
 	background-color: var(--color-accent-400);
+	box-shadow: var(--shadow-card);
 	display: flex;
 	position: relative;
 }

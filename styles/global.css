@@ -166,12 +166,6 @@ a {
 	font-weight: 600;
 }
 
-a:focus {
-	outline: var(--border-size) solid var(--color-accent-400);
-	border-radius: var(--border-radius);
-	outline-offset: 0.25em;
-}
-
 :focus:not(:focus-visible) {
 	outline: none !important;
 }
