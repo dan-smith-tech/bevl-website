@@ -42,7 +42,7 @@
 	text-decoration: none;
 	position: relative;
 	border: var(--border-size) solid var(--color-accent-400);
-	border-radius: 0.85rem;
+	border-radius: var(--border-radius-small);
 	cursor: pointer;
 	transition-property: transform;
 	transition-duration: var(--transition-duration);
@@ -89,14 +89,6 @@
 	position: relative;
 	border-radius: var(--border-radius-large);
 }
-
-/* .content-container-graphic::after {
-	content: "";
-	position: absolute;
-	inset: 0;
-	background-color: red;
-	opacity: 0.35;
-} */
 
 .content-container-graphic::before {
 	content: "";

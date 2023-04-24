@@ -90,7 +90,7 @@
 
 .demo-video {
 	width: 100%;
-	border-radius: var(--border-radius);
+	border-radius: var(--border-radius-large);
 }
 
 .demo-heading {

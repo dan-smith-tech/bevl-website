@@ -73,7 +73,7 @@
 	height: 0.25em;
 	margin: 0 1em;
 	border: none;
-	border-radius: var(--border-radius);
+	border-radius: var(--border-radius-large);
 	background-color: var(--color-secondary-blue-translucent);
 	background-color: var(--color-neutral-grey);
 	transition-property: background-color;

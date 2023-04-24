@@ -123,7 +123,7 @@
 		rgba(255, 107, 123, 0.325) 100%
 	);
 	box-shadow: var(--shadow-card);
-	border-radius: var(--border-radius);
+	border-radius: var(--border-radius-large);
 	position: relative;
 	overflow: hidden;
 	flex-grow: 1;

@@ -3,7 +3,7 @@
 	height: 3.65rem;
 	box-sizing: border-box;
 	background-color: transparent;
-	border-radius: 0.85em;
+	border-radius: var(--border-radius-small);
 	font-size: 1.1rem;
 	font-weight: 600;
 	color: var(--color-secondary-100);

@@ -62,7 +62,7 @@
 
 .container-content {
 	padding: 2.65em;
-	border-radius: var(--border-radius);
+	border-radius: var(--border-radius-large);
 	background-color: var(--color-accent-400);
 	box-shadow: var(--shadow-card);
 	display: flex;
@@ -72,7 +72,7 @@
 .container-content::before {
 	content: "";
 	position: absolute;
-	border-radius: var(--border-radius);
+	border-radius: var(--border-radius-large);
 	inset: 0;
 	background-image: linear-gradient(
 			35deg,
@@ -108,6 +108,6 @@
 .container-graphic {
 	flex-grow: 1;
 	position: relative;
-	border-radius: var(--border-radius);
+	border-radius: var(--border-radius-large);
 	overflow-x: visible;
 }

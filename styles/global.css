@@ -81,7 +81,8 @@ body {
 	--color-secondary-400: var(--color-light-400);
 
 	--border-size: 0.2rem;
-	--border-radius: 1.35rem;
+	--border-radius-large: 1.35rem;
+	--border-radius-small: 0.85em;
 
 	--shadow-color: 227deg 36% 15%;
 	--shadow-card: 0px 0.6px 0.7px hsl(var(--shadow-color) / 0.13),

@@ -3,7 +3,7 @@
 	background-color: var(--color-primary-400);
 	border: var(--border-size) solid var(--color-accent-400);
 	box-shadow: var(--shadow-card);
-	border-radius: var(--border-radius);
+	border-radius: var(--border-radius-large);
 	position: relative;
 	overflow: hidden;
 	transition-property: height;
