@@ -136,12 +136,7 @@ function Landing() {
 			</div>
 			<div
 				className={
-					"container-full " +
-					landingStyles["container-full-content"] +
-					" " +
-					landingStyles["container-full-content-dark"] +
-					" " +
-					landingStyles["container-full-features"]
+					"container-full " + landingStyles["container-full-features"]
 				}
 			>
 				<div
