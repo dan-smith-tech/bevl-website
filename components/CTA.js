@@ -55,11 +55,11 @@ export default function CTA({ independent }) {
 						<Modal
 							show={showModal}
 							onClose={() => setShowModal(false)}
-							heading={"Confirm Subscription"}
+							heading={"Almost there..."}
 							body={
 								"Thank you for signing up to the newsletter! Please confirm your subscription through the email you have been sent."
 							}
-							buttonValue={"I've Confirmed My Email"}
+							buttonValue={"Okay!"}
 						/>
 					</div>
 				</form>
@@ -95,11 +95,11 @@ export default function CTA({ independent }) {
 									<Modal
 										show={showModal}
 										onClose={() => setShowModal(false)}
-										heading={"Confirm Subscription"}
+										heading={"Almost there..."}
 										body={
 											"Thank you for signing up to the newsletter! Please confirm your subscription through the email you have been sent."
 										}
-										buttonValue={"I've Confirmed My Email"}
+										buttonValue={"Okay!"}
 									/>
 								</div>
 							</form>

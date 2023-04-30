@@ -24,12 +24,12 @@ export default function TasksGraphic() {
 				/>
 			</div>
 			<div
-				id={graphicStyles["container-task-drag"]}
+				id={graphicStyles["container-day"]}
 				className={graphicStyles["container-image"]}
 			>
 				<Image
-					src={"/images/graphics/Task-Drag.png"}
-					alt={"Task Drag"}
+					src={"/images/graphics/Day.png"}
+					alt={"Day"}
 					layout="fill"
 					className={graphicStyles["image"]}
 					draggable="false"
@@ -42,12 +42,12 @@ export default function TasksGraphic() {
 				/>
 			</div>
 			<div
-				id={graphicStyles["container-day"]}
+				id={graphicStyles["container-task-drag"]}
 				className={graphicStyles["container-image"]}
 			>
 				<Image
-					src={"/images/graphics/Day.png"}
-					alt={"Day"}
+					src={"/images/graphics/Task-Drag.png"}
+					alt={"Task Drag"}
 					layout="fill"
 					className={graphicStyles["image"]}
 					draggable="false"

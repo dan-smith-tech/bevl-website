@@ -17,7 +17,6 @@
 .container-partial h2 {
 	text-align: center;
 	position: relative;
-	z-index: 1;
 }
 
 .container-discussion {

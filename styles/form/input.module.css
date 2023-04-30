@@ -1,25 +1,87 @@
-.element {
+.container-element {
 	width: 100%;
 	height: 3.65rem;
-	padding: 0 1.35em;
-	box-sizing: border-box;
-	background-color: var(--color-secondary-100);
-	border: none;
+	position: relative;
 	border-radius: var(--border-radius-small);
-	font-size: 1rem;
-	color: var(--color-primary-400);
+	transition-property: transform;
+	transition-duration: 100ms;
+	transition-timing-function: ease-out;
 }
 
-.element:hover {
-	background-color: var(--color-secondary-400);
+.element {
+	width: 100%;
+	height: 100%;
+	padding: 0 1.35em;
+	box-sizing: border-box;
+	background-color: transparent;
+	border: var(--border-size) solid var(--color-secondary-100);
+	border-radius: var(--border-radius-small);
+	font-size: 1rem;
+	color: var(--color-secondary-100);
+	position: relative;
+}
+
+.container-element::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background-color: var(--color-secondary-100);
+	border-radius: var(--border-radius-small);
+	opacity: 0.15;
+}
+
+.container-element:hover {
+	transform: scale(1.0325);
 }
 
 .element:focus {
 	outline: var(--border-size) solid var(--color-accent-400);
+	outline-offset: 0.1em;
+}
+
+.element:not(:placeholder-shown) {
+	color: var(--color-primary-100);
+	font-weight: 500;
+}
+
+.container-element:has(.element:not(:placeholder-shown))::before {
+	opacity: 0.65;
 }
 
 .element-textarea {
 	height: 8.5em;
 	border-radius: 2.5em;
 	resize: none;
+}
+
+/* https://stackoverflow.com/questions/2610497/change-an-html-inputs-placeholder-color-with-css */
+.element::-webkit-input-placeholder {
+	/* WebKit, Blink, Edge */
+	color: var(--color-secondary-100);
+	opacity: 0.65;
+}
+.element:-moz-placeholder {
+	/* Mozilla Firefox 4 to 18 */
+	color: var(--color-secondary-100);
+	opacity: 0.65;
+}
+.element::-moz-placeholder {
+	/* Mozilla Firefox 19+ */
+	color: var(--color-secondary-100);
+	opacity: 0.65;
+}
+.element:-ms-input-placeholder {
+	/* Internet Explorer 10-11 */
+	color: var(--color-secondary-100);
+	opacity: 0.65;
+}
+.element::-ms-input-placeholder {
+	/* Microsoft Edge */
+	color: var(--color-secondary-100);
+	opacity: 0.65;
+}
+.element::placeholder {
+	/* Most modern browsers support this now. */
+	color: var(--color-secondary-100);
+	opacity: 0.65;
 }

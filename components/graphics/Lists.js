@@ -24,12 +24,12 @@ export default function ListsGraphic() {
 				/>
 			</div>
 			<div
-				id={graphicStyles["container-list-drag"]}
+				id={graphicStyles["container-list-1"]}
 				className={graphicStyles["container-image"]}
 			>
 				<Image
-					src={"/images/graphics/List-Drag.png"}
-					alt={"List Drag"}
+					src={"/images/graphics/List-1.png"}
+					alt={"List"}
 					layout="fill"
 					className={graphicStyles["image"]}
 					draggable="false"
@@ -42,12 +42,12 @@ export default function ListsGraphic() {
 				/>
 			</div>
 			<div
-				id={graphicStyles["container-list-1"]}
+				id={graphicStyles["container-list-drag"]}
 				className={graphicStyles["container-image"]}
 			>
 				<Image
-					src={"/images/graphics/List-1.png"}
-					alt={"List"}
+					src={"/images/graphics/List-Drag.png"}
+					alt={"List Drag"}
 					layout="fill"
 					className={graphicStyles["image"]}
 					draggable="false"

@@ -6,12 +6,12 @@ export default function DrawingsGraphic() {
 	return (
 		<>
 			<div
-				id={graphicStyles["container-tasks"]}
+				id={graphicStyles["container-today"]}
 				className={graphicStyles["container-image"]}
 			>
 				<Image
-					src={"/images/graphics/Tasks.png"}
-					alt={"Tasks"}
+					src={"/images/graphics/Today.png"}
+					alt={"Today"}
 					layout="fill"
 					className={graphicStyles["image"]}
 					draggable="false"
@@ -24,12 +24,12 @@ export default function DrawingsGraphic() {
 				/>
 			</div>
 			<div
-				id={graphicStyles["container-today"]}
+				id={graphicStyles["container-tasks"]}
 				className={graphicStyles["container-image"]}
 			>
 				<Image
-					src={"/images/graphics/Today.png"}
-					alt={"Today"}
+					src={"/images/graphics/Tasks.png"}
+					alt={"Tasks"}
 					layout="fill"
 					className={graphicStyles["image"]}
 					draggable="false"

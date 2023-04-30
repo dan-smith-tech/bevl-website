@@ -2,7 +2,6 @@
 	aspect-ratio: 1/1;
 	position: absolute;
 	border-radius: var(--border-radius-large);
-	z-index: 1;
 	user-select: none;
 	pointer-events: none;
 	animation-iteration-count: infinite;
@@ -37,7 +36,6 @@
 	width: 58%;
 	top: 15%;
 	left: 15%;
-	z-index: 4;
 	animation-name: container-task-drag;
 	animation-duration: 2s;
 }
@@ -91,7 +89,6 @@
 	width: 58%;
 	top: 15%;
 	left: 15%;
-	z-index: 4;
 	animation-name: list-drag;
 	animation-duration: 2s;
 }
@@ -147,7 +144,6 @@
 	width: 85%;
 	top: -26%;
 	left: 0;
-	z-index: 4;
 	animation-name: label-1;
 	animation-duration: 2s;
 }
@@ -257,7 +253,6 @@
 	width: 82%;
 	top: -68%;
 	left: -11%;
-	z-index: 2;
 	animation-name: tasks;
 	animation-duration: 1.5s;
 	animation-delay: 0.35s;
@@ -276,7 +271,6 @@
 	width: 65%;
 	top: -87%;
 	right: -1%;
-	z-index: 1;
 	animation-name: today;
 	animation-duration: 1.5s;
 	animation-delay: 1.5s;
@@ -295,7 +289,6 @@
 	width: 60%;
 	top: -1%;
 	right: 12%;
-	z-index: 3;
 	animation-name: tomorrow;
 	animation-duration: 1.85s;
 	animation-delay: 0.75s;
