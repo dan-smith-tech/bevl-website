@@ -29,7 +29,7 @@ export default async function emailHandler(req, res) {
 					)
 						link += "productivityTips=true&";
 
-					sendinblue.sendEmail(email, { link }, 6).then((data) => {
+					await sendinblue.sendEmail(email, { link }, 6).then((data) => {
 						res.status(201).json({ success: true, data: { email } });
 					});
 				} else if (
@@ -55,27 +55,25 @@ export default async function emailHandler(req, res) {
 					if (bevlAnnouncements) listIds.push(6);
 					if (productivityTips) listIds.push(7);
 
-					sendinblue.doesContactExist(contact.email).then((exists) => {
-						if (!exists)
-							sendinblue.addContact(contact, listIds).then((data) => {
+					const exists = await sendinblue.doesContactExist(contact.email);
+					if (!exists)
+						await sendinblue.addContact(contact, listIds).then((data) => {
+							res.status(201).json({
+								success: true,
+								data: { email },
+							});
+						});
+					else
+						await sendinblue
+							.updateContact(contact, listIds, [])
+							.then((data) => {
 								res.status(201).json({
 									success: true,
 									data: { email },
 								});
 							});
-						else
-							sendinblue
-								.updateContact(contact, listIds, [])
-								.then((data) => {
-									res.status(201).json({
-										success: true,
-										data: { email },
-									});
-								});
-					});
 				}
 			} catch (err) {
-				console.log(err);
 				res.status(400).json({ success: false, message: err });
 			}
 			break;
@@ -84,7 +82,6 @@ export default async function emailHandler(req, res) {
 				success: false,
 				message: "Incorrect request method: " + method,
 			});
-			console.log("Incorrect request method" + method);
 			break;
 	}
 }

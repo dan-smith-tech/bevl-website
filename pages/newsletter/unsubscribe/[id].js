@@ -8,7 +8,6 @@ import newsletterStyles from "../../../styles/newsletter.module.css";
 
 export async function getServerSideProps(context) {
 	const { id } = context.query;
-
 	const email = decryptEmail(id);
 
 	const bevlAnnouncements =
@@ -27,7 +26,7 @@ export async function getServerSideProps(context) {
 	};
 }
 
-function NewsletterUnsubscribeConfirmation(props) {
+export default function NewsletterUnsubscribeConfirmation(props) {
 	const { id, email, bevlAnnouncements, productivityTips, absoluteUrl } =
 		props;
 
@@ -61,7 +60,7 @@ function NewsletterUnsubscribeConfirmation(props) {
 						}
 					>
 						<h1>You're Unsubscribed</h1>
-						<p>I'm sorry to see you go!</p>
+						<p>Sorry to see you go!</p>
 					</div>
 				</div>
 			</>
@@ -91,5 +90,3 @@ function NewsletterUnsubscribeConfirmation(props) {
 		);
 	}
 }
-
-export default NewsletterUnsubscribeConfirmation;

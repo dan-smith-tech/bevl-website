@@ -65,14 +65,12 @@ function NewsletterUnsubscribe(props) {
 						}
 					>
 						<h1>Confirm Unsubscription</h1>
-						<p>Click below to confirm your unsubscription.</p>
+						<p>Click below to unsubscribe from the Bevl newsletter.</p>
 						<form onSubmit={handleSubmit}>
 							<div className={newsletterStyles["container-form-button"]}>
-								<FormButton
-									type={"submit"}
-									value="Unsubscribe"
-									light={true}
-								/>
+								<FormButton type={"submit"} light={true}>
+									Unsubscribe
+								</FormButton>
 							</div>
 						</form>
 					</div>

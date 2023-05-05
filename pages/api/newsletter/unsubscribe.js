@@ -27,7 +27,7 @@ export default async function emailHandler(req, res) {
 				if (bevlAnnouncements) unlinkListIds.push(6);
 				if (productivityTips) unlinkListIds.push(7);
 
-				sendinblue
+				await sendinblue
 					.updateContact(contact, [], unlinkListIds)
 					.then((data) => {
 						res.status(201).json({ success: true, data: { email } });
