@@ -221,7 +221,7 @@ export default function Landing() {
 				<LabelsGraphic />
 			</FeatureSummary>
 			<FeatureSummary
-				heading={"Productivity Resources"}
+				heading={"Resources"}
 				description={
 					"Learn about the planning philosophy that Bevl was designed to facilitate, or explore the latest issues of the magazine."
 				}
