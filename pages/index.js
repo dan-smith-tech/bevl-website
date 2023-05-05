@@ -1,12 +1,10 @@
 import { useRef, useEffect, useState } from "react";
 import Head from "next/head";
 
-import CTA from "../components/CTA";
-import FeatureSummary from "../components/FeatureSummary";
-import Testimonials from "../components/Testimonials";
-import FAQ from "../components/faq/Index";
-
+import FeatureSummary from "../components/partials/FeatureSummary";
 import TasksGraphic from "../components/graphics/Tasks";
+import CTA from "../components/form/CTA";
+import FAQ from "../components/faq/Index";
 
 import "boxicons/css/boxicons.min.css";
 import landingStyles from "../styles/landing.module.css";
@@ -14,7 +12,7 @@ import ListsGraphic from "../components/graphics/Lists";
 import LabelsGraphic from "../components/graphics/Labels";
 import ResourcesGraphic from "../components/graphics/Resources";
 
-function Landing() {
+export default function Landing() {
 	const featuresIntersectionDetectorRef = useRef();
 	const [featuresIntersection, setFeaturesIntersection] = useState();
 	const splashContent = useRef();
@@ -194,7 +192,7 @@ function Landing() {
 				description={
 					"Plan any todo with 4 unique task types (Deadlines, Events, Habits, Projects) that suit every situation."
 				}
-				link={"/signup"}
+				link={"/demo"}
 				image={"/images/screenshots/tasks.png"}
 				imageFirst={false}
 			>
@@ -205,7 +203,7 @@ function Landing() {
 				description={
 					"Keep track of less-organised notes and ideas, without cluttering your todo list."
 				}
-				link={"/features/lists"}
+				link={"/demo"}
 				image={"/images/screenshots/lists.png"}
 				imageFirst={true}
 			>
@@ -216,7 +214,7 @@ function Landing() {
 				description={
 					"Group and filter content with customisable tags, to organise the tasks at hand."
 				}
-				link={"/features/labels"}
+				link={"/demo"}
 				image={"/images/screenshots/labels.png"}
 				imageFirst={false}
 			>
@@ -227,7 +225,7 @@ function Landing() {
 				description={
 					"Learn about the planning philosophy that Bevl was designed to facilitate, or explore the latest issues of the magazine."
 				}
-				link={"/philosophy"}
+				link={"/about"}
 				image={"/images/screenshots/comingSoon.png"}
 				imageFirst={true}
 			>
@@ -238,5 +236,3 @@ function Landing() {
 		</>
 	);
 }
-
-export default Landing;

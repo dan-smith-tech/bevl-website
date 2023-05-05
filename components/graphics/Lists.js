@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import graphicStyles from "../..//styles/graphics.module.css";
+import graphicStyles from "../../styles/partials/graphics.module.css";
 
 export default function ListsGraphic() {
 	return (

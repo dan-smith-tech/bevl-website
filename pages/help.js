@@ -2,7 +2,7 @@ import Head from "next/head";
 
 import helpStyles from "../styles/help.module.css";
 
-function Help() {
+export default function Help() {
 	return (
 		<>
 			<Head>
@@ -17,11 +17,9 @@ function Help() {
 						"container-partial " + helpStyles["container-partial"]
 					}
 				>
-					<p>The help centre will open when Bevl launches.</p>
+					<p>The help centre will release closer to launch.</p>
 				</div>
 			</div>
 		</>
 	);
 }
-
-export default Help;

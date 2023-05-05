@@ -1,18 +1,16 @@
 import { useState } from "react";
 import Head from "next/head";
 
-import FormInput from "../../components/form/Input";
-import FormButton from "../../components/form/Button";
-import Modal from "../../components/Modal";
-import ProductivityTipsSignup from "../../components/ProductivityTipsSignup";
-
 import { isEmail } from "../../lib/helpers";
 import sendFetchRequest from "../../lib/fetch";
 
-import newsletterStyles from "../../styles/newsletter.module.css";
-import newsletterSignupStyles from "../../styles/productivityTipsSignup.module.css";
+import FormInput from "../../components/form/Input";
+import FormButton from "../../components/form/Button";
+import Modal from "../../components/form/Modal";
 
-function Newsletter() {
+import newsletterStyles from "../../styles/newsletter.module.css";
+
+export default function Newsletter() {
 	const [showModal, setShowModal] = useState(false);
 
 	function handleSubmit(e) {
@@ -48,30 +46,21 @@ function Newsletter() {
 			<div
 				className={
 					"container-full " +
-					newsletterSignupStyles["container-full"] +
+					newsletterStyles["container-full"] +
 					" " +
 					newsletterStyles["container-full-content"]
 				}
 			>
 				<div
 					className={
-						"container-partial " +
-						newsletterSignupStyles["container-partial"]
+						"container-partial " + newsletterStyles["container-partial"]
 					}
 				>
-					<div className={newsletterSignupStyles["container-info"]}>
-						<h2
-							className={
-								newsletterSignupStyles["container-info-heading"]
-							}
-						>
+					<div className={newsletterStyles["container-info"]}>
+						<h2 className={newsletterStyles["container-info-heading"]}>
 							Get Special Offers, and Stay In The Loop
 						</h2>
-						<p
-							className={
-								newsletterSignupStyles["container-info-summary"]
-							}
-						>
+						<p className={newsletterStyles["container-info-summary"]}>
 							Bevl's <em>Announcements </em> newsletter reveals sneak
 							previews of the newest features coming to Bevl, and offers
 							exclusive promotions.
@@ -79,11 +68,9 @@ function Newsletter() {
 					</div>
 					<form
 						onSubmit={handleSubmit}
-						className={newsletterSignupStyles["container-form"]}
+						className={newsletterStyles["container-form"]}
 					>
-						<div
-							className={newsletterSignupStyles["container-form-input"]}
-						>
+						<div className={newsletterStyles["container-form-input"]}>
 							<FormInput
 								type={"text"}
 								name={"email"}
@@ -92,9 +79,7 @@ function Newsletter() {
 							/>
 							<small>No spam. Unsubscribe at any time.</small>
 						</div>
-						<div
-							className={newsletterSignupStyles["container-form-button"]}
-						>
+						<div className={newsletterStyles["container-form-button"]}>
 							<FormButton type={"submit"} value="Sign Up" light={true} />
 							<Modal
 								show={showModal}
@@ -109,9 +94,6 @@ function Newsletter() {
 					</form>
 				</div>
 			</div>
-			{/* <ProductivityTipsSignup /> */}
 		</>
 	);
 }
-
-export default Newsletter;

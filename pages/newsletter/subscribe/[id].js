@@ -26,7 +26,7 @@ export async function getServerSideProps(context) {
 	};
 }
 
-function NewsletterSubscribeConfirmation(props) {
+export default function NewsletterSubscribeConfirmation(props) {
 	const { id, email, bevlAnnouncements, productivityTips, absoluteUrl } =
 		props;
 
@@ -90,5 +90,3 @@ function NewsletterSubscribeConfirmation(props) {
 		);
 	}
 }
-
-export default NewsletterSubscribeConfirmation;

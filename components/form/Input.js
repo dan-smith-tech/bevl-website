@@ -16,14 +16,20 @@ export default function FormInput({ type, name, placeholder, required }) {
 		);
 	else
 		return (
-			<textarea
-				name={name}
-				id={name}
+			<div
 				className={
-					inputStyles["element"] + " " + inputStyles["element-textarea"]
+					inputStyles["container-element"] +
+					" " +
+					inputStyles["container-element-textarea"]
 				}
-				placeholder={placeholder}
-				required={required}
-			></textarea>
+			>
+				<textarea
+					name={name}
+					id={name}
+					className={inputStyles["element"]}
+					placeholder={placeholder}
+					required={required}
+				></textarea>
+			</div>
 		);
 }

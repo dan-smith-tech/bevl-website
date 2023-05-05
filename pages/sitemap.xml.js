@@ -8,15 +8,7 @@ function generateSiteMap(posts, date) {
 		 <lastmod>${date}</lastmod>
      </url>
      <url>
-       <loc>https://www.bevl.app/features/tasks</loc>
-		 <lastmod>${date}</lastmod>
-     </url>
-     <url>
-       <loc>https://www.bevl.app/features/lists</loc>
-		 <lastmod>${date}</lastmod>
-     </url>
-     <url>
-       <loc>https://www.bevl.app/features/labels</loc>
+       <loc>https://www.bevl.app/about</loc>
 		 <lastmod>${date}</lastmod>
      </url>
      <url>
@@ -33,14 +25,6 @@ function generateSiteMap(posts, date) {
      </url>
      <url>
        <loc>https://www.bevl.app/contact</loc>
-		 <lastmod>${date}</lastmod>
-     </url>
-     <url>
-       <loc>https://www.bevl.app/story</loc>
-		 <lastmod>${date}</lastmod>
-     </url>
-     <url>
-       <loc>https://www.bevl.app/philosophy</loc>
 		 <lastmod>${date}</lastmod>
      </url>
      <url>
@@ -75,6 +59,4 @@ export async function getServerSideProps({ res }) {
 	};
 }
 
-function SiteMap() {}
-
-export default SiteMap;
+export default function SiteMap() {}

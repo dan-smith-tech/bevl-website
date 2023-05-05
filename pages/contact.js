@@ -5,9 +5,8 @@ import FormInput from "../components/form/Input";
 import FormButton from "../components/form/Button";
 
 import contactStyles from "../styles/contact.module.css";
-import buttonStyles from "../styles/form/button.module.css";
 
-function Contact() {
+export default function Contact() {
 	return (
 		<>
 			<Head>
@@ -76,14 +75,17 @@ function Contact() {
 							</div>
 						</div>
 						<div className={contactStyles["form-row"]}>
-							<button
+							{/* <button
 								type={"submit"}
 								className={
 									buttonStyles["button"] + " pageclip-form__submit"
 								}
 							>
 								<span>Send Message</span>
-							</button>
+							</button> */}
+							<FormButton type={"submit"} light={true}>
+								Send
+							</FormButton>
 						</div>
 					</form>
 				</div>
@@ -91,5 +93,3 @@ function Contact() {
 		</>
 	);
 }
-
-export default Contact;

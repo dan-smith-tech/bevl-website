@@ -48,9 +48,13 @@
 	opacity: 0.65;
 }
 
-.element-textarea {
-	height: 8.5em;
-	border-radius: 2.5em;
+.container-element-textarea {
+	height: 13.5rem;
+}
+
+.container-element-textarea .element {
+	height: 100%;
+	padding: 0.85em 1.35em;
 	resize: none;
 }
 

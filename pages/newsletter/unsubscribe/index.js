@@ -1,10 +1,10 @@
 import { useRouter } from "next/router";
 import Head from "next/head";
 
-import FormButton from "../../../components/form/Button";
-
 import { encryptEmail } from "../../../lib/crypto";
 import { isEmail } from "../../../lib/helpers";
+
+import FormButton from "../../../components/form/Button";
 
 import newsletterStyles from "../../../styles/newsletter.module.css";
 
@@ -28,7 +28,7 @@ export async function getServerSideProps(context) {
 	};
 }
 
-function NewsletterUnsubscribe(props) {
+export default function NewsletterUnsubscribe(props) {
 	const { id, email, bevlAnnouncements, productivityTips, absoluteUrl } =
 		props;
 	const router = useRouter();
@@ -102,5 +102,3 @@ function NewsletterUnsubscribe(props) {
 		);
 	}
 }
-
-export default NewsletterUnsubscribe;

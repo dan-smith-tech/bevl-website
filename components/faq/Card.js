@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+
 import faqCardStyles from "../../styles/faq/card.module.css";
 
 export default function faqCard({ question, children }) {
