@@ -10,7 +10,7 @@ export default function ListsGraphic() {
 				className={graphicStyles["container-image"]}
 			>
 				<Image
-					src={"/images/graphics/List-0.png"}
+					src={"/images/graphics/showcases/lists/list-0.png"}
 					alt={"List"}
 					layout="fill"
 					className={graphicStyles["image"]}
@@ -28,7 +28,7 @@ export default function ListsGraphic() {
 				className={graphicStyles["container-image"]}
 			>
 				<Image
-					src={"/images/graphics/List-1.png"}
+					src={"/images/graphics/showcases/lists/list-1.png"}
 					alt={"List"}
 					layout="fill"
 					className={graphicStyles["image"]}
@@ -46,7 +46,7 @@ export default function ListsGraphic() {
 				className={graphicStyles["container-image"]}
 			>
 				<Image
-					src={"/images/graphics/List-Drag.png"}
+					src={"/images/graphics/showcases/lists/list-Drag.png"}
 					alt={"List Drag"}
 					layout="fill"
 					className={graphicStyles["image"]}

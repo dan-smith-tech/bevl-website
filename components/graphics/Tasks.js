@@ -10,7 +10,7 @@ export default function TasksGraphic() {
 				className={graphicStyles["container-image"]}
 			>
 				<Image
-					src={"/images/graphics/Container-Tasks.png"}
+					src={"/images/graphics/showcases/tasks/tasks-container.png"}
 					alt={"Tasks Container"}
 					layout="fill"
 					className={graphicStyles["image"]}
@@ -28,7 +28,7 @@ export default function TasksGraphic() {
 				className={graphicStyles["container-image"]}
 			>
 				<Image
-					src={"/images/graphics/Day.png"}
+					src={"/images/graphics/showcases/tasks/day.png"}
 					alt={"Day"}
 					layout="fill"
 					className={graphicStyles["image"]}
@@ -46,7 +46,7 @@ export default function TasksGraphic() {
 				className={graphicStyles["container-image"]}
 			>
 				<Image
-					src={"/images/graphics/Task-Drag.png"}
+					src={"/images/graphics/showcases/tasks/task-drag.png"}
 					alt={"Task Drag"}
 					layout="fill"
 					className={graphicStyles["image"]}

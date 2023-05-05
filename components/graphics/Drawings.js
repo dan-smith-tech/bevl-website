@@ -10,7 +10,7 @@ export default function DrawingsGraphic() {
 				className={graphicStyles["container-image"]}
 			>
 				<Image
-					src={"/images/graphics/Today.png"}
+					src={"/images/graphics/showcases/drawings/today.png"}
 					alt={"Today"}
 					layout="fill"
 					className={graphicStyles["image"]}
@@ -28,7 +28,7 @@ export default function DrawingsGraphic() {
 				className={graphicStyles["container-image"]}
 			>
 				<Image
-					src={"/images/graphics/Tasks.png"}
+					src={"/images/graphics/showcases/drawings/tasks.png"}
 					alt={"Tasks"}
 					layout="fill"
 					className={graphicStyles["image"]}
@@ -46,7 +46,7 @@ export default function DrawingsGraphic() {
 				className={graphicStyles["container-image"]}
 			>
 				<Image
-					src={"/images/graphics/Tomorrow.png"}
+					src={"/images/graphics/showcases/drawings/tomorrow.png"}
 					alt={"Tomorrow"}
 					layout="fill"
 					className={graphicStyles["image"]}

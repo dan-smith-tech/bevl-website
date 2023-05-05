@@ -10,7 +10,7 @@ export default function LabelsGraphic() {
 				className={graphicStyles["container-image"]}
 			>
 				<Image
-					src={"/images/graphics/Label-0.png"}
+					src={"/images/graphics/showcases/labels/label-0.png"}
 					alt={"Label"}
 					layout="fill"
 					className={graphicStyles["image"]}
@@ -28,7 +28,7 @@ export default function LabelsGraphic() {
 				className={graphicStyles["container-image"]}
 			>
 				<Image
-					src={"/images/graphics/Label-1.png"}
+					src={"/images/graphics/showcases/labels/label-1.png"}
 					alt={"Label"}
 					layout="fill"
 					className={graphicStyles["image"]}
@@ -46,7 +46,7 @@ export default function LabelsGraphic() {
 				className={graphicStyles["container-image"]}
 			>
 				<Image
-					src={"/images/graphics/Label-2.png"}
+					src={"/images/graphics/showcases/labels/label-2.png"}
 					alt={"Label"}
 					layout="fill"
 					className={graphicStyles["image"]}

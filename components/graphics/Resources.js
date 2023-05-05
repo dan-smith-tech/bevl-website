@@ -10,7 +10,7 @@ export default function ResourcesGraphic() {
 				className={graphicStyles["container-image"]}
 			>
 				<Image
-					src={"/images/graphics/Question.png"}
+					src={"/images/graphics/showcases/resources/question.png"}
 					alt={"Question"}
 					layout="fill"
 					className={graphicStyles["image"]}
@@ -28,7 +28,7 @@ export default function ResourcesGraphic() {
 				className={graphicStyles["container-image"]}
 			>
 				<Image
-					src={"/images/graphics/Rocket.png"}
+					src={"/images/graphics/showcases/resources/rocket.png"}
 					alt={"Rocket"}
 					layout="fill"
 					className={graphicStyles["image"]}
@@ -46,7 +46,7 @@ export default function ResourcesGraphic() {
 				className={graphicStyles["container-image"]}
 			>
 				<Image
-					src={"/images/graphics/Mail.png"}
+					src={"/images/graphics/showcases/resources/mail.png"}
 					alt={"Mail"}
 					layout="fill"
 					className={graphicStyles["image"]}
@@ -64,7 +64,7 @@ export default function ResourcesGraphic() {
 				className={graphicStyles["container-image"]}
 			>
 				<Image
-					src={"/images/graphics/Bulb.png"}
+					src={"/images/graphics/showcases/resources/bulb.png"}
 					alt={"Bulb"}
 					layout="fill"
 					className={graphicStyles["image"]}
