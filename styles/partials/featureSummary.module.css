@@ -93,16 +93,25 @@
 .content-container-graphic::before {
 	content: "";
 	position: absolute;
-	inset: -4.35em -4.35em -4.35em -12.35rem;
-	background-color: var(--color-primary-100);
+	inset: -5em -5em -5em -12.35rem;
+	background: var(--color-primary-100);
+	background: linear-gradient(
+		90deg,
+		var(--color-primary-400) 0%,
+		var(--color-primary-100) 85%
+	);
 	border-radius: 1.85em;
 	transform: skew(0deg, 3deg);
-	box-shadow: var(--shadow-card);
 }
 
 .container-partial-content-reorder .content-container-graphic::before {
-	left: -4.35em;
+	left: -5em;
 	right: -12.35rem;
+	background: linear-gradient(
+		270deg,
+		var(--color-primary-400) 0%,
+		var(--color-primary-100) 85%
+	);
 	transform: skew(0, -3deg);
 }
 

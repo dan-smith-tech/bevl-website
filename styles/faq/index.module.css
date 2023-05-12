@@ -7,11 +7,15 @@
 .container-partial::before {
 	content: "";
 	position: absolute;
-	inset: 2.35em -1.85em 0 -1.85em;
+	inset: 2.35em -2.65em -2.65em -2.65em;
 	background-color: var(--color-primary-100);
+	background: linear-gradient(
+		180deg,
+		var(--color-primary-400) 0%,
+		var(--color-primary-100) 85%
+	);
 	border-radius: 1.85em;
 	transform: skew(0deg, 3deg);
-	box-shadow: var(--shadow-card);
 }
 
 .container-partial h2 {
