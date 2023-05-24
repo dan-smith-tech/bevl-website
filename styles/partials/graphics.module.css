@@ -1,3 +1,42 @@
+@media (prefers-reduced-motion: no-preference) {
+	.visibility .visibility-container {
+		position: absolute;
+		inset: 0;
+		opacity: 0;
+		transition-property: transform, opacity;
+		transition-duration: 1s;
+		transition-timing-function: ease-in-out;
+	}
+
+	.visibility-active .visibility-container {
+		transform: translateY(0);
+		opacity: 1;
+	}
+
+	#container-task-drag {
+		transform: scale(0) translateY(50px);
+		transition-delay: 350ms;
+	}
+	.visibility-active #container-task-drag {
+		transform: scale(1) translateY(0);
+	}
+
+	#container-tasks-container {
+		transform: scale(0) translateY(100px);
+	}
+	.visibility-active #container-tasks-container {
+		transform: scale(1) translateY(0);
+	}
+
+	#container-day {
+		transform: scale(0) translateY(85px);
+		transition-delay: 150ms;
+	}
+	.visibility-active #container-day {
+		transform: scale(1) translateY(0);
+	}
+}
+
 .container-image {
 	aspect-ratio: 1/1;
 	position: absolute;
@@ -16,7 +55,7 @@
 
 /* Tasks */
 
-#container-task-drag {
+#container-task-drag .container-image {
 	width: 45%;
 	top: 25%;
 	left: 25%;
@@ -32,7 +71,7 @@
 	}
 }
 
-#container-tasks-container {
+#container-tasks-container .container-image {
 	height: 100%;
 	left: -2.85%;
 	animation-duration: 1.5s;
@@ -47,7 +86,7 @@
 	}
 }
 
-#container-day {
+#container-day .container-image {
 	top: -3.35%;
 	right: 0;
 	width: 47%;
@@ -288,15 +327,15 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-	#container-task-drag {
+	#container-task-drag .container-image {
 		animation-name: container-task-drag;
 	}
 
-	#container-tasks-container {
+	#container-tasks-container .container-image {
 		animation-name: container-tasks-idle;
 	}
 
-	#container-day {
+	#container-day .container-image {
 		animation-name: container-day;
 	}
 
