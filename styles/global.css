@@ -98,6 +98,7 @@ body {
 	--header-height: 6.15rem;
 
 	--transition-duration: 150ms;
+	--transition-timing-function-elastic: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 * {
@@ -125,13 +126,13 @@ body {
 h1 {
 	font-size: 3.5rem;
 	font-weight: 700;
-	line-height: 3.85rem;
+	line-height: 4.65rem;
 }
 
 h2 {
 	font-size: 1.85rem;
 	font-weight: 600;
-	line-height: 2.15rem;
+	line-height: 2.85rem;
 }
 
 h3 {

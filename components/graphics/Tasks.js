@@ -1,38 +1,12 @@
-import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+
+import GraphicVisibility from "./Visibility";
 
 import graphicStyles from "../../styles/partials/graphics.module.css";
 
 export default function TasksGraphic() {
-	const intersectionDetectorRef = useRef();
-	const [intersection, setIntersection] = useState(false);
-
-	const getVisibility = () => {
-		if (!intersection) return graphicStyles["visibility"];
-		else
-			return (
-				graphicStyles["visibility"] +
-				" " +
-				graphicStyles["visibility-active"]
-			);
-	};
-
-	useEffect(() => {
-		// watch element to play animation when it loads into the viewport
-		const observer = new IntersectionObserver((entries) => {
-			const entry = entries[0];
-			if (!intersection && entry.isIntersecting) {
-				setIntersection(true);
-				observer.disconnect();
-			}
-		});
-		observer.observe(intersectionDetectorRef.current);
-
-		return () => observer.disconnect();
-	}, []);
-
 	return (
-		<div className={getVisibility()} ref={intersectionDetectorRef}>
+		<GraphicVisibility>
 			<div
 				id={graphicStyles["container-tasks-container"]}
 				className={graphicStyles["visibility-container"]}
@@ -93,6 +67,6 @@ export default function TasksGraphic() {
 					/>
 				</div>
 			</div>
-		</div>
+		</GraphicVisibility>
 	);
 }

@@ -75,11 +75,12 @@ export default function Landing() {
 					ref={splashContent}
 				>
 					<h1 className={landingStyles["heading"]}>
-						Get Ahead of Life's Endeavors
+						Spend less time organising, <br /> and more time{" "}
+						<span>doing</span>.
 					</h1>
-					<p className={landingStyles["tagline"]}>
+					{/* <p className={landingStyles["tagline"]}>
 						Spend less time planning, and more time doing.
-					</p>
+					</p> */}
 					<CTA />
 				</div>
 			</div>

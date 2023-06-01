@@ -35,35 +35,30 @@ export default function CTA({ independent }) {
 
 	if (!independent)
 		return (
-			<div>
-				<form
-					onSubmit={handleSubmit}
-					className={ctaStyles["container-form"]}
-				>
-					<div className={ctaStyles["container-form-input"]}>
-						<FormInput
-							type={"text"}
-							name={"email1"}
-							placeholder="Enter email address..."
-							required={true}
-						/>
-					</div>
-					<div className={ctaStyles["container-form-button"]}>
-						<FormButton type={"submit"} light={true}>
-							Sign Up
-						</FormButton>
-						<Modal
-							show={showModal}
-							onClose={() => setShowModal(false)}
-							heading={"Almost there..."}
-							body={
-								"Thank you for signing up to the newsletter! Please confirm your subscription through the email you have been sent."
-							}
-							buttonValue={"Okay!"}
-						/>
-					</div>
-				</form>
-			</div>
+			<form onSubmit={handleSubmit} className={ctaStyles["container-form"]}>
+				<div className={ctaStyles["container-form-input"]}>
+					<FormInput
+						type={"text"}
+						name={"email1"}
+						placeholder="Enter email address..."
+						required={true}
+					/>
+				</div>
+				<div className={ctaStyles["container-form-button"]}>
+					<FormButton type={"submit"} light={true}>
+						Sign Up
+					</FormButton>
+					<Modal
+						show={showModal}
+						onClose={() => setShowModal(false)}
+						heading={"Almost there..."}
+						body={
+							"Thank you for signing up to the newsletter! Please confirm your subscription through the email you have been sent."
+						}
+						buttonValue={"Okay!"}
+					/>
+				</div>
+			</form>
 		);
 	else
 		return (

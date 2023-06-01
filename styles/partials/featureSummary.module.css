@@ -172,13 +172,8 @@
 }
 
 @media (max-width: 550px) {
-	.content-container-text,
-	.content-container-graphic {
+	.content-container-text {
 		width: 100%;
-	}
-
-	.content-container-graphic {
-		height: 10em;
 	}
 }
 

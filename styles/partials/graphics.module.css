@@ -1,48 +1,136 @@
+.visibility .visibility-container {
+	position: absolute;
+	aspect-ratio: 1/1;
+	user-select: none;
+	pointer-events: none;
+}
+
 @media (prefers-reduced-motion: no-preference) {
 	.visibility .visibility-container {
-		position: absolute;
-		inset: 0;
 		opacity: 0;
 		transition-property: transform, opacity;
-		transition-duration: 1s;
-		transition-timing-function: ease-in-out;
+		transition-duration: 850ms;
+		transition-timing-function: var(--transition-timing-function-elastic);
 	}
 
 	.visibility-active .visibility-container {
-		transform: translateY(0);
+		transform: translate(0, 0);
 		opacity: 1;
 	}
 
-	#container-task-drag {
-		transform: scale(0) translateY(50px);
+	/* Lists */
+
+	#container-list-0 {
+		transform: scale(0.65) translateY(50px);
 		transition-delay: 350ms;
 	}
-	.visibility-active #container-task-drag {
+	.visibility-active #container-list-0 {
 		transform: scale(1) translateY(0);
 	}
 
-	#container-tasks-container {
-		transform: scale(0) translateY(100px);
+	#container-list-1 {
+		transform: scale(0.65) translateY(100px);
 	}
-	.visibility-active #container-tasks-container {
+	.visibility-active #container-list-1 {
 		transform: scale(1) translateY(0);
 	}
 
-	#container-day {
-		transform: scale(0) translateY(85px);
+	#container-list-drag {
+		transform: scale(0.65) translateX(85px);
 		transition-delay: 150ms;
 	}
-	.visibility-active #container-day {
+	.visibility-active #container-list-drag {
+		transform: scale(1) translateX(0);
+	}
+
+	/* Labels */
+
+	#container-label-0 {
+		transform: scale(0.85) translateX(350px);
+		transition-delay: 150ms;
+	}
+	.visibility-active #container-label-0 {
+		transform: scale(1) translateX(0);
+	}
+
+	#container-label-1 {
+		transform: scale(0.85) translateX(-350px);
+	}
+	.visibility-active #container-label-1 {
+		transform: scale(1) translateX(0);
+	}
+
+	#container-label-2 {
+		transform: scale(0.85) translateX(350px);
+		transition-delay: 300ms;
+	}
+	.visibility-active #container-label-2 {
+		transform: scale(1) translateX(0);
+	}
+
+	/* Resources */
+
+	#container-question {
+		transform: scale(0.85) translateY(150px);
+		transition-delay: 450ms;
+	}
+	.visibility-active #container-question {
 		transform: scale(1) translateY(0);
+	}
+
+	#container-rocket {
+		transform: scale(0.85) translateY(-150px);
+		transition-delay: 300ms;
+	}
+	.visibility-active #container-rocket {
+		transform: scale(1) translateY(0);
+	}
+
+	#container-mail {
+		transform: scale(0.85) translateY(150px);
+		transition-delay: 150ms;
+	}
+	.visibility-active #container-mail {
+		transform: scale(1) translateY(0);
+	}
+
+	#container-bulb {
+		transform: scale(0.85) translateY(-150px);
+	}
+	.visibility-active #container-bulb {
+		transform: scale(1) translateY(0);
+	}
+
+	/* Drawings */
+
+	#container-today {
+		transform: scale(0.65) translateX(150px);
+		transition-delay: 150ms;
+	}
+	.visibility-active #container-today {
+		transform: scale(1) translateX(0);
+	}
+
+	#container-tasks {
+		transform: scale(0.65) translateX(-150px);
+	}
+	.visibility-active #container-tasks {
+		transform: scale(1) translateX(0);
+	}
+
+	#container-tomorrow {
+		transform: scale(0.65) translateY(150px);
+		transition-delay: 300ms;
+	}
+	.visibility-active #container-tomorrow {
+		transform: scale(1) translateX(0);
 	}
 }
 
 .container-image {
 	aspect-ratio: 1/1;
-	position: absolute;
+	position: relative;
 	border-radius: var(--border-radius-large);
-	user-select: none;
-	pointer-events: none;
 	animation-iteration-count: infinite;
 	animation-timing-function: ease-in-out;
 	animation-direction: alternate;
@@ -53,13 +141,31 @@
 	object-fit: contain;
 }
 
-/* Tasks */
+/* Tasks: task drag  */
 
-#container-task-drag .container-image {
+#container-task-drag {
 	width: 45%;
 	top: 25%;
 	left: 25%;
+}
+
+#container-task-drag .container-image {
 	animation-duration: 2.15s;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	#container-task-drag {
+		transform: scale(0.65) translateY(50px);
+		transition-delay: 350ms;
+	}
+
+	.visibility-active #container-task-drag {
+		transform: scale(1) translateY(0);
+	}
+
+	#container-task-drag .container-image {
+		animation-name: container-task-drag;
+	}
 }
 
 @keyframes container-task-drag {
@@ -71,10 +177,29 @@
 	}
 }
 
-#container-tasks-container .container-image {
+/* Tasks: tasks container */
+
+#container-tasks-container {
 	height: 100%;
 	left: -2.85%;
+}
+
+#container-tasks-container .container-image {
 	animation-duration: 1.5s;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	#container-tasks-container {
+		transform: scale(0.65) translateY(100px);
+	}
+
+	.visibility-active #container-tasks-container {
+		transform: scale(1) translateY(0);
+	}
+
+	#container-tasks-container .container-image {
+		animation-name: container-tasks-idle;
+	}
 }
 
 @keyframes container-tasks-idle {
@@ -86,12 +211,32 @@
 	}
 }
 
-#container-day .container-image {
+/* Tasks: container day */
+
+#container-day {
 	top: -3.35%;
 	right: 0;
 	width: 47%;
+}
+
+#container-day .container-image {
 	animation-duration: 1.5s;
 	animation-delay: 1s;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	#container-day {
+		transform: scale(0.65) translateY(85px);
+		transition-delay: 150ms;
+	}
+
+	.visibility-active #container-day {
+		transform: scale(1) translateY(0);
+	}
+
+	#container-day .container-image {
+		animation-name: container-day;
+	}
 }
 
 @keyframes container-day {
@@ -103,14 +248,32 @@
 	}
 }
 
-/* Lists */
+/* Lists: list drag */
 
 #container-list-drag {
 	width: 48.8%;
 	top: 22%;
 	left: 15%;
+}
+
+#container-list-drag .container-image {
 	animation-duration: 2s;
 	animation-delay: 0.75s;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	#container-list-0 {
+		transform: scale(0.65) translateY(50px);
+		transition-delay: 350ms;
+	}
+
+	.visibility-active #container-list-0 {
+		transform: scale(1) translateY(0);
+	}
+
+	#container-list-drag .container-image {
+		animation-name: list-drag;
+	}
 }
 
 @keyframes list-drag {
@@ -125,6 +288,9 @@
 #container-list-0 {
 	width: 48.5%;
 	top: -2.5%;
+}
+
+#container-list-0 .container-image {
 	animation-duration: 1.5s;
 }
 
@@ -141,6 +307,9 @@
 	width: 48.5%;
 	bottom: -2.5%;
 	right: 0;
+}
+
+#container-list-1 .container-image {
 	animation-duration: 1.5s;
 	animation-delay: 1s;
 }
@@ -160,6 +329,9 @@
 	width: 85%;
 	top: -55%;
 	right: 0;
+}
+
+#container-label-0 .container-image {
 	animation-duration: 2s;
 }
 
@@ -176,6 +348,9 @@
 	width: 85%;
 	top: -26%;
 	left: 0;
+}
+
+#container-label-1 .container-image {
 	animation-duration: 2s;
 	animation-delay: 0.75s;
 }
@@ -193,6 +368,9 @@
 	width: 85%;
 	bottom: -54.5%;
 	right: 0;
+}
+
+#container-label-2 .container-image {
 	animation-duration: 2s;
 	animation-delay: 1.5s;
 }
@@ -212,6 +390,9 @@
 	width: 22%;
 	bottom: 22%;
 	left: 0;
+}
+
+#container-question .container-image {
 	animation-duration: 1.5s;
 }
 
@@ -228,6 +409,9 @@
 	width: 22%;
 	top: 22%;
 	left: 26%;
+}
+
+#container-rocket .container-image {
 	animation-duration: 1.5s;
 }
 
@@ -244,6 +428,9 @@
 	width: 22%;
 	bottom: 22%;
 	right: 26%;
+}
+
+#container-mail .container-image {
 	animation-duration: 1.5s;
 	animation-delay: 0.75s;
 }
@@ -261,6 +448,9 @@
 	width: 22%;
 	top: 22%;
 	right: 0;
+}
+
+#container-bulb .container-image {
 	animation-duration: 1.5s;
 	animation-delay: 0.75s;
 }
@@ -280,6 +470,9 @@
 	width: 52%;
 	right: 15%;
 	bottom: -5%;
+}
+
+#container-tomorrow .container-image {
 	animation-duration: 2s;
 }
 
@@ -296,6 +489,9 @@
 	width: 75%;
 	top: -65%;
 	left: -8%;
+}
+
+#container-tasks .container-image {
 	animation-duration: 2s;
 	animation-delay: 1s;
 }
@@ -313,6 +509,9 @@
 	width: 60%;
 	top: -86%;
 	right: 2%;
+}
+
+#container-today .container-image {
 	animation-duration: 2s;
 	animation-delay: 1.5s;
 }
@@ -327,67 +526,51 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-	#container-task-drag .container-image {
-		animation-name: container-task-drag;
-	}
-
-	#container-tasks-container .container-image {
-		animation-name: container-tasks-idle;
-	}
-
-	#container-day .container-image {
-		animation-name: container-day;
-	}
-
-	#container-list-drag {
-		animation-name: list-drag;
-	}
-
-	#container-list-0 {
+	#container-list-0 .container-image {
 		animation-name: list-0;
 	}
 
-	#container-list-1 {
+	#container-list-1 .container-image {
 		animation-name: list-1;
 	}
 
-	#container-label-0 {
+	#container-label-0 .container-image {
 		animation-name: label-0;
 	}
 
-	#container-label-1 {
+	#container-label-1 .container-image {
 		animation-name: label-1;
 	}
 
-	#container-label-2 {
+	#container-label-2 .container-image {
 		animation-name: label-2;
 	}
 
-	#container-question {
+	#container-question .container-image {
 		animation-name: question;
 	}
 
-	#container-rocket {
+	#container-rocket .container-image {
 		animation-name: rocket;
 	}
 
-	#container-mail {
+	#container-mail .container-image {
 		animation-name: mail;
 	}
 
-	#container-bulb {
+	#container-bulb .container-image {
 		animation-name: bulb;
 	}
 
-	#container-tomorrow {
+	#container-tomorrow .container-image {
 		animation-name: tomorrow;
 	}
 
-	#container-tasks {
+	#container-tasks .container-image {
 		animation-name: tasks;
 	}
 
-	#container-today {
+	#container-today .container-image {
 		animation-name: today;
 	}
 }
