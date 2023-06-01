@@ -9,6 +9,13 @@
 
 .container-partial-splash {
 	margin: 3.5em 0 5em 0;
+	padding-top: 5em;
+	padding-bottom: 3em;
+	display: flex;
+}
+
+.splash-info {
+	z-index: 1;
 }
 
 .container-partial-splash button:focus {
@@ -29,6 +36,7 @@
 }
 
 .tagline {
+	max-width: 31em;
 	margin-top: 1.15em;
 	font-weight: 500;
 	color: var(--color-primary-400);
@@ -36,6 +44,43 @@
 
 .container-full-splash input {
 	background-color: var(--color-secondary-400);
+}
+
+.splash-demo {
+	flex-grow: 1;
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.splash-demo-container-image {
+	width: 40em;
+	aspect-ratio: 1/1;
+	position: absolute;
+	right: -5em;
+	mask-image: linear-gradient(
+		to right,
+		rgba(255, 255, 255, 0),
+		rgb(255, 255, 255) 65%
+	);
+	animation-name: splash-demo-intro;
+	animation-timing-function: var(--transition-timing-function-elastic);
+	animation-duration: 850ms;
+}
+
+.splash-demo-image {
+	object-fit: contain;
+}
+
+@keyframes splash-demo-intro {
+	0% {
+		transform: translateX(-85px);
+		opacity: 0.35;
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
 }
 
 @media (max-width: 650px) {

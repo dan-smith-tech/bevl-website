@@ -1,5 +1,6 @@
 import { useRef, useEffect, useState } from "react";
 import Head from "next/head";
+import Image from "next/image";
 
 import FeatureSummary from "../components/partials/FeatureSummary";
 import TasksGraphic from "../components/graphics/Tasks";
@@ -74,15 +75,34 @@ export default function Landing() {
 					}
 					ref={splashContent}
 				>
-					<h1 className={landingStyles["heading"]}>
-						Spend less time <span>organising</span>, <br /> and more time{" "}
-						<span>doing</span>.
-					</h1>
-					<h3 className={landingStyles["tagline"]}>
-						One place to organise all your todos, events, notes, and
-						ideas.
-					</h3>
-					<CTA />
+					<div className={landingStyles["splash-info"]}>
+						<h1 className={landingStyles["heading"]}>
+							Spend less time <span>organising</span>, <br /> and more
+							time <span>doing</span>.
+						</h1>
+						<h3 className={landingStyles["tagline"]}>
+							Unleash your productive potential with the minmalist
+							simplicity of visual planning.
+						</h3>
+						<CTA />
+					</div>
+					<div className={landingStyles["splash-demo"]}>
+						<div className={landingStyles["splash-demo-container-image"]}>
+							<Image
+								src={"/images/screenshots/placeholder.png"}
+								alt={"Screenshot of app"}
+								layout="fill"
+								className={landingStyles["splash-demo-image"]}
+								draggable="false"
+								quality={50}
+								loading={"eager"}
+								blurDataURL={
+									"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP85xNfDwAGIwIqqYhd4AAAAABJRU5ErkJggg=="
+								}
+								placeholder={"blur"}
+							/>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div
