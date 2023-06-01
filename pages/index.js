@@ -81,8 +81,7 @@ export default function Landing() {
 							time <span>doing</span>.
 						</h1>
 						<h3 className={landingStyles["tagline"]}>
-							Unleash your productive potential with the minmalist
-							simplicity of visual planning.
+							A modern todo list for productive visual plans.
 						</h3>
 						<CTA />
 					</div>
