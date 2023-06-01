@@ -20,15 +20,19 @@
 	color: var(--color-primary-400);
 }
 
-.heading span {
+.heading span:first-child {
+	color: var(--color-primary-100);
+}
+
+.heading span:last-child {
 	color: var(--color-accent-400);
 }
 
-/* .tagline {
-	margin-bottom: 2.35em;
-	text-align: center;
+.tagline {
+	margin-top: 1.15em;
+	font-weight: 500;
 	color: var(--color-primary-400);
-} */
+}
 
 .container-full-splash input {
 	background-color: var(--color-secondary-400);
