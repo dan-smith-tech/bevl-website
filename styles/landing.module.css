@@ -63,23 +63,28 @@
 		rgba(255, 255, 255, 0),
 		rgb(255, 255, 255) 65%
 	);
-	animation-name: splash-demo-intro;
-	animation-timing-function: var(--transition-timing-function-elastic);
-	animation-duration: 850ms;
 }
 
 .splash-demo-image {
 	object-fit: contain;
 }
 
-@keyframes splash-demo-intro {
-	0% {
-		transform: translateX(-85px);
-		opacity: 0.35;
+@media (prefers-reduced-motion: no-preference) {
+	.splash-demo-container-image {
+		animation-name: splash-demo-intro;
+		animation-timing-function: var(--transition-timing-function-elastic);
+		animation-duration: 850ms;
 	}
-	100% {
-		transform: translateX(0);
-		opacity: 1;
+
+	@keyframes splash-demo-intro {
+		0% {
+			transform: translateX(-85px);
+			opacity: 0.35;
+		}
+		100% {
+			transform: translateX(0);
+			opacity: 1;
+		}
 	}
 }
 
@@ -142,9 +147,11 @@
 }
 
 /* Features */
+
 .container-full-features {
 	background-color: var(--color-primary-400);
 	color: var(--color-secondary-100);
+	position: relative;
 }
 
 .container-partial-features {
@@ -198,11 +205,16 @@
 }
 
 @media (prefers-reduced-motion: no-preference) and (min-width: 1201px) {
-	.features-animation .feature {
+	.feature {
 		animation-name: featureEnter;
 		animation-timing-function: var(--transition-timing-function-elastic);
 		animation-duration: 850ms;
-		animation-fill-mode: both;
+		animation-fill-mode: backwards;
+		animation-play-state: paused;
+	}
+
+	.features-animation .feature {
+		animation-play-state: running;
 	}
 
 	.feature:nth-child(1) {

@@ -159,10 +159,15 @@ export default function Landing() {
 					"container-full " + landingStyles["container-full-features"]
 				}
 			>
-				<div
-					className={getFeatureStyles()}
-					ref={featuresIntersectionDetectorRef}
-				>
+				<div className={getFeatureStyles()}>
+					<div
+						style={{
+							position: "absolute",
+							top: "50%",
+							visibility: "hidden",
+						}}
+						ref={featuresIntersectionDetectorRef}
+					></div>
 					<h2 className={landingStyles["features-title"]}>
 						Simple, Personal, Powerful
 					</h2>
