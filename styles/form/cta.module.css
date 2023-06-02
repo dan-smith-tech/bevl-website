@@ -13,14 +13,12 @@
 	align-items: center;
 }
 
-.container-form-button {
-	width: 30%;
+.container-form-input small {
+	color: var(--color-primary-400);
 }
 
-.container-form + small {
-	width: 28em;
-	margin: 1.35em auto 0 auto;
-	text-align: center;
+.container-form-button {
+	width: 30%;
 }
 
 @media (max-width: 750px) {
@@ -104,10 +102,8 @@
 	margin: 0;
 }
 
-.container-content .container-form + small {
-	width: 28em;
-	margin: 1.35em 0 0 6.5rem;
-	text-align: center;
+.container-content small {
+	color: var(--color-secondary-100);
 }
 
 .container-graphic {
