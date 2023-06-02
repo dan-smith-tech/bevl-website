@@ -43,6 +43,7 @@ export default function CTA({ independent }) {
 						placeholder="Enter email address..."
 						required={true}
 					/>
+					<small>Get a special offer at launch by signing up now.</small>
 				</div>
 				<div className={ctaStyles["container-form-button"]}>
 					<FormButton type={"submit"} light={true}>
@@ -81,7 +82,11 @@ export default function CTA({ independent }) {
 										name={"email1"}
 										placeholder="Enter email address..."
 										required={true}
+										secondary={true}
 									/>
+									<small>
+										Get a special offer at launch by signing up now.
+									</small>
 								</div>
 								<div className={ctaStyles["container-form-button"]}>
 									<FormButton type={"submit"} secondary={true}>
