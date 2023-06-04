@@ -31,7 +31,28 @@ export default function Landing() {
 		);
 	};
 
+	// parallax taken from: https://codepen.io/Prachl/pen/jjKzEy
+
+	function throttle(fn, wait) {
+		var time = Date.now();
+		return function () {
+			if (time + wait - Date.now() < 0) {
+				fn();
+				time = Date.now();
+			}
+		};
+	}
+
+	function parallax() {
+		var scrolled = window.pageYOffset;
+		// You can adjust the 0.4 to change the speed
+		var coords = scrolled * 0.4 + "px";
+		splashRef.current.style.transform = "translateY(" + coords + ")";
+	}
+
 	useEffect(() => {
+		window.addEventListener("scroll", throttle(parallax, 14));
+
 		const observer = new IntersectionObserver((entries) => {
 			const entry = entries[0];
 			if (!featuresIntersection && entry.isIntersecting) {
@@ -77,8 +98,8 @@ export default function Landing() {
 				>
 					<div className={landingStyles["splash-info"]}>
 						<h1 className={landingStyles["heading"]}>
-							Spend less time <span>organising</span>, <br /> and more
-							time <span>doing</span>.
+							Spend less time <span>organising</span>,<br />
+							and more time <span>doing</span>.
 						</h1>
 						<h3 className={landingStyles["tagline"]}>
 							A modern todo list for productive visual plans.
