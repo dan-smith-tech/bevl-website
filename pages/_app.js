@@ -21,7 +21,6 @@ export default function BevlWebsite({ Component, pageProps }) {
 					content="https://www.bevl.app/images/open-graph/index.png"
 				/>
 			</Head>
-			{/* <Header /> */}
 			<Component {...pageProps} />
 			<Footer />
 		</>

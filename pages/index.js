@@ -16,7 +16,7 @@ import ResourcesGraphic from "../components/graphics/Resources";
 export default function Landing() {
 	const featuresIntersectionDetectorRef = useRef();
 	const [featuresIntersection, setFeaturesIntersection] = useState();
-	const splashContent = useRef();
+	const splashRef = useRef();
 
 	const getFeatureStyles = () => {
 		if (!featuresIntersection)
@@ -73,7 +73,7 @@ export default function Landing() {
 						"container-partial " +
 						landingStyles["container-partial-splash"]
 					}
-					ref={splashContent}
+					ref={splashRef}
 				>
 					<div className={landingStyles["splash-info"]}>
 						<h1 className={landingStyles["heading"]}>

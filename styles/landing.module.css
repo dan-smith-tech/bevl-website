@@ -1,21 +1,18 @@
 /* Splash */
 .container-full-splash {
-	padding-top: 0.85em;
-	/* padding-top: var(--header-height); */
 	position: relative;
 	background-color: var(--color-secondary-100);
 	color: var(--color-primary-400);
 }
 
 .container-partial-splash {
-	margin: 3.5em 0 5em 0;
-	padding-top: 5em;
-	padding-bottom: 3em;
-	display: flex;
+	margin-top: 8.5em;
+	position: relative;
 }
 
 .splash-info {
-	z-index: 1;
+	position: relative;
+	z-index: 2;
 }
 
 .container-partial-splash button:focus {
@@ -36,8 +33,7 @@
 }
 
 .tagline {
-	max-width: 30em;
-	margin-top: 1.15em;
+	margin-top: 1.35rem;
 	font-weight: 400;
 	color: var(--color-primary-400);
 }
@@ -47,21 +43,26 @@
 }
 
 .splash-demo {
-	flex-grow: 1;
+	position: absolute;
+	inset: 0;
 	display: flex;
 	align-items: center;
-	position: relative;
+	justify-content: flex-end;
+	pointer-events: none;
+	user-select: none;
+	z-index: 1;
 }
 
 .splash-demo-container-image {
-	width: 40em;
-	aspect-ratio: 1/1;
-	position: absolute;
-	right: -5em;
+	--_scale-factor: 0.55;
+	width: calc(1310px * var(--_scale-factor));
+	height: calc(894px * var(--_scale-factor));
+	margin-right: -5rem;
+	position: relative;
 	mask-image: linear-gradient(
 		to right,
 		rgba(255, 255, 255, 0),
-		rgb(255, 255, 255) 65%
+		rgb(255, 255, 255) 75%
 	);
 }
 
@@ -88,9 +89,26 @@
 	}
 }
 
+@media (max-width: 1200px) {
+}
+
 @media (max-width: 650px) {
 	.heading {
 		margin: 3.5rem 0 0.35em 0;
+	}
+
+	.splash-demo {
+		align-items: flex-start;
+		justify-content: center;
+	}
+
+	.splash-demo-container-image {
+		--_scale-factor: 0.32;
+		mask-image: linear-gradient(
+			to top,
+			rgba(255, 255, 255, 0) 15%,
+			rgb(255, 255, 255)
+		);
 	}
 }
 
@@ -98,9 +116,9 @@
 .container-waves {
 	height: 22em;
 	position: relative;
-	overflow-x: hidden;
 	background-color: var(--color-secondary-100);
-	/* z-index: -100; */
+	user-select: none;
+	pointer-events: none;
 }
 
 .wave {
@@ -115,15 +133,19 @@
 }
 
 .wave-background {
+	height: 110%;
 	animation-duration: 12.35s;
 }
 
 .wave-middleground {
+	height: 100%;
 	animation-duration: 9.65s;
+	z-index: 2;
 }
 
 .wave-foreground {
 	animation-duration: 5.15s;
+	z-index: 3;
 }
 
 @media (prefers-reduced-motion: no-preference) {
