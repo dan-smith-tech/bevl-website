@@ -17,6 +17,8 @@ export default function Landing() {
 	const featuresIntersectionDetectorRef = useRef();
 	const [featuresIntersection, setFeaturesIntersection] = useState();
 	const splashRef = useRef();
+	const backWaveRef = useRef();
+	const middleWaveRef = useRef();
 
 	const getFeatureStyles = () => {
 		if (!featuresIntersection)
@@ -43,15 +45,24 @@ export default function Landing() {
 		};
 	}
 
-	function parallax() {
-		var scrolled = window.pageYOffset;
-		// You can adjust the 0.4 to change the speed
-		var coords = scrolled * 0.4 + "px";
-		splashRef.current.style.transform = "translateY(" + coords + ")";
+	function parallax(element, speed) {
+		var coords = window.pageYOffset * speed + "px";
+		element.style.transform = "translateY(" + coords + ")";
 	}
 
 	useEffect(() => {
-		window.addEventListener("scroll", throttle(parallax, 14));
+		window.addEventListener(
+			"scroll",
+			throttle(() => parallax(splashRef.current, 0.35), 14)
+		);
+		window.addEventListener(
+			"scroll",
+			throttle(() => parallax(backWaveRef.current, -0.1), 14)
+		);
+		window.addEventListener(
+			"scroll",
+			throttle(() => parallax(middleWaveRef.current, 0.5), 14)
+		);
 
 		const observer = new IntersectionObserver((entries) => {
 			const entry = entries[0];
@@ -89,6 +100,21 @@ export default function Landing() {
 					"container-full " + landingStyles["container-full-splash"]
 				}
 			>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					preserveAspectRatio="none"
+					viewBox="0 0 1440 320"
+					className={
+						landingStyles["wave"] + " " + landingStyles["wave-background"]
+					}
+					ref={backWaveRef}
+				>
+					<path
+						fill="#eaefff"
+						fillOpacity="1"
+						d="M0,32L34.3,32C68.6,32,137,32,206,26.7C274.3,21,343,11,411,26.7C480,43,549,85,617,96C685.7,107,754,85,823,69.3C891.4,53,960,43,1029,64C1097.1,85,1166,139,1234,170.7C1302.9,203,1371,213,1406,218.7L1440,224L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"
+					></path>
+				</svg>
 				<div
 					className={
 						"container-partial " +
@@ -124,25 +150,6 @@ export default function Landing() {
 						</div>
 					</div>
 				</div>
-			</div>
-			<div
-				className={"container-full " + landingStyles["container-waves"]}
-				tabIndex={-1}
-			>
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					preserveAspectRatio="none"
-					viewBox="0 0 1440 320"
-					className={
-						landingStyles["wave"] + " " + landingStyles["wave-background"]
-					}
-				>
-					<path
-						fill="#eaefff"
-						fillOpacity="1"
-						d="M0,32L34.3,32C68.6,32,137,32,206,26.7C274.3,21,343,11,411,26.7C480,43,549,85,617,96C685.7,107,754,85,823,69.3C891.4,53,960,43,1029,64C1097.1,85,1166,139,1234,170.7C1302.9,203,1371,213,1406,218.7L1440,224L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"
-					></path>
-				</svg>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					preserveAspectRatio="none"
@@ -152,6 +159,7 @@ export default function Landing() {
 						" " +
 						landingStyles["wave-middleground"]
 					}
+					ref={middleWaveRef}
 				>
 					<path
 						fill="#fe4c5f"
