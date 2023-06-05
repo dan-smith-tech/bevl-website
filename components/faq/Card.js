@@ -40,7 +40,7 @@ export default function faqCard({ question, children }) {
 				onClick={activateToggle}
 				style={{ height: questionHeight + "px" }}
 			>
-				<i class="bx bx-plus-circle" />
+				<i className="bx bx-plus-circle" />
 				<span>{question}</span>
 			</h3>
 			<p className={faqCardStyles["answer"]} ref={answerRef}>
