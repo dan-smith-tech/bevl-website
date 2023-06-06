@@ -116,8 +116,8 @@
 
 .wave {
 	width: 100%;
-	min-width: 65rem;
 	height: 50%;
+	min-width: 65rem;
 	position: absolute;
 	left: 0 !important;
 	right: 0 !important;
@@ -127,6 +127,12 @@
 	user-select: none;
 }
 
+.wave svg {
+	position: absolute;
+	height: 100%;
+	bottom: 0;
+}
+
 .wave-background {
 	height: 55%;
 	animation-duration: 12.35s;
@@ -134,12 +140,10 @@
 
 .wave-middleground {
 	animation-duration: 9.65s;
-	z-index: 2;
 }
 
 .wave-foreground {
 	animation-duration: 5.15s;
-	z-index: 3;
 }
 
 @media (prefers-reduced-motion: no-preference) {

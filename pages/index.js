@@ -57,11 +57,11 @@ export default function Landing() {
 		);
 		window.addEventListener(
 			"scroll",
-			throttle(() => parallax(backWaveRef.current, -0.1), 14)
+			throttle(() => parallax(backWaveRef.current, 0.25), 14)
 		);
 		window.addEventListener(
 			"scroll",
-			throttle(() => parallax(middleWaveRef.current, 0.5), 14)
+			throttle(() => parallax(middleWaveRef.current, 0.15), 14)
 		);
 
 		const observer = new IntersectionObserver((entries) => {
@@ -100,21 +100,24 @@ export default function Landing() {
 					"container-full " + landingStyles["container-full-splash"]
 				}
 			>
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					preserveAspectRatio="none"
-					viewBox="0 0 1440 320"
+				<div
 					className={
 						landingStyles["wave"] + " " + landingStyles["wave-background"]
 					}
-					ref={backWaveRef}
 				>
-					<path
-						fill="#eaefff"
-						fillOpacity="1"
-						d="M0,32L34.3,32C68.6,32,137,32,206,26.7C274.3,21,343,11,411,26.7C480,43,549,85,617,96C685.7,107,754,85,823,69.3C891.4,53,960,43,1029,64C1097.1,85,1166,139,1234,170.7C1302.9,203,1371,213,1406,218.7L1440,224L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"
-					></path>
-				</svg>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						preserveAspectRatio="none"
+						viewBox="0 0 1440 320"
+						ref={backWaveRef}
+					>
+						<path
+							fill="#eaefff"
+							fillOpacity="1"
+							d="M0,32L34.3,32C68.6,32,137,32,206,26.7C274.3,21,343,11,411,26.7C480,43,549,85,617,96C685.7,107,754,85,823,69.3C891.4,53,960,43,1029,64C1097.1,85,1166,139,1234,170.7C1302.9,203,1371,213,1406,218.7L1440,224L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"
+						></path>
+					</svg>
+				</div>
 				<div
 					className={
 						"container-partial " +
@@ -150,37 +153,43 @@ export default function Landing() {
 						</div>
 					</div>
 				</div>
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					preserveAspectRatio="none"
-					viewBox="0 0 1440 320"
+				<div
 					className={
 						landingStyles["wave"] +
 						" " +
 						landingStyles["wave-middleground"]
 					}
-					ref={middleWaveRef}
 				>
-					<path
-						fill="#fe4c5f"
-						fillOpacity="1"
-						d="M0,64L48,69.3C96,75,192,85,288,106.7C384,128,480,160,576,144C672,128,768,64,864,58.7C960,53,1056,107,1152,128C1248,149,1344,139,1392,133.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-					></path>
-				</svg>
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					preserveAspectRatio="none"
-					viewBox="0 0 1440 320"
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						preserveAspectRatio="none"
+						viewBox="0 0 1440 320"
+						ref={middleWaveRef}
+					>
+						<path
+							fill="#fe4c5f"
+							fillOpacity="1"
+							d="M0,64L48,69.3C96,75,192,85,288,106.7C384,128,480,160,576,144C672,128,768,64,864,58.7C960,53,1056,107,1152,128C1248,149,1344,139,1392,133.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+						></path>
+					</svg>
+				</div>
+				<div
 					className={
 						landingStyles["wave"] + " " + landingStyles["wave-foreground"]
 					}
 				>
-					<path
-						fill="#292f44"
-						fillOpacity="1"
-						d="M0,192L60,202.7C120,213,240,235,360,229.3C480,224,600,192,720,176C840,160,960,160,1080,181.3C1200,203,1320,245,1380,266.7L1440,288L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
-					></path>
-				</svg>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						preserveAspectRatio="none"
+						viewBox="0 0 1440 320"
+					>
+						<path
+							fill="#292f44"
+							fillOpacity="1"
+							d="M0,192L60,202.7C120,213,240,235,360,229.3C480,224,600,192,720,176C840,160,960,160,1080,181.3C1200,203,1320,245,1380,266.7L1440,288L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+						></path>
+					</svg>
+				</div>
 			</div>
 			<div
 				className={
