@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect } from "react";
 import Head from "next/head";
 import Image from "next/image";
 
@@ -12,26 +12,12 @@ import landingStyles from "../styles/landing.module.css";
 import ListsGraphic from "../components/graphics/Lists";
 import LabelsGraphic from "../components/graphics/Labels";
 import ResourcesGraphic from "../components/graphics/Resources";
+import Features from "../components/partials/Features";
 
 export default function Landing() {
-	const featuresIntersectionDetectorRef = useRef();
-	const [featuresIntersection, setFeaturesIntersection] = useState();
 	const splashRef = useRef();
 	const backWaveRef = useRef();
 	const middleWaveRef = useRef();
-
-	const getFeatureStyles = () => {
-		if (!featuresIntersection)
-			return (
-				"container-partial " + landingStyles["container-partial-features"]
-			);
-		return (
-			"container-partial " +
-			landingStyles["container-partial-features"] +
-			" " +
-			landingStyles["features-animation"]
-		);
-	};
 
 	// should not run if on low-end/battery (mobile) device
 	function parallax(element, speed) {
@@ -48,21 +34,10 @@ export default function Landing() {
 		window.addEventListener("scroll", backWaveParallax);
 		window.addEventListener("scroll", midWaveParallax);
 
-		const observer = new IntersectionObserver((entries) => {
-			const entry = entries[0];
-			if (!featuresIntersection && entry.isIntersecting) {
-				setFeaturesIntersection(true);
-				observer.disconnect();
-			}
-		});
-		observer.observe(featuresIntersectionDetectorRef.current);
-
 		return () => {
 			window.removeEventListener("scroll", infoParallax);
 			window.removeEventListener("scroll", backWaveParallax);
 			window.removeEventListener("scroll", midWaveParallax);
-
-			observer.disconnect();
 		};
 	}, []);
 
@@ -183,66 +158,7 @@ export default function Landing() {
 					</svg>
 				</div>
 			</div>
-			<div
-				className={
-					"container-full " + landingStyles["container-full-features"]
-				}
-			>
-				<div className={getFeatureStyles()}>
-					<div
-						style={{
-							position: "absolute",
-							top: "50%",
-							visibility: "hidden",
-						}}
-						ref={featuresIntersectionDetectorRef}
-					></div>
-					<h2 className={landingStyles["features-title"]}>
-						Simple, Personal, Powerful
-					</h2>
-					<div
-						className={landingStyles["container-partial-features-list"]}
-					>
-						<div className={landingStyles["feature"]}>
-							<i className="bx bxs-hand"></i>
-							<p>
-								Assign time to work on todos by dragging them into the
-								calendar.
-							</p>
-						</div>
-						<div className={landingStyles["feature"]}>
-							<i className="bx bxs-calendar"></i>
-							<p>
-								Set recurring events to create routines or develop
-								habits.
-							</p>
-						</div>
-						<div className={landingStyles["feature"]}>
-							<i className="bx bxs-extension"></i>
-							<p>
-								Split larger tasks into smaller tasks to organise
-								individually.
-							</p>
-						</div>
-						<div className={landingStyles["feature"]}>
-							<i className="bx bxs-filter-alt"></i>
-							<p>
-								Filter and drag tasks using the interactable calendar.
-							</p>
-						</div>
-						<div className={landingStyles["feature"]}>
-							<i className="bx bxs-customize"></i>
-							<p>
-								Keep track of random ideas and notes on custom lists.
-							</p>
-						</div>
-						<div className={landingStyles["feature"]}>
-							<i className="bx bxs-purchase-tag"></i>
-							<p>Group and filter tasks and lists with custom tags.</p>
-						</div>
-					</div>
-				</div>
-			</div>
+			<Features />
 			<FeatureSummary
 				heading={"Tasks"}
 				description={
