@@ -1,6 +1,6 @@
 /* Splash */
 .container-full-splash {
-	min-height: 60em;
+	min-height: 55em;
 	position: relative;
 	background-color: var(--color-secondary-100);
 	color: var(--color-primary-400);
@@ -128,8 +128,9 @@
 }
 
 .wave svg {
-	position: absolute;
+	width: 100%;
 	height: 100%;
+	position: absolute;
 	bottom: 0;
 }
 
