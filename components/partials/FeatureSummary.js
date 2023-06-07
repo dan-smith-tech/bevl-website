@@ -33,6 +33,8 @@ export default function FeatureSummary({
 			}
 		});
 		observer.observe(intersectionDetectorRef.current);
+
+		return () => observer.disconnect();
 	}, []);
 
 	const textElement = link ? (

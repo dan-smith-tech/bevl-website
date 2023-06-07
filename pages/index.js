@@ -33,36 +33,20 @@ export default function Landing() {
 		);
 	};
 
-	// parallax taken from: https://codepen.io/Prachl/pen/jjKzEy
-
-	function throttle(fn, wait) {
-		var time = Date.now();
-		return function () {
-			if (time + wait - Date.now() < 0) {
-				fn();
-				time = Date.now();
-			}
-		};
-	}
-
+	// should not run if on low-end/battery (mobile) device
 	function parallax(element, speed) {
-		var coords = window.pageYOffset * speed + "px";
-		element.style.transform = "translateY(" + coords + ")";
+		element.style.transform =
+			"translateY(" + window.pageYOffset * speed + "px)";
 	}
+
+	const infoParallax = () => parallax(splashRef.current, 0.35);
+	const backWaveParallax = () => parallax(backWaveRef.current, 0.25);
+	const midWaveParallax = () => parallax(middleWaveRef.current, 0.15);
 
 	useEffect(() => {
-		window.addEventListener(
-			"scroll",
-			throttle(() => parallax(splashRef.current, 0.35), 14)
-		);
-		window.addEventListener(
-			"scroll",
-			throttle(() => parallax(backWaveRef.current, 0.25), 14)
-		);
-		window.addEventListener(
-			"scroll",
-			throttle(() => parallax(middleWaveRef.current, 0.15), 14)
-		);
+		window.addEventListener("scroll", infoParallax);
+		window.addEventListener("scroll", backWaveParallax);
+		window.addEventListener("scroll", midWaveParallax);
 
 		const observer = new IntersectionObserver((entries) => {
 			const entry = entries[0];
@@ -72,6 +56,14 @@ export default function Landing() {
 			}
 		});
 		observer.observe(featuresIntersectionDetectorRef.current);
+
+		return () => {
+			window.removeEventListener("scroll", infoParallax);
+			window.removeEventListener("scroll", backWaveParallax);
+			window.removeEventListener("scroll", midWaveParallax);
+
+			observer.disconnect();
+		};
 	}, []);
 
 	return (

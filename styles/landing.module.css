@@ -144,6 +144,7 @@
 }
 
 .wave-foreground {
+	bottom: -1px; /* fix seam */
 	animation-duration: 5.15s;
 }
 
