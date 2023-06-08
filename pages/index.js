@@ -19,7 +19,6 @@ export default function Landing() {
 	const backWaveRef = useRef();
 	const middleWaveRef = useRef();
 
-	// should not run if on low-end/battery (mobile) device
 	function parallax(element, speed) {
 		element.style.transform =
 			"translateY(" + window.pageYOffset * speed + "px)";
@@ -30,15 +29,18 @@ export default function Landing() {
 	const midWaveParallax = () => parallax(middleWaveRef.current, 0.15);
 
 	useEffect(() => {
-		window.addEventListener("scroll", infoParallax);
-		window.addEventListener("scroll", backWaveParallax);
-		window.addEventListener("scroll", midWaveParallax);
+		// resize?
+		if (window.innerWidth > 650) {
+			window.addEventListener("scroll", infoParallax);
+			window.addEventListener("scroll", backWaveParallax);
+			window.addEventListener("scroll", midWaveParallax);
 
-		return () => {
-			window.removeEventListener("scroll", infoParallax);
-			window.removeEventListener("scroll", backWaveParallax);
-			window.removeEventListener("scroll", midWaveParallax);
-		};
+			return () => {
+				window.removeEventListener("scroll", infoParallax);
+				window.removeEventListener("scroll", backWaveParallax);
+				window.removeEventListener("scroll", midWaveParallax);
+			};
+		}
 	}, []);
 
 	return (

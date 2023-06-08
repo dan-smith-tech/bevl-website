@@ -1,6 +1,6 @@
 .container-form {
 	width: 32em;
-	margin-top: 1.85rem;
+	margin-top: 1.85em;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -24,7 +24,6 @@
 @media (max-width: 750px) {
 	.container-form {
 		width: 100%;
-		margin-top: 3.15em;
 	}
 
 	.container-form {

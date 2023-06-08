@@ -207,7 +207,12 @@ small {
 	}
 
 	h1 {
-		font-size: 2.35rem !important;
-		line-height: 3.15rem !important;
+		font-size: 2.65rem !important;
+		line-height: 3.35rem !important;
+	}
+
+	h3 {
+		font-size: 1.15rem;
+		line-height: 1.85rem;
 	}
 }

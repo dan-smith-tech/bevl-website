@@ -6,7 +6,7 @@
 }
 
 .container-partial-splash {
-	height: 18.5em;
+	height: fit-content;
 	margin-top: 8.5em;
 	position: relative;
 }
@@ -21,7 +21,6 @@
 }
 
 .heading {
-	margin-bottom: 0.15em;
 	color: var(--color-primary-400);
 }
 
@@ -34,7 +33,7 @@
 }
 
 .tagline {
-	margin-top: 1.35rem;
+	margin-top: 1em;
 	font-weight: 400;
 	color: var(--color-primary-400);
 }
@@ -45,7 +44,7 @@
 
 .splash-demo {
 	position: absolute;
-	inset: 0;
+	inset: 0 2.5rem;
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
@@ -57,12 +56,12 @@
 	--_scale-factor: 0.55;
 	width: calc(1310px * var(--_scale-factor));
 	height: calc(894px * var(--_scale-factor));
-	margin-right: -5rem;
+	margin-right: -5em;
 	position: relative;
 	mask-image: linear-gradient(
 		to right,
 		rgba(255, 255, 255, 0),
-		rgb(255, 255, 255) 75%
+		rgb(255, 255, 255) 85%
 	);
 }
 
@@ -89,31 +88,9 @@
 	}
 }
 
-@media (max-width: 1200px) {
-}
-
-@media (max-width: 650px) {
-	.heading {
-		margin: 3.5rem 0 0.35em 0;
-	}
-
-	.splash-demo {
-		align-items: flex-start;
-		justify-content: center;
-	}
-
-	.splash-demo-container-image {
-		--_scale-factor: 0.32;
-		mask-image: linear-gradient(
-			to top,
-			rgba(255, 255, 255, 0) 15%,
-			rgb(255, 255, 255)
-		);
-	}
-}
-
 .wave {
 	width: 100%;
+	min-width: 85rem !important;
 	height: 50%;
 	min-width: 65rem;
 	position: absolute;
@@ -163,5 +140,61 @@
 		100% {
 			transform: translateX(0) scaleX(2);
 		}
+	}
+}
+
+@media (max-width: 1350px) {
+	.splash-demo-container-image {
+		/* --_scale-factor: 0.5; */
+		margin-right: 0;
+		mask-image: linear-gradient(
+			to right,
+			rgba(255, 255, 255, 0),
+			rgb(255, 255, 255)
+		);
+	}
+}
+
+@media (max-width: 1150px) {
+	.splash-demo-container-image {
+		--_scale-factor: 0.45;
+	}
+}
+
+@media (max-width: 650px) {
+	.container-full-splash {
+		min-height: 45em;
+	}
+
+	.container-partial-splash {
+		margin-top: 1.5em;
+	}
+
+	.heading {
+		margin-top: 3.5rem;
+	}
+
+	.tagline {
+		margin-top: 0.85em;
+	}
+
+	.splash-demo {
+		align-items: flex-start;
+		justify-content: center;
+	}
+
+	.splash-demo-container-image {
+		--_scale-factor: 0.32;
+		margin-top: -1.5em;
+		mask-image: linear-gradient(
+			to top,
+			rgba(255, 255, 255, 0.05) 15%,
+			rgba(255, 255, 255, 0.15) 65%,
+			rgb(255, 255, 255)
+		);
+	}
+
+	.wave {
+		height: 20%;
 	}
 }
