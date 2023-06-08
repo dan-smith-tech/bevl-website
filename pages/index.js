@@ -8,7 +8,7 @@ import CTA from "../components/form/CTA";
 import FAQ from "../components/faq/Index";
 
 import "boxicons/css/boxicons.min.css";
-import landingStyles from "../styles/landing.module.css";
+import splashStyles from "../styles/splash.module.css";
 import ListsGraphic from "../components/graphics/Lists";
 import LabelsGraphic from "../components/graphics/Labels";
 import ResourcesGraphic from "../components/graphics/Resources";
@@ -64,12 +64,12 @@ export default function Landing() {
 			</Head>
 			<div
 				className={
-					"container-full " + landingStyles["container-full-splash"]
+					"container-full " + splashStyles["container-full-splash"]
 				}
 			>
 				<div
 					className={
-						landingStyles["wave"] + " " + landingStyles["wave-background"]
+						splashStyles["wave"] + " " + splashStyles["wave-background"]
 					}
 				>
 					<svg
@@ -88,27 +88,27 @@ export default function Landing() {
 				<div
 					className={
 						"container-partial " +
-						landingStyles["container-partial-splash"]
+						splashStyles["container-partial-splash"]
 					}
 					ref={splashRef}
 				>
-					<div className={landingStyles["splash-info"]}>
-						<h1 className={landingStyles["heading"]}>
+					<div className={splashStyles["splash-info"]}>
+						<h1 className={splashStyles["heading"]}>
 							Spend less time <span>organising</span>,<br />
 							and more time <span>doing</span>.
 						</h1>
-						<h3 className={landingStyles["tagline"]}>
+						<h3 className={splashStyles["tagline"]}>
 							A modern todo list for productive visual plans.
 						</h3>
 						<CTA />
 					</div>
-					<div className={landingStyles["splash-demo"]}>
-						<div className={landingStyles["splash-demo-container-image"]}>
+					<div className={splashStyles["splash-demo"]}>
+						<div className={splashStyles["splash-demo-container-image"]}>
 							<Image
 								src={"/images/screenshots/placeholder.png"}
 								alt={"Screenshot of app"}
 								layout="fill"
-								className={landingStyles["splash-demo-image"]}
+								className={splashStyles["splash-demo-image"]}
 								draggable="false"
 								quality={50}
 								loading={"eager"}
@@ -122,9 +122,7 @@ export default function Landing() {
 				</div>
 				<div
 					className={
-						landingStyles["wave"] +
-						" " +
-						landingStyles["wave-middleground"]
+						splashStyles["wave"] + " " + splashStyles["wave-middleground"]
 					}
 				>
 					<svg
@@ -142,7 +140,7 @@ export default function Landing() {
 				</div>
 				<div
 					className={
-						landingStyles["wave"] + " " + landingStyles["wave-foreground"]
+						splashStyles["wave"] + " " + splashStyles["wave-foreground"]
 					}
 				>
 					<svg

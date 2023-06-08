@@ -1,4 +1,3 @@
-/* Splash */
 .container-full-splash {
 	min-height: 55em;
 	position: relative;
@@ -14,7 +13,7 @@
 
 .splash-info {
 	position: relative;
-	z-index: 2;
+	z-index: 1;
 }
 
 .container-partial-splash button:focus {
@@ -52,7 +51,6 @@
 	justify-content: flex-end;
 	pointer-events: none;
 	user-select: none;
-	z-index: 1;
 }
 
 .splash-demo-container-image {
