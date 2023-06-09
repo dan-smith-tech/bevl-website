@@ -3,7 +3,6 @@
 	position: relative;
 	background-color: var(--color-secondary-100);
 	color: var(--color-primary-400);
-	overflow: hidden;
 }
 
 .container-partial-splash {

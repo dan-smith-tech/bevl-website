@@ -63,8 +63,8 @@ body,
 	background-color: var(--color-dark-400);
 }
 
-body {
-	overflow-x: hidden;
+#__next {
+	overflow: hidden;
 }
 
 :root {
