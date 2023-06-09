@@ -145,11 +145,11 @@
 
 @media (max-width: 1350px) {
 	.splash-demo-container-image {
-		/* --_scale-factor: 0.5; */
 		margin-right: 0;
 		mask-image: linear-gradient(
 			to right,
-			rgba(255, 255, 255, 0),
+			rgba(255, 255, 255, 0.15) 15%,
+			rgba(255, 255, 255, 0.35) 65%,
 			rgb(255, 255, 255)
 		);
 	}
@@ -157,17 +157,17 @@
 
 @media (max-width: 1150px) {
 	.splash-demo-container-image {
-		--_scale-factor: 0.45;
+		--_scale-factor: 0.4;
 	}
 }
 
-@media (max-width: 650px) {
+@media (max-width: 950px) {
 	.container-full-splash {
-		min-height: 45em;
+		min-height: 40em;
 	}
 
 	.container-partial-splash {
-		margin-top: 1.5em;
+		margin-top: 3.5em;
 	}
 
 	.heading {
@@ -184,17 +184,54 @@
 	}
 
 	.splash-demo-container-image {
-		--_scale-factor: 0.32;
+		--_scale-factor: 0.35;
 		margin-top: -1.5em;
 		mask-image: linear-gradient(
 			to top,
+			rgba(255, 255, 255, 0.1) 15%,
+			rgba(255, 255, 255, 0.3) 75%,
+			rgb(255, 255, 255)
+		);
+	}
+
+	.wave {
+		height: 35%;
+	}
+}
+
+@media (max-width: 850px) {
+	.container-full-splash {
+		min-height: 30em;
+	}
+
+	.container-partial-splash {
+		margin-top: 1.5em;
+	}
+
+	.splash-demo-container-image {
+		--_scale-factor: 0.35;
+		margin-top: 0;
+		mask-image: linear-gradient(
+			to top,
 			rgba(255, 255, 255, 0.05) 15%,
-			rgba(255, 255, 255, 0.15) 65%,
+			rgba(255, 255, 255, 0.35) 85%,
 			rgb(255, 255, 255)
 		);
 	}
 
 	.wave {
 		height: 20%;
+	}
+}
+
+@media (max-width: 650px) {
+	.container-full-splash {
+		min-height: 40em;
+	}
+}
+
+@media (max-width: 500px) {
+	.container-full-splash {
+		min-height: 42em;
 	}
 }

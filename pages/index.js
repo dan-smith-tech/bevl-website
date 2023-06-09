@@ -29,8 +29,7 @@ export default function Landing() {
 	const midWaveParallax = () => parallax(middleWaveRef.current, 0.15);
 
 	useEffect(() => {
-		// resize?
-		if (window.innerWidth > 650) {
+		if (window.innerWidth > 850) {
 			window.addEventListener("scroll", infoParallax);
 			window.addEventListener("scroll", backWaveParallax);
 			window.addEventListener("scroll", midWaveParallax);

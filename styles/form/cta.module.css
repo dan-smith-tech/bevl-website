@@ -21,7 +21,7 @@
 	width: fit-content;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 650px) {
 	.container-form {
 		width: 100%;
 	}
@@ -41,12 +41,6 @@
 	}
 
 	.container-form + small {
-		width: 100%;
-	}
-}
-
-@media (max-width: 500px) {
-	.container-form-button {
 		width: 100%;
 	}
 }
