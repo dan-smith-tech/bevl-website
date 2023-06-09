@@ -1,8 +1,9 @@
 .container-full-splash {
-	min-height: 55em;
+	min-height: 50em;
 	position: relative;
 	background-color: var(--color-secondary-100);
 	color: var(--color-primary-400);
+	overflow: hidden;
 }
 
 .container-partial-splash {
@@ -91,7 +92,7 @@
 .wave {
 	width: 100%;
 	min-width: 85rem !important;
-	height: 50%;
+	height: 45%;
 	min-width: 65rem;
 	position: absolute;
 	left: 0 !important;
@@ -110,17 +111,17 @@
 }
 
 .wave-background {
-	height: 55%;
-	animation-duration: 12.35s;
+	height: 50%;
+	animation-duration: calc(12.35s * 1.5);
 }
 
 .wave-middleground {
-	animation-duration: 9.65s;
+	animation-duration: calc(9.65s * 1.5);
 }
 
 .wave-foreground {
 	bottom: -1px; /* fix seam */
-	animation-duration: 5.15s;
+	animation-duration: calc(5.15s * 1.5);
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -197,6 +198,10 @@
 	.wave {
 		height: 35%;
 	}
+
+	.wave-background {
+		height: 38%;
+	}
 }
 
 @media (max-width: 850px) {
@@ -221,6 +226,10 @@
 
 	.wave {
 		height: 20%;
+	}
+
+	.wave-background {
+		height: 23%;
 	}
 }
 
