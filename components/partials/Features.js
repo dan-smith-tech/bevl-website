@@ -8,14 +8,12 @@ export default function Features() {
 
 	const getFeatureStyles = () => {
 		if (!featuresIntersection)
-			return (
-				"container-partial " + featureStyles["container-partial-features"]
-			);
+			return "container-partial " + featureStyles["container-partial"];
 		return (
 			"container-partial " +
-			featureStyles["container-partial-features"] +
+			featureStyles["container-partial"] +
 			" " +
-			featureStyles["features-animation"]
+			featureStyles["animation"]
 		);
 	};
 
@@ -33,24 +31,14 @@ export default function Features() {
 	}, []);
 
 	return (
-		<div
-			className={
-				"container-full " + featureStyles["container-full-features"]
-			}
-		>
+		<div className={"container-full " + featureStyles["container-full"]}>
 			<div className={getFeatureStyles()}>
 				<div
-					style={{
-						position: "absolute",
-						top: "50%",
-						visibility: "hidden",
-					}}
+					className={featureStyles["intersection-dectector"]}
 					ref={featuresIntersectionDetectorRef}
 				></div>
-				<h2 className={featureStyles["features-title"]}>
-					Simple, Personal, Powerful
-				</h2>
-				<div className={featureStyles["container-partial-features-list"]}>
+				<h2>Simple, Personal, Powerful</h2>
+				<div className={featureStyles["container-partial-list"]}>
 					<div className={featureStyles["feature"]}>
 						<i className="bx bxs-hand"></i>
 						<p>

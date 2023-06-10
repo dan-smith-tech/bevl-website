@@ -1,21 +1,20 @@
-.container-full-features {
+.container-full {
 	background-color: var(--color-primary-400);
 	color: var(--color-secondary-100);
 	position: relative;
 }
 
-.container-partial-features {
-	margin: 3.5em 0 8.5em 0;
+.container-partial {
+	margin: 3.5em 0 var(--partial-spacing) 0;
 }
 
-.features-title {
-	margin-bottom: 3.85rem;
+.container-partial h2 {
+	margin-bottom: 2.65rem;
 	font-size: 2.35rem;
-	font-weight: 600;
 	text-align: center;
 }
 
-.container-partial-features-list {
+.container-partial-list {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 2.5rem;
@@ -54,7 +53,7 @@
 	width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) and (min-width: 1201px) {
+@media (prefers-reduced-motion: no-preference) {
 	.feature {
 		animation-name: featureEnter;
 		animation-timing-function: var(--transition-timing-function-elastic);
@@ -63,7 +62,7 @@
 		animation-play-state: paused;
 	}
 
-	.features-animation .feature {
+	.animation .feature {
 		animation-play-state: running;
 	}
 
@@ -110,13 +109,41 @@
 }
 
 @media (max-width: 1200px) {
-	.container-partial-features-list {
+	.container-partial-list {
 		grid-template-columns: repeat(2, 1fr);
 	}
 }
 
-@media (max-width: 650px) {
-	.container-partial-features-list {
+@media (max-width: 850px) {
+	.title {
+		margin-bottom: 1.65rem;
+		font-size: 1.85rem;
+		text-align: center;
+	}
+
+	.container-partial-list {
+		gap: 1.5rem;
+	}
+
+	.feature i {
+		font-size: 2.5rem;
+	}
+
+	.feature p {
+		margin-top: 0.85em;
+	}
+}
+
+@media (min-width: 750px) {
+	.intersection-dectector {
+		position: absolute;
+		top: 50%;
+		visibility: hidden;
+	}
+}
+
+@media (max-width: 750px) {
+	.container-partial-list {
 		grid-template-columns: repeat(1, 1fr);
 	}
 }

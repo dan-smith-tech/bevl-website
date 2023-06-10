@@ -80,6 +80,8 @@ body,
 	--color-secondary-100: var(--color-light-100);
 	--color-secondary-400: var(--color-light-400);
 
+	--partial-spacing: 5em;
+
 	--border-size: 0.2rem;
 	--border-radius-large: 1.35rem;
 	--border-radius-small: 0.85em;
@@ -94,8 +96,6 @@ body,
 		-0.1px 19.9px 24.6px -1.3px hsl(var(--shadow-color) / 0.21),
 		-0.1px 27.8px 34.4px -1.5px hsl(var(--shadow-color) / 0.22),
 		-0.1px 38.2px 47.3px -1.7px hsl(var(--shadow-color) / 0.23);
-
-	--header-height: 6.15rem;
 
 	--transition-duration: 150ms;
 	--transition-timing-function-elastic: cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -211,8 +211,29 @@ small {
 		line-height: 3.35rem !important;
 	}
 
+	h2 {
+		font-size: 1.65rem;
+		line-height: 2.85rem;
+	}
+
 	h3 {
 		font-size: 1.15rem;
+		line-height: 1.85rem;
+	}
+
+	h4 {
+		font-size: 1rem;
+	}
+
+	h5 {
+		font-size: 0.85rem;
+		line-height: 1.5rem;
+		letter-spacing: 0.025rem;
+	}
+
+	p,
+	li {
+		font-size: 1rem;
 		line-height: 1.85rem;
 	}
 }

@@ -60,6 +60,10 @@
 	box-shadow: none;
 }
 
+.element::placeholder {
+	color: var(--color-primary-400);
+}
+
 .container-element-secondary .element:focus {
 	border-color: var(--color-secondary-100);
 }
