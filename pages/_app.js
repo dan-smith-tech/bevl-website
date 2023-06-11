@@ -1,6 +1,5 @@
 import Head from "next/head";
 
-import Header from "../components/partials/Header";
 import Footer from "../components/partials/Footer";
 
 import "../styles/global.css";

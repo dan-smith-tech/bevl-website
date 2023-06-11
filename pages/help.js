@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import helpStyles from "../styles/help.module.css";
+import tempStyles from "../styles/temp.module.css";
 
 export default function Help() {
 	return (
@@ -11,10 +11,10 @@ export default function Help() {
 				<meta name="description" content="Learn how to use Bevl." />
 				<meta property="og:description" content="Learn how to use Bevl." />
 			</Head>
-			<div className={"container-full " + helpStyles["container-full"]}>
+			<div className={"container-full " + tempStyles["container-full"]}>
 				<div
 					className={
-						"container-partial " + helpStyles["container-partial"]
+						"container-partial " + tempStyles["container-partial"]
 					}
 				>
 					<p>The help centre will release closer to launch.</p>

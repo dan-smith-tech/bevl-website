@@ -6,4 +6,13 @@ module.exports = {
 		defaultLocale: "en",
 	},
 	productionBrowserSourceMaps: true,
+	async redirects() {
+		return [
+			{
+				source: "/signup",
+				destination: "/newsletter",
+				permanent: true,
+			},
+		];
+	},
 };
