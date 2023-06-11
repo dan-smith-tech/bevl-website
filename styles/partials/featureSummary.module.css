@@ -174,10 +174,10 @@
 @media (max-width: 450px) {
 	.content-container-text,
 	.content-container-graphic {
-		width: calc(16em * 1.35);
+		width: calc(16em * 1.15);
 	}
 
 	.content-container-graphic {
-		height: calc(9em * 1.35);
+		height: calc(9em * 1.15);
 	}
 }

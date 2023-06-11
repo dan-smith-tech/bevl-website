@@ -157,4 +157,9 @@
 		font-size: 2rem;
 		line-height: 2.85rem;
 	}
+
+	.container-graphic {
+		width: calc(28em * 0.65);
+		height: calc(14.15em * 0.65);
+	}
 }
