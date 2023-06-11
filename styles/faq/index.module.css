@@ -36,7 +36,7 @@
 
 @media (max-width: 1200px) {
 	.container-partial {
-		margin: var(--partial-spacing) 0;
+		margin: calc(var(--partial-spacing) / 2) 0;
 	}
 
 	.container-discussion {

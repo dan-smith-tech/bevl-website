@@ -24,9 +24,6 @@
 	margin-bottom: 0.35em;
 }
 
-.content-container-text p {
-}
-
 .button {
 	width: fit-content;
 	margin-top: 2.35em;
@@ -171,5 +168,16 @@
 @media (max-width: 550px) {
 	.content-container-text {
 		width: 100%;
+	}
+}
+
+@media (max-width: 450px) {
+	.content-container-text,
+	.content-container-graphic {
+		width: calc(16em * 1.35);
+	}
+
+	.content-container-graphic {
+		height: calc(9em * 1.35);
 	}
 }

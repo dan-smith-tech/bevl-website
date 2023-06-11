@@ -115,10 +115,8 @@
 }
 
 @media (max-width: 850px) {
-	.title {
-		margin-bottom: 1.65rem;
-		font-size: 1.85rem;
-		text-align: center;
+	.container-partial h2 {
+		font-size: 1.65rem;
 	}
 
 	.container-partial-list {
@@ -146,4 +144,11 @@
 	.container-partial-list {
 		grid-template-columns: repeat(1, 1fr);
 	}
+}
+
+@media (max-width: 400px) {
+	/* .container-partial h2 {
+		margin-bottom: 1.65rem;
+		font-size: 1.65rem;
+	} */
 }
