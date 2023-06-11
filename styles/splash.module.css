@@ -171,7 +171,7 @@
 	}
 
 	.heading {
-		margin-top: 3.5rem;
+		margin-top: 2.5rem;
 	}
 
 	.tagline {
@@ -218,7 +218,7 @@
 		mask-image: linear-gradient(
 			to top,
 			rgba(255, 255, 255, 0.05) 15%,
-			rgba(255, 255, 255, 0.35) 85%,
+			rgba(255, 255, 255, 0.25) 85%,
 			rgb(255, 255, 255)
 		);
 	}
@@ -241,5 +241,15 @@
 @media (max-width: 500px) {
 	.container-full-splash {
 		min-height: 42em;
+	}
+
+	.splash-demo-container-image {
+		margin-top: -5vh;
+	}
+}
+
+@media (max-width: 400px) {
+	.splash-demo-container-image {
+		margin-top: -10vh;
 	}
 }
