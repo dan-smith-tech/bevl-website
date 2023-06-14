@@ -15,9 +15,7 @@ export default function CTA({ independent }) {
 
 	function handleSubmit(e) {
 		e.preventDefault();
-		const email = e.target.email1
-			? e.target.email1.value
-			: e.target.email2.value;
+		const email = e.target.email.value;
 		if (email.length > 0 && isEmail(email)) {
 			setShowModal(true);
 			sendFetchRequest(
@@ -27,9 +25,7 @@ export default function CTA({ independent }) {
 					email,
 				}
 			);
-			e.target.email1
-				? (e.target.email1.value = null)
-				: (e.target.email2.value = null);
+			e.target.email.value = null;
 		}
 	}
 
@@ -39,7 +35,7 @@ export default function CTA({ independent }) {
 				<div className={ctaStyles["container-form-input"]}>
 					<FormInput
 						type={"text"}
-						name={"email1"}
+						name={"email"}
 						placeholder="Enter email address..."
 						required={true}
 					/>
@@ -79,7 +75,7 @@ export default function CTA({ independent }) {
 								<div className={ctaStyles["container-form-input"]}>
 									<FormInput
 										type={"text"}
-										name={"email1"}
+										name={"email"}
 										placeholder="Enter email address..."
 										required={true}
 										secondary={true}
