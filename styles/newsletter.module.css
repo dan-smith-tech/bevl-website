@@ -1,47 +1,47 @@
-/* Confirmations */
-
 .container-full {
-	height: 100vh;
-	padding-top: var(--header-height);
-	color: var(--color-secondary-100);
+	min-height: calc(100vh - 3.5rem);
 }
 
 .container-partial {
+	margin: 3.5em 0;
+	padding-top: 3.5rem;
+}
+
+.container-info h1,
+.container-info p {
+	margin-bottom: 0.65em;
+}
+
+.container-form {
+	width: 32em;
+	margin-top: 1.85em;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.container-form-input {
+	width: 66.5%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
 }
 
-.container-partial h1 {
-	margin-bottom: 0.35em;
+.container-form-input input {
+	border-color: var(--color-secondary-100);
+}
+
+.container-form-input input::placeholder {
+	color: var(--color-secondary-100);
 }
 
 .container-form-button {
-	margin-top: 1.85em;
+	width: fit-content;
 }
 
-@media (max-height: 285px), (max-width: 500px) {
-	.container-full {
-		height: fit-content;
-	}
-
+@media (max-height: 150px) {
 	.container-partial {
-		margin: 3.5em 0;
+		padding-top: 0;
 		display: block;
 	}
-}
-
-@media (max-width: 500px) {
-	.container-form-button {
-		width: 100%;
-	}
-}
-
-/* Content */
-
-.container-full-content {
-	padding-top: var(--header-height);
-	box-sizing: content-box;
-	color: var(--color-secondary-100);
 }

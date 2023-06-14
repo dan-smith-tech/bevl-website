@@ -57,13 +57,16 @@ export default function Newsletter() {
 					}
 				>
 					<div className={newsletterStyles["container-info"]}>
-						<h2 className={newsletterStyles["container-info-heading"]}>
-							Get Special Offers, and Stay In The Loop
-						</h2>
-						<p className={newsletterStyles["container-info-summary"]}>
-							Bevl's <em>Announcements </em> newsletter reveals sneak
-							previews of the newest features coming to Bevl, and offers
-							exclusive promotions.
+						<h1>Stay in the loop</h1>
+						<p>
+							While you wait for Bevl to launch (soon!), why not sign up
+							to the newsletter to stay up to date with all the
+							development news - and to get a special offer at launch!
+						</p>
+						<p>
+							Bevl's Announcements newsletter reveals sneak previews of
+							the newest features coming to Bevl, and offers exclusive
+							promotions.
 						</p>
 					</div>
 					<form
@@ -74,21 +77,23 @@ export default function Newsletter() {
 							<FormInput
 								type={"text"}
 								name={"email"}
-								placeholder="Enter email..."
-								required={"true"}
+								placeholder="Enter email address..."
+								required={true}
 							/>
-							<small>No spam. Unsubscribe at any time.</small>
+							<small>
+								Get a special offer at launch by signing up now.
+							</small>
 						</div>
 						<div className={newsletterStyles["container-form-button"]}>
-							<FormButton type={"submit"} value="Sign Up" light={true} />
+							<FormButton type={"submit"}>Sign Up</FormButton>
 							<Modal
 								show={showModal}
 								onClose={() => setShowModal(false)}
-								heading={"Confirm Subscription"}
+								heading={"Almost there..."}
 								body={
 									"Thank you for signing up to the newsletter! Please confirm your subscription through the email you have been sent."
 								}
-								buttonValue={"I've Confirmed My Email"}
+								buttonValue={"Okay!"}
 							/>
 						</div>
 					</form>
