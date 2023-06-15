@@ -6,7 +6,7 @@ import faqStyles from "../../styles/faq/index.module.css";
 
 export default function FAQ() {
 	return (
-		<div className={"container-full"}>
+		<div className={"container-full " + faqStyles["container-full"]}>
 			<div className={"container-partial " + faqStyles["container-partial"]}>
 				<h2>FAQ</h2>
 				<div className={faqStyles["container-discussion"]}>

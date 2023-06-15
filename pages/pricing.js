@@ -1,6 +1,7 @@
 import Head from "next/head";
 
 import tempStyles from "../styles/temp.module.css";
+import detailStyles from "../styles/partials/detail.module.css";
 
 export default function Pricing() {
 	return (
@@ -17,7 +18,14 @@ export default function Pricing() {
 					content="Explore Bevl's pricing options."
 				/>
 			</Head>
-			<div className={"container-full " + tempStyles["container-full"]}>
+			<div
+				className={
+					"container-full " +
+					tempStyles["container-full"] +
+					" " +
+					detailStyles["container-detail"]
+				}
+			>
 				<div
 					className={
 						"container-partial " + tempStyles["container-partial"]

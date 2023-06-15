@@ -1,6 +1,7 @@
 import Head from "next/head";
 
 import tempStyles from "../styles/temp.module.css";
+import detailStyles from "../styles/partials/detail.module.css";
 
 export default function Help() {
 	return (
@@ -11,7 +12,14 @@ export default function Help() {
 				<meta name="description" content="Learn how to use Bevl." />
 				<meta property="og:description" content="Learn how to use Bevl." />
 			</Head>
-			<div className={"container-full " + tempStyles["container-full"]}>
+			<div
+				className={
+					"container-full " +
+					tempStyles["container-full"] +
+					" " +
+					detailStyles["container-detail"]
+				}
+			>
 				<div
 					className={
 						"container-partial " + tempStyles["container-partial"]

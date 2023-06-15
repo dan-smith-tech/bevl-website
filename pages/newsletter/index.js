@@ -9,6 +9,7 @@ import FormButton from "../../components/form/Button";
 import Modal from "../../components/form/Modal";
 
 import newsletterStyles from "../../styles/newsletter.module.css";
+import detailStyles from "../../styles/partials/detail.module.css";
 
 export default function Newsletter() {
 	const [showModal, setShowModal] = useState(false);
@@ -48,7 +49,9 @@ export default function Newsletter() {
 					"container-full " +
 					newsletterStyles["container-full"] +
 					" " +
-					newsletterStyles["container-full-content"]
+					newsletterStyles["container-full-content"] +
+					" " +
+					detailStyles["container-detail"]
 				}
 			>
 				<div

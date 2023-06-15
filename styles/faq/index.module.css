@@ -1,3 +1,7 @@
+.container-full {
+	margin-bottom: 3.5rem;
+}
+
 .container-partial {
 	margin: var(--partial-spacing) 0 8.5em 0;
 	position: relative;

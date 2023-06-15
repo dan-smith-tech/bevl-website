@@ -1,0 +1,11 @@
+.container-detail {
+	position: relative;
+	z-index: 1;
+}
+
+.container-detail::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	z-index: -1;
+}
