@@ -1,139 +1,29 @@
-.container-full {
-	padding-top: var(--header-height);
-	background-color: var(--color-primary-400);
-	color: var(--color-secondary-100);
-}
-
 .container-partial {
 	margin: 6.5em 0;
 	scroll-margin-top: calc(8.5em + var(--header-height));
-	display: flex;
-	justify-content: space-between;
 }
 
-.content-text {
-	width: 40rem;
-	text-align: justify;
+.container-partial h1 {
+	margin-bottom: 3.5rem;
 }
 
-.content-text h1 {
-	margin-bottom: 0.85em;
+.container-partial h2 {
+	margin-top: 3.35rem;
+	margin-bottom: 1.65rem;
+	font-size: 2.35rem;
+	line-height: 3.35rem;
 }
 
-.content-text p {
-}
-
-.content-text p:not(:last-child) {
+.container-partial p:not(:last-child) {
 	margin-bottom: 1.65rem;
 }
 
-.content-graphic {
-	position: relative;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	z-index: 1;
-}
-
-.graphic {
-	width: 15em;
-	height: 15em;
-	right: 0;
-	position: absolute;
-	animation-timing-function: var(--timing-functions);
-	animation-iteration-count: infinite;
-}
-
-.graphic-1 {
-	border-radius: 64% 36% 33% 67% / 61% 31% 69% 39%;
-	background-color: var(--color-accent-400);
-	z-index: 1;
-}
-
-.graphic-2 {
-	border-radius: 61% 39% 55% 45% / 50% 42% 58% 50%;
-	background-color: var(--color-secondary-100);
-	margin-top: 6.5em;
-	margin-right: 4.5em;
-	z-index: 0;
-}
-
-@media (prefers-reduced-motion: no-preference) and (min-width: 1200px) {
-	.graphic-1 {
-		background-color: var(--color-accent-400);
-		z-index: 1;
-		animation-name: graphic1;
-		animation-duration: 15s;
-	}
-
-	@keyframes graphic1 {
-		0% {
-			border-radius: 49% 51% 40% 60% / 54% 67% 33% 46%;
-			transform: scale(0.9, 1.1);
-		}
-		30% {
-			transform: scale(1.1, 0.9);
-		}
-		50% {
-			border-radius: 64% 36% 33% 67% / 61% 31% 69% 39%;
-			transform: scale(1);
-		}
-		70% {
-			transform: scale(1.1, 0.9);
-		}
-		100% {
-			border-radius: 49% 51% 40% 60% / 54% 67% 33% 46%;
-			transform: scale(0.9, 1.1);
-		}
-	}
-
-	.graphic-2 {
-		background-color: var(--color-secondary-400);
-		margin-top: 6.5em;
-		margin-right: 4.5em;
-		z-index: 0;
-		animation-name: graphic2;
-		animation-duration: 18s;
-	}
-
-	@keyframes graphic2 {
-		0% {
-			border-radius: 31% 69% 33% 67% / 37% 61% 39% 63%;
-			transform: scale(0.9, 1.1);
-		}
-		30% {
-			transform: scale(1.1, 0.9);
-		}
-		50% {
-			border-radius: 61% 39% 55% 45% / 50% 42% 58% 50%;
-			transform: scale(1);
-		}
-		70% {
-			transform: scale(1.1, 0.9);
-		}
-		100% {
-			border-radius: 31% 69% 33% 67% / 37% 61% 39% 63%;
-			transform: scale(0.9, 1.1);
-		}
-	}
+.spacer {
+	height: 3.5rem;
 }
 
 @media (max-width: 1200px) {
 	.container-partial {
 		margin: 3.85em 0;
-	}
-
-	.content-text {
-		width: 100%;
-		text-align: left;
-	}
-
-	.content-text h1 {
-		margin-bottom: 0.85em;
-	}
-
-	.content-graphic {
-		display: none;
-		visibility: hidden;
 	}
 }
