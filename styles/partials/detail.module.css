@@ -15,7 +15,7 @@
 	border-radius: 50% 50% 50% 0;
 	background-color: var(--color-accent-400);
 	background: radial-gradient(var(--color-accent-400), #fe4c5e00);
-	filter: blur(35em);
-	opacity: 0.35;
+	filter: blur(135px);
+	opacity: 0.15;
 	z-index: -1;
 }
