@@ -12,10 +12,10 @@
 	top: 0;
 	left: 0;
 	transform: translate(-25%, -50%);
-	border-radius: 50% 50% 50% 0;
+	border-radius: 0 0 50% 0;
 	background-color: var(--color-accent-400);
 	background: radial-gradient(var(--color-accent-400), #fe4c5e00);
-	filter: blur(135px);
-	opacity: 0.15;
+	filter: blur(35px);
+	opacity: 0.25;
 	z-index: -1;
 }
