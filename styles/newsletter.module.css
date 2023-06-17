@@ -37,12 +37,14 @@
 	color: var(--color-secondary-100);
 }
 
-.container-form-button {
-	width: fit-content;
-}
-
 @media (max-height: 150px) {
 	.container-partial {
 		display: block;
 	}
+}
+
+/* Confirm pages */
+
+.container-confirm p {
+	margin: 0.85rem 0;
 }

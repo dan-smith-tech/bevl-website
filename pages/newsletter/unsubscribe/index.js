@@ -7,6 +7,7 @@ import { isEmail } from "../../../lib/helpers";
 import FormButton from "../../../components/form/Button";
 
 import newsletterStyles from "../../../styles/newsletter.module.css";
+import detailStyles from "../../../styles/partials/detail.module.css";
 
 export async function getServerSideProps(context) {
 	const email = context.query.email ? context.query.email : null;
@@ -55,13 +56,18 @@ export default function NewsletterUnsubscribe(props) {
 				</Head>
 				<div
 					className={
-						"container-full " + newsletterStyles["container-full"]
+						"container-full " +
+						newsletterStyles["container-full"] +
+						" " +
+						detailStyles["container-detail"]
 					}
 				>
 					<div
 						className={
 							"container-partial " +
-							newsletterStyles["container-partial"]
+							newsletterStyles["container-partial"] +
+							" " +
+							newsletterStyles["container-confirm"]
 						}
 					>
 						<h1>Confirm Unsubscription</h1>

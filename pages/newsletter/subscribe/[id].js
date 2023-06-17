@@ -5,6 +5,7 @@ import { isEmail } from "../../../lib/helpers";
 import sendFetchRequest from "../../../lib/fetch";
 
 import newsletterStyles from "../../../styles/newsletter.module.css";
+import detailStyles from "../../../styles/partials/detail.module.css";
 
 export async function getServerSideProps(context) {
 	const { id } = context.query;
@@ -50,16 +51,21 @@ export default function NewsletterSubscribeConfirmation(props) {
 				</Head>
 				<div
 					className={
-						"container-full " + newsletterStyles["container-full"]
+						"container-full " +
+						newsletterStyles["container-full"] +
+						" " +
+						detailStyles["container-detail"]
 					}
 				>
 					<div
 						className={
 							"container-partial " +
-							newsletterStyles["container-partial"]
+							newsletterStyles["container-partial"] +
+							" " +
+							newsletterStyles["container-confirm"]
 						}
 					>
-						<h1>You're Subscribed</h1>
+						<h1>You're subscribed</h1>
 						<p>Thank you for joining the Bevl newsletter!</p>
 					</div>
 				</div>
