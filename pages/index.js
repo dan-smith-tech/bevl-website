@@ -14,10 +14,12 @@ import LabelsGraphic from "../components/graphics/Labels";
 import ResourcesGraphic from "../components/graphics/Resources";
 import Features from "../components/partials/Features";
 
+import { isEmail } from "../lib/helpers";
+import sendFetchRequest from "../lib/fetch";
+
 import "boxicons/css/boxicons.min.css";
 import splashStyles from "../styles/splash.module.css";
 import ctaStyles from "../styles/form/cta.module.css";
-import { isEmail } from "../lib/helpers";
 
 export default function Landing() {
 	const splashRef = useRef();

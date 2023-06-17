@@ -4,9 +4,7 @@ import Head from "next/head";
 import { isEmail } from "../../lib/helpers";
 import sendFetchRequest from "../../lib/fetch";
 
-import FormInput from "../../components/form/Input";
-import FormButton from "../../components/form/Button";
-import Modal from "../../components/form/Modal";
+import CTA from "../../components/form/CTA";
 
 import newsletterStyles from "../../styles/newsletter.module.css";
 import detailStyles from "../../styles/partials/detail.module.css";
@@ -72,34 +70,7 @@ export default function Newsletter() {
 							promotions.
 						</p>
 					</div>
-					<form
-						onSubmit={handleSubmit}
-						className={newsletterStyles["container-form"]}
-					>
-						<div className={newsletterStyles["container-form-input"]}>
-							<FormInput
-								type={"text"}
-								name={"email"}
-								placeholder="Enter email address..."
-								required={true}
-							/>
-							<small>
-								Get a special offer at launch by signing up now.
-							</small>
-						</div>
-						<div className={newsletterStyles["container-form-button"]}>
-							<FormButton type={"submit"}>Sign Up</FormButton>
-							<Modal
-								show={showModal}
-								onClose={() => setShowModal(false)}
-								heading={"Almost there..."}
-								body={
-									"Thank you for signing up to the newsletter! Please confirm your subscription through the email you have been sent."
-								}
-								buttonValue={"Okay!"}
-							/>
-						</div>
-					</form>
+					<CTA />
 				</div>
 			</div>
 		</>

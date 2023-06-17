@@ -14,26 +14,15 @@
 	margin-bottom: 0.65em;
 }
 
-.container-form {
-	width: 32em;
-	margin-top: 1.85em;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-}
-
-.container-form-input {
-	width: 66.5%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-.container-form-input input {
+.container-partial input {
 	border-color: var(--color-secondary-100);
 }
 
-.container-form-input input::placeholder {
+.container-partial small {
+	color: var(--color-secondary-100);
+}
+
+.container-partial input::placeholder {
 	color: var(--color-secondary-100);
 }
 
