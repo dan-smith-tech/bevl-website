@@ -1,18 +1,23 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 
 import FeatureSummary from "../components/partials/FeatureSummary";
 import TasksGraphic from "../components/graphics/Tasks";
+import FormInput from "../components/form/Input";
+import FormButton from "../components/form/Button";
+import Modal from "../components/form/Modal";
 import CTA from "../components/form/CTA";
 import FAQ from "../components/faq/Index";
-
-import "boxicons/css/boxicons.min.css";
-import splashStyles from "../styles/splash.module.css";
 import ListsGraphic from "../components/graphics/Lists";
 import LabelsGraphic from "../components/graphics/Labels";
 import ResourcesGraphic from "../components/graphics/Resources";
 import Features from "../components/partials/Features";
+
+import "boxicons/css/boxicons.min.css";
+import splashStyles from "../styles/splash.module.css";
+import ctaStyles from "../styles/form/cta.module.css";
+import { isEmail } from "../lib/helpers";
 
 export default function Landing() {
 	const splashRef = useRef();
@@ -43,13 +48,33 @@ export default function Landing() {
 		}
 	}, []);
 
+	// Splash CTA (has to be seperate to prevent transform breaking fixed position)
+	const [showModal, setShowModal] = useState(false);
+	function handleSubmit(e) {
+		e.preventDefault();
+		const email = e.target.email.value;
+		if (email.length > 0 && isEmail(email)) {
+			setShowModal(true);
+			sendFetchRequest(
+				"/api/newsletter/subscribe?optInStage=1&bevlAnnouncements=true",
+				"POST",
+				{
+					email,
+				}
+			);
+			e.target.email.value = null;
+		}
+	}
+
 	return (
 		<>
 			<Head>
-				<title>Bevl • A Modern Todo List for Productive Visual Plans</title>
+				<title>
+					Bevl • A Minimalist Modern Todo List for Productive Visual Plans
+				</title>
 				<meta
 					property="og:title"
-					content="Bevl • A Modern Todo List for Productive Visual Plans"
+					content="Bevl • A Minimalist Modern Todo List for Productive Visual Plans"
 				/>
 				<meta
 					name="description"
@@ -100,9 +125,29 @@ export default function Landing() {
 							and more time <span>doing</span>.
 						</h1>
 						<h3 className={splashStyles["tagline"]}>
-							A modern todo list for productive visual plans.
+							A minimalist, modern todo list for productive visual plans.
 						</h3>
-						<CTA />
+						<form
+							onSubmit={handleSubmit}
+							className={ctaStyles["container-form"]}
+						>
+							<div className={ctaStyles["container-form-input"]}>
+								<FormInput
+									type={"text"}
+									name={"email"}
+									placeholder="Enter email address..."
+									required={true}
+								/>
+								<small>
+									Get a special offer at launch by signing up now.
+								</small>
+							</div>
+							<div className={ctaStyles["container-form-button"]}>
+								<FormButton type={"submit"} light={true}>
+									Sign Up
+								</FormButton>
+							</div>
+						</form>
 					</div>
 					<div className={splashStyles["splash-demo"]}>
 						<div className={splashStyles["splash-demo-container-image"]}>
@@ -158,6 +203,15 @@ export default function Landing() {
 					</svg>
 				</div>
 			</div>
+			<Modal
+				show={showModal}
+				onClose={() => setShowModal(false)}
+				heading={"Almost there..."}
+				body={
+					"Thank you for signing up to the newsletter! Please confirm your subscription through the email you have been sent."
+				}
+				buttonValue={"Okay!"}
+			/>
 			<Features />
 			<FeatureSummary
 				heading={"Tasks"}

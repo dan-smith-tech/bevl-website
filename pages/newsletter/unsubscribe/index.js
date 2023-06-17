@@ -91,13 +91,18 @@ export default function NewsletterUnsubscribe(props) {
 				</Head>
 				<div
 					className={
-						"container-full " + newsletterStyles["container-full"]
+						"container-full " +
+						newsletterStyles["container-full"] +
+						" " +
+						detailStyles["container-detail"]
 					}
 				>
 					<div
 						className={
 							"container-partial " +
-							newsletterStyles["container-partial"]
+							newsletterStyles["container-partial"] +
+							" " +
+							newsletterStyles["container-confirm"]
 						}
 					>
 						<h1>Error</h1>
