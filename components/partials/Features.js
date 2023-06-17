@@ -55,17 +55,20 @@ export default function Features() {
 					<div className={featureStyles["feature"]}>
 						<i className="bx bxs-extension"></i>
 						<p>
-							Split larger tasks into smaller tasks to organise
+							Split big tasks into smaller tasks to organise each
 							individually.
 						</p>
 					</div>
 					<div className={featureStyles["feature"]}>
-						<i className="bx bxs-filter-alt"></i>
-						<p>Filter and drag tasks using the interactable calendar.</p>
-					</div>
-					<div className={featureStyles["feature"]}>
 						<i className="bx bxs-customize"></i>
 						<p>Keep track of random ideas and notes on custom lists.</p>
+					</div>
+					<div className={featureStyles["feature"]}>
+						<i class="bx bxs-bookmark-alt"></i>
+						<p>
+							Group bookmarks for websites and external resources on
+							lists.
+						</p>
 					</div>
 					<div className={featureStyles["feature"]}>
 						<i className="bx bxs-purchase-tag"></i>

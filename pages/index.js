@@ -216,7 +216,7 @@ export default function Landing() {
 			<FeatureSummary
 				heading={"Tasks"}
 				description={
-					"Plan any todo with 4 unique task types (Deadlines, Events, Habits, Projects) that suit every situation."
+					"Plan any todo with 4 unique task types:  Deadlines for longer-term todos, Events for one-off occasions, Habits for routines, and Projects to split up large tasks."
 				}
 				link={"/demo"}
 				image={"/images/screenshots/tasks.png"}
@@ -227,7 +227,7 @@ export default function Landing() {
 			<FeatureSummary
 				heading={"Lists"}
 				description={
-					"Keep track of less-organised notes and ideas, without cluttering your todo list."
+					"Keep track of less structured notes and ideas, without cluttering your todo list. Bookmark websites and files, and filter them on a moodboard-like panel."
 				}
 				link={"/demo"}
 				image={"/images/screenshots/lists.png"}
@@ -238,7 +238,7 @@ export default function Landing() {
 			<FeatureSummary
 				heading={"Labels"}
 				description={
-					"Group and filter content with customisable tags, to organise the tasks at hand."
+					"Group Tasks and Lists with customisable tags to filter and organise all of your work and ideas."
 				}
 				link={"/demo"}
 				image={"/images/screenshots/labels.png"}
@@ -249,7 +249,7 @@ export default function Landing() {
 			<FeatureSummary
 				heading={"Resources"}
 				description={
-					"Learn about the planning philosophy that Bevl was designed to facilitate, or explore the latest issues of the magazine."
+					"Learn about the planning philosophy that Bevl was designed to facilitate, or explore the experiences that informed its design."
 				}
 				link={"/about"}
 				image={"/images/screenshots/comingSoon.png"}
