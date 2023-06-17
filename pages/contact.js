@@ -5,6 +5,7 @@ import FormInput from "../components/form/Input";
 import FormButton from "../components/form/Button";
 
 import contactStyles from "../styles/contact.module.css";
+import detailStyles from "../styles/partials/detail.module.css";
 
 export default function Contact() {
 	return (
@@ -26,23 +27,21 @@ export default function Contact() {
 					media="screen"
 				/>
 			</Head>
-			<div className={"container-full " + contactStyles["container-full"]}>
+			<div
+				className={
+					"container-full " +
+					contactStyles["container-full"] +
+					" " +
+					detailStyles["container-detail"]
+				}
+			>
 				<div
 					className={
 						"container-partial " + contactStyles["container-partial"]
 					}
 				>
 					<h1>Contact</h1>
-					<Script
-						src="https://s.pageclip.co/v1/pageclip.js"
-						charset="utf-8"
-					/>
-					<form
-						action="https://send.pageclip.co/92FMod1rpAg6GX3cDoCW21G3Z41ftFGu/contact"
-						method={"POST"}
-						className="pageclip-form"
-					>
-						<input type="hidden" name="form-name" value="Contact" />
+					<form action="/api/contact" method={"POST"}>
 						<div className={contactStyles["form-row"]}>
 							<div className={contactStyles["form-element"]}>
 								<label htmlFor="name">Name*</label>
@@ -75,17 +74,7 @@ export default function Contact() {
 							</div>
 						</div>
 						<div className={contactStyles["form-row"]}>
-							{/* <button
-								type={"submit"}
-								className={
-									buttonStyles["button"] + " pageclip-form__submit"
-								}
-							>
-								<span>Send Message</span>
-							</button> */}
-							<FormButton type={"submit"} light={true}>
-								Send
-							</FormButton>
+							<FormButton type={"submit"}>Send</FormButton>
 						</div>
 					</form>
 				</div>

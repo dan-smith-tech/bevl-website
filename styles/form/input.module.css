@@ -63,6 +63,7 @@
 
 .element::placeholder {
 	color: var(--color-primary-400);
+	opacity: 0.65;
 }
 
 .container-element-secondary .element:focus {
@@ -73,9 +74,26 @@
 	border-color: var(--color-error);
 }
 
-.container-element textarea {
+.container-element-textarea {
+	height: fit-content;
+}
+
+.container-element-textarea .element {
 	max-height: 35em;
 	height: 10.05em;
 	min-height: 10.05em;
+	border-color: var(--color-secondary-100);
 	resize: vertical;
+}
+
+.container-element-textarea .element::placeholder {
+	color: var(--color-secondary-100);
+}
+
+.container-element-textarea .element:hover {
+	transform: none;
+}
+
+.container-element-textarea .element:focus {
+	border-color: var(--color-accent-400);
 }

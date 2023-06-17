@@ -1,7 +1,5 @@
 .container-full {
 	min-height: 100vh;
-	padding-top: var(--header-height);
-	color: var(--color-secondary-100);
 }
 
 .container-partial {
