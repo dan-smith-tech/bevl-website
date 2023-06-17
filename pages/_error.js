@@ -1,4 +1,5 @@
 import errorStyles from "../styles/error.module.css";
+import detailStyles from "../styles/partials/detail.module.css";
 
 Error.getInitialProps = ({ res, err }) => {
 	const statusCode = res ? res.statusCode : err ? err.statusCode : 404;
@@ -7,7 +8,11 @@ Error.getInitialProps = ({ res, err }) => {
 
 export default function Error({ statusCode }) {
 	return (
-		<div className={errorStyles["container"]}>
+		<div
+			className={
+				errorStyles["container"] + " " + detailStyles["container-detail"]
+			}
+		>
 			<div className={errorStyles["code"]}>
 				{statusCode ? statusCode : "Client"}
 			</div>
