@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 
 import CTA from "../components/form/CTA";
 
@@ -53,10 +54,13 @@ export default function About() {
 						my needs. Calendars generally require you to input specific
 						times (not to mention the tediousness of having to create new
 						events) and todo lists don&apos;t often allow you to visualise
-						plans or assign time to work on tasks. This is why I created
-						Bevl; to facilitate my philosophy of creating visual plans
-						that are not too time-specific, but allow for chunks of time
-						to be assigned to todos.
+						plans or assign time to work on tasks. This is why I created{" "}
+						<Link href="/">
+							<a>Bevl</a>
+						</Link>
+						; to facilitate my philosophy of creating visual plans that
+						are not too time-specific, but allow for chunks of time to be
+						assigned to todos.
 					</p>
 					<h2>Philosophy</h2>
 					<p>
@@ -68,13 +72,16 @@ export default function About() {
 						bad for both productivity and mental health.
 					</p>
 					<p>
-						Bevl was created to support this idea that plans should be
-						created without assigning tasks to specific times during the
-						day, but to appoint time to tasks using arbitrary chunks, with
-						the relative sizes of these chunks representing the
-						distribution of our time between the tasks. The goal of this
-						is to have full organisational control, but to prevent us from
-						getting bogged down in details that cause us to overlook the
+						<Link href="/">
+							<a>Bevl</a>
+						</Link>{" "}
+						was created to support this idea that plans should be created
+						without assigning tasks to specific times during the day, but
+						to appoint time to tasks using arbitrary chunks, with the
+						relative sizes of these chunks representing the distribution
+						of our time between the tasks. The goal of this is to have
+						full organisational control, but to prevent us from getting
+						bogged down in details that cause us to overlook the
 						unpredictable nature of our todos (which often result in us
 						taking longer to do things than we planned and therefore cause
 						our plans to constantly need adaptation).
