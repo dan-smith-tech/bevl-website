@@ -20,8 +20,9 @@ export default function Landing() {
 	const middleWaveRef = useRef();
 
 	function parallax(element, speed) {
-		element.style.transform =
-			"translateY(" + window.pageYOffset * speed + "px)";
+		if (element != null)
+			element.style.transform =
+				"translateY(" + window.pageYOffset * speed + "px)";
 	}
 
 	const infoParallax = () => parallax(splashRef.current, 0.35);
