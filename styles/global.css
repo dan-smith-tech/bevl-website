@@ -189,14 +189,10 @@ small {
 	display: block;
 }
 
-.pageclip-form__success {
-	inset: -0.15rem;
-	background-color: var(--color-primary-400);
-	opacity: 0.85;
-}
-
-.pageclip-form__success__message {
-	color: var(--color-secondary-100);
+.checkbox-hidden {
+	position: absolute;
+	pointer-events: none;
+	opacity: 0;
 }
 
 @media (max-width: 850px) {

@@ -1,13 +1,38 @@
+import { useRef } from "react";
 import Head from "next/head";
-import Script from "next/script";
 
 import FormInput from "../components/form/Input";
 import FormButton from "../components/form/Button";
+
+import sendFetchRequest from "../lib/fetch";
 
 import contactStyles from "../styles/contact.module.css";
 import detailStyles from "../styles/partials/detail.module.css";
 
 export default function Contact() {
+	const contactFormElement = useRef();
+	const contactFormLoaderElement = useRef();
+	const contactFormMessageElement = useRef();
+
+	function handleContactSubmit(e) {
+		e.preventDefault();
+
+		if (!e.target.do_not_check.checked) {
+			contactFormElement.current.classList.add(contactStyles["form-sent"]);
+
+			sendFetchRequest("/api/contact", "POST", {
+				name: e.target.name.value,
+				email: e.target.email.value,
+				body: e.target.body.value,
+			}).then((res) => {
+				contactFormLoaderElement.current.classList.add(
+					contactStyles["loading-hidden"]
+				);
+				contactFormMessageElement.current.innerHTML = res.message;
+			});
+		}
+	}
+
 	return (
 		<>
 			<Head>
@@ -20,11 +45,6 @@ export default function Contact() {
 				<meta
 					property="og:description"
 					content="Get in contact with Bevl's developer."
-				/>
-				<link
-					rel="stylesheet"
-					href="https://s.pageclip.co/v1/pageclip.css"
-					media="screen"
 				/>
 			</Head>
 			<div
@@ -41,7 +61,7 @@ export default function Contact() {
 					}
 				>
 					<h1>Contact</h1>
-					<form action="/api/contact" method={"POST"}>
+					<form onSubmit={handleContactSubmit} ref={contactFormElement}>
 						<div className={contactStyles["form-row"]}>
 							<div className={contactStyles["form-element"]}>
 								<label htmlFor="name">Name*</label>
@@ -74,7 +94,29 @@ export default function Contact() {
 							</div>
 						</div>
 						<div className={contactStyles["form-row"]}>
+							<input
+								type="checkbox"
+								name="do_not_check"
+								className={"checkbox-hidden"}
+							/>
 							<FormButton type={"submit"}>Send</FormButton>
+						</div>
+						<div className={contactStyles["form-response"]}>
+							<p ref={contactFormMessageElement}></p>
+							<div
+								id="contact-form-button-loading"
+								className={contactStyles["loading"]}
+								ref={contactFormLoaderElement}
+							>
+								<span />
+								<span />
+								<span />
+								<span />
+								<span />
+								<span />
+								<span />
+								<span />
+							</div>
 						</div>
 					</form>
 				</div>
