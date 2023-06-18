@@ -64,7 +64,7 @@ export default function Features() {
 						<p>Keep track of random ideas and notes on custom lists.</p>
 					</div>
 					<div className={featureStyles["feature"]}>
-						<i class="bx bxs-bookmark-alt"></i>
+						<i className="bx bxs-bookmark-alt"></i>
 						<p>
 							Group bookmarks for websites and external resources on
 							lists.
