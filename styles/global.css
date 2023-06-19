@@ -173,6 +173,28 @@ a {
 	outline: none !important;
 }
 
+:focus:not(:focus-visible)::after {
+	content: none !important;
+}
+
+a:focus {
+	border-radius: var(--border-radius-small);
+	outline-offset: 0.35em;
+	outline: var(--border-size) solid var(--color-accent-400);
+	position: relative;
+	z-index: 1;
+}
+
+a:focus::after {
+	content: "";
+	border-radius: var(--border-radius-small);
+	position: absolute;
+	inset: -0.35em;
+	background-color: var(--color-accent-400);
+	opacity: 0.25;
+	z-index: -1;
+}
+
 a:active {
 	opacity: 0.5;
 }

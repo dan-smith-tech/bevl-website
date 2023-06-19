@@ -98,6 +98,7 @@ export default function Contact() {
 								type="checkbox"
 								name="do_not_check"
 								className={"checkbox-hidden"}
+								tabIndex={-1}
 							/>
 							<FormButton type={"submit"}>Send</FormButton>
 						</div>

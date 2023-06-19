@@ -69,6 +69,11 @@
 	opacity: 0.65;
 }
 
+.button:focus {
+	outline-offset: var(--border-size);
+	outline: var(--border-size) solid var(--color-secondary-100);
+}
+
 .button span {
 	margin-bottom: 0.2em;
 }

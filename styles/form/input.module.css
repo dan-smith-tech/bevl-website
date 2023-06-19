@@ -68,6 +68,12 @@
 
 .container-element-secondary .element:focus {
 	border-color: var(--color-secondary-100);
+
+	border-radius: var(--border-radius-small);
+	outline-offset: var(--border-size);
+	outline: var(--border-size) solid var(--color-primary-400);
+	position: relative;
+	z-index: 1;
 }
 
 .element-error .element {

@@ -51,7 +51,7 @@
 
 .element:focus {
 	outline-offset: var(--border-size);
-	outline: var(--border-size) solid var(--color-neutral-white);
+	outline: var(--border-size) solid var(--color-secondary-100);
 }
 
 .element:active {
