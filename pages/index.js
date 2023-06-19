@@ -86,10 +86,6 @@ export default function Landing() {
 					property="og:description"
 					content="Spend less time planning, and more time doing. Drag and drop todos to make visual plans, and keep track of wandering ideas. Bevl is an app with a philosophy."
 				/>
-				<meta
-					property="og:image"
-					content="https://www.bevl.app/images/open-graph/landing.png"
-				/>
 			</Head>
 			<div
 				className={

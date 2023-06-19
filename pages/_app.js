@@ -17,7 +17,7 @@ export default function BevlWebsite({ Component, pageProps }) {
 				/>
 				<meta
 					property="og:image"
-					content="https://www.bevl.app/images/open-graph/index.png"
+					content="https://www.bevl.app/images/opengraph.png"
 				/>
 			</Head>
 			<Component {...pageProps} />
