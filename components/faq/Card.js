@@ -8,11 +8,18 @@ export default function faqCard({ question, children }) {
 	const questionHeight = 85;
 	const answerRef = useRef();
 
+	function setTabIndex(i) {
+		if (answerRef.current.querySelector("a"))
+			answerRef.current.querySelector("a").tabIndex = i;
+	}
+
 	function activateToggle() {
 		setToggle(!toggle);
 
-		if (toggle) cardRef.current.style.height = questionHeight + "px";
-		else
+		if (toggle) {
+			cardRef.current.style.height = questionHeight + "px";
+			setTabIndex(-1);
+		} else {
 			cardRef.current.style.height =
 				questionHeight +
 				answerRef.current.offsetHeight +
@@ -20,7 +27,13 @@ export default function faqCard({ question, children }) {
 					window.getComputedStyle(answerRef.current)["marginBottom"]
 				) +
 				"px";
+			setTabIndex(0);
+		}
 	}
+
+	useEffect(() => {
+		setTabIndex(-1);
+	}, [answerRef]);
 
 	const getCardStyles = () => {
 		if (!toggle) return faqCardStyles["discussion"];
