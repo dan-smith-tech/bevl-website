@@ -7,10 +7,16 @@ export default function Demo() {
 	return (
 		<>
 			<Head>
-				<title>Bevl • Help</title>
-				<meta property="og:title" content="Bevl • Help" />
-				<meta name="description" content="Learn how to use Bevl." />
-				<meta property="og:description" content="Learn how to use Bevl." />
+				<title>Bevl • Demo</title>
+				<meta property="og:title" content="Bevl • Demo" />
+				<meta
+					name="description"
+					content="Try using Bevl's unique todo list, calendar, and note system, to see if it meets your productivity needs."
+				/>
+				<meta
+					property="og:description"
+					content="Try using Bevl's unique todo list, calendar, and note system, to see if it meets your productivity needs."
+				/>
 			</Head>
 			<div
 				className={

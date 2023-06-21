@@ -9,8 +9,14 @@ export default function Help() {
 			<Head>
 				<title>Bevl • Help</title>
 				<meta property="og:title" content="Bevl • Help" />
-				<meta name="description" content="Learn how to use Bevl." />
-				<meta property="og:description" content="Learn how to use Bevl." />
+				<meta
+					name="description"
+					content="Learn how to use Bevl's unique todo list, calendar, and note system."
+				/>
+				<meta
+					property="og:description"
+					content="Learn how to use Bevl's unique todo list, calendar, and note system."
+				/>
 			</Head>
 			<div
 				className={

@@ -14,11 +14,11 @@ export default function About() {
 				<meta property="og:title" content="Bevl • Story" />
 				<meta
 					name="description"
-					content="Discover what inspired Bevl's creation."
+					content="Explore the planning journey and productivity experiences that inspired Bevl's unique todo and calendar design."
 				/>
 				<meta
 					property="og:description"
-					content="Discover what inspired Bevl's creation."
+					content="Explore the planning journey and productivity experiences that inspired Bevl's unique todo and calendar design."
 				/>
 			</Head>
 			<div className={"container-full " + detailStyles["container-detail"]}>

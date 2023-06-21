@@ -54,7 +54,7 @@ export default function Landing() {
 	const [showModal, setShowModal] = useState(false);
 	function handleSubmit(e) {
 		e.preventDefault();
-		const email = e.target.email.value;
+		const email = e.target.email_splash.value;
 		if (email.length > 0 && isEmail(email)) {
 			setShowModal(true);
 			sendFetchRequest(
@@ -64,7 +64,7 @@ export default function Landing() {
 					email,
 				}
 			);
-			e.target.email.value = null;
+			e.target.email_splash.value = null;
 		}
 	}
 
@@ -80,11 +80,11 @@ export default function Landing() {
 				/>
 				<meta
 					name="description"
-					content="Spend less time planning, and more time doing. Drag and drop todos to make visual plans, and keep track of wandering ideas. Bevl is an app with a philosophy."
+					content="Spend less time planning, and more time doing: drag and drop todos to make visual plans, keep track of random ideas, and sort or filter through all of them."
 				/>
 				<meta
 					property="og:description"
-					content="Spend less time planning, and more time doing. Drag and drop todos to make visual plans, and keep track of wandering ideas. Bevl is an app with a philosophy."
+					content="Spend less time planning, and more time doing: drag and drop todos to make visual plans, keep track of random ideas, and sort or filter through all of them."
 				/>
 			</Head>
 			<div
@@ -122,9 +122,9 @@ export default function Landing() {
 							Spend less time <span>organising</span>,<br />
 							and more time <span>doing</span>.
 						</h1>
-						<h3 className={splashStyles["tagline"]}>
+						<h2 className={splashStyles["tagline"]}>
 							A minimalist, modern todo list for productive visual plans.
-						</h3>
+						</h2>
 						<form
 							onSubmit={handleSubmit}
 							className={ctaStyles["container-form"]}
@@ -132,7 +132,7 @@ export default function Landing() {
 							<div className={ctaStyles["container-form-input"]}>
 								<FormInput
 									type={"text"}
-									name={"email"}
+									name={"email_splash"}
 									placeholder="Enter email address..."
 									required={true}
 								/>

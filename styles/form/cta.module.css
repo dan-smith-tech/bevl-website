@@ -72,7 +72,7 @@
 			var(--color-accent-400),
 			rgba(254, 76, 97, 0.5)
 		),
-		url("/images/textures/isometric.jpg");
+		url("/images/texture.webp");
 	background-size: cover;
 	z-index: 0;
 }
