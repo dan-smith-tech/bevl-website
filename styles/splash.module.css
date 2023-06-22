@@ -16,6 +16,25 @@
 	z-index: 1;
 }
 
+.splash-info::before {
+	content: "";
+	--_scale: 1.35;
+	--_translate_y: -10%;
+	width: 100%;
+	height: calc(365px * 1.12);
+	position: absolute;
+	top: -65px;
+	background: url("/images/logo-complete.svg");
+	background-repeat: no-repeat;
+	transform: scale(var(--_scale)) translateY(var(--_translate_y));
+	mask-image: linear-gradient(
+		to right,
+		rgba(255, 255, 255, 0.11),
+		rgb(255, 255, 255, 0.22) 85%
+	);
+	z-index: -1;
+}
+
 .container-partial-splash button:focus {
 	outline-color: var(--color-primary-400) !important;
 }
@@ -145,7 +164,17 @@
 	}
 }
 
+@media (max-width: 1650px) {
+	.splash-info::before {
+		--_scale: 1.15;
+	}
+}
+
 @media (max-width: 1350px) {
+	.splash-info::before {
+		--_scale: 1;
+	}
+
 	.splash-demo-container-image {
 		margin-right: 0;
 		mask-image: linear-gradient(
@@ -170,6 +199,10 @@
 
 	.container-partial-splash {
 		margin-top: 3.5em;
+	}
+
+	.splash-info::before {
+		--_translate_y: 3.5vh;
 	}
 
 	.heading {
@@ -238,11 +271,19 @@
 	.container-full-splash {
 		min-height: 40em;
 	}
+
+	.splash-info::before {
+		--_translate_y: 5vh;
+	}
 }
 
 @media (max-width: 500px) {
 	.container-full-splash {
 		min-height: 42em;
+	}
+
+	.splash-info::before {
+		--_translate_y: 15vh;
 	}
 
 	.splash-demo-container-image {
