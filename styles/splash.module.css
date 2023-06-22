@@ -35,6 +35,25 @@
 	z-index: -1;
 }
 
+@media (prefers-reduced-motion: no-preference) {
+	.splash-info::before {
+		animation-name: splash-logo-intro;
+		animation-timing-function: var(--transition-timing-function-elastic);
+		animation-duration: 850ms;
+	}
+
+	@keyframes splash-logo-intro {
+		0% {
+			transform: scale(1.15) translateY(var(--_translate_y));
+			opacity: 0.35;
+		}
+		100% {
+			transform: scale(var(--_scale)) translateY(var(--_translate_y));
+			opacity: 1;
+		}
+	}
+}
+
 .container-partial-splash button:focus {
 	outline-color: var(--color-primary-400) !important;
 }
