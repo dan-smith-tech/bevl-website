@@ -83,19 +83,6 @@
 	.form-element:last-child {
 		margin: 0;
 	}
-
-	.form-element label {
-		width: fit-content;
-		margin-bottom: 0.5em;
-		padding-left: 2.5em;
-		display: flex;
-		font-size: 1rem;
-		font-weight: 600;
-	}
-
-	.form-p {
-		margin-bottom: 1.5rem;
-	}
 }
 
 /* Loading icon */
