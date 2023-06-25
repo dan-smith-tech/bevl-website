@@ -8,7 +8,7 @@ export default function BevlWebsite({ Component, pageProps }) {
 	return (
 		<>
 			<Head>
-				<link rel="icon" href="/images/favicon.svg" />
+				<link rel="icon" href="/images/favicon.ico" />
 				<title>Bevl</title>
 				<meta property="og:title" content="Bevl" key="title" />
 				<meta
