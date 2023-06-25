@@ -10,7 +10,6 @@ export default function BevlWebsite({ Component, pageProps }) {
 			<Head>
 				<link rel="icon" href="/images/favicon.ico" />
 				<title>Bevl</title>
-				<meta property="og:title" content="Bevl" key="title" />
 				<meta property="og:site_name" content="Bevl" />
 				<meta
 					name="keywords"
