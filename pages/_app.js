@@ -20,6 +20,7 @@ export default function BevlWebsite({ Component, pageProps }) {
 					property="og:image"
 					content="https://www.bevl.app/images/opengraph.png"
 				/>
+				<meta name="twitter:card" content="summary_large_image" />
 			</Head>
 			<Component {...pageProps} />
 			<Footer />
